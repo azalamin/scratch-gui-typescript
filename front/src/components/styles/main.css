@@ -1,0 +1,28 @@
+.error-alert {
+  position: absolute;
+  left: 30vw;
+  width: 40vw;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.form-container {
+  width: 85%;
+}
+
+.form-button {
+  height: 3rem;
+  width: 70%;
+  background: #073a93;
+}
+
+.form-link {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/*# sourceMappingURL=main.css.map */

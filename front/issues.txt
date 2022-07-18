@@ -1,0 +1,7 @@
+1. alt attribute error './components/elements/Loading'
+    <div className="im" alt="background">
+    <div className="im" alt="background">
+2. what is the data type of alert './reducers/alert'
+    return state.filter((alert) => alert.id !== payload);
+3. token datatype
+   const setAuthToken = (token) => {/..}
