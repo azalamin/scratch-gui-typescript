@@ -38,7 +38,7 @@ const MenuBarHOC = function (WrappedComponent: any) {
 
   MenuBarContainer.defaultProps = {
     // default to using standard js confirm
-    confirmWithMessage: (message: any) => confirm(message), // eslint-disable-line no-alert
+    confirmWithMessage: (message: any) => window.confirm(message), // eslint-disable-line no-alert
   };
 
   const mapStateToProps = (state: any) => ({

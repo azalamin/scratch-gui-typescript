@@ -8,7 +8,7 @@ import { getEventXY } from '../lib/touch-utils';
 import { getVariableValue, setVariableValue } from '../lib/variable-utils';
 
 const ListMonitor = (prop: PropsInterface) => {
-  const [states, setStates] = useState({
+  const [states, setStates] = useState<any>({
     activeIndex: null,
     activeValue: null,
     width: prop.width || 100,
@@ -38,12 +38,12 @@ const ListMonitor = (prop: PropsInterface) => {
     }
   };
 
-  const handleFocus = e => {
+  const handleFocus = (e: any) => {
     // Select all the text in the input when it is focused.
     e.target.select();
   };
 
-  const handleKeyPress = e => {
+  const handleKeyPress = (e: any) => {
     // Special case for tab, arrow keys and enter.
     // Tab / shift+tab navigate down / up the list.
     // Arrow down / arrow up navigate down / up the list.
@@ -89,11 +89,11 @@ const ListMonitor = (prop: PropsInterface) => {
     }
   };
 
-  const handleInput = e => {
+  const handleInput = (e: any) => {
     setStates({ ...states, activeValue: e.target.value });
   };
 
-  const handleRemove = e => {
+  const handleRemove = (e: any) => {
     e.preventDefault(); // Default would blur input, prevent that.
     e.stopPropagation(); // Bubbling would activate, which will be handled here
     const { vm, targetId, id: variableId } = prop;
@@ -127,12 +127,12 @@ const ListMonitor = (prop: PropsInterface) => {
     });
   };
 
-  const handleResizeMouseDown = e => {
-    initialPosition = getEventXY(e);
-    initialWidth = states.width;
-    initialHeight = states.height;
+  const handleResizeMouseDown = (e: any) => {
+    const initialPosition = getEventXY(e);
+    const initialWidth = states.width;
+    const initialHeight = states.height;
 
-    const onMouseMove = ev => {
+    const onMouseMove = (ev: any) => {
       const newPosition = getEventXY(ev);
       const dx = newPosition.x - initialPosition.x;
       const dy = newPosition.y - initialPosition.y;
@@ -143,7 +143,7 @@ const ListMonitor = (prop: PropsInterface) => {
       });
     };
 
-    const onMouseUp = ev => {
+    const onMouseUp = (ev: any) => {
       onMouseMove(ev); // Make sure width/height are up-to-date
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseup', onMouseUp);
@@ -160,7 +160,7 @@ const ListMonitor = (prop: PropsInterface) => {
     window.addEventListener('mouseup', onMouseUp);
   };
 
-  const wrapListIndex = (index, length) => {
+  const wrapListIndex = (index: any, length: any) => {
     return (index + length) % length;
   };
 
@@ -188,28 +188,29 @@ const ListMonitor = (prop: PropsInterface) => {
   );
 };
 
-ListMonitor.propTypes = {
-  height: PropTypes.number,
-  id: PropTypes.string,
-  targetId: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  vm: PropTypes.instanceOf(VM),
-  width: PropTypes.number,
-  x: PropTypes.number,
-  y: PropTypes.number,
-};
-
 interface PropsInterface {
   height: number;
   id: string;
   targetId: string;
-  value: number | string;
+  value: number | string | any;
   vm: any;
   width: number;
   x: number;
   y: number;
 }
 
-const mapStateToProps = state => ({ vm: state.scratchGui.vm });
+// TODO
+// ListMonitor.propTypes = {
+//   height: PropTypes.number,
+//   id: PropTypes.string,
+//   targetId: PropTypes.string,
+//   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+//   vm: PropTypes.instanceOf(VM),
+//   width: PropTypes.number,
+//   x: PropTypes.number,
+//   y: PropTypes.number,
+// };
+
+const mapStateToProps = (state: any) => ({ vm: state.scratchGui.vm });
 
 export default connect(mapStateToProps)(ListMonitor);

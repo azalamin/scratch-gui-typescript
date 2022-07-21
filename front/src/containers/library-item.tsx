@@ -1,11 +1,9 @@
-import bindAll from 'lodash.bindall';
-import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { injectIntl } from 'react-intl';
 
 import LibraryItemComponent from '../components/library-item/library-item.jsx';
 
-const LibraryItem = (props: PropsInterface) => {
+const LibraryItem: any = (props: PropsInterface) => {
   const [iconStatus, setIconStatus] = useState<any>({
     iconIndex: 0,
     isRotatingIcon: false,

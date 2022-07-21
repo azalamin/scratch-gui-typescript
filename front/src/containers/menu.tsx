@@ -1,24 +1,29 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import MenuComponent from '../components/menu/menu.jsx';
 
 const Menu = (prop: PropsInterface) => {
   let menu: any = useRef();
 
-  const addListeners = () => {
-    document.addEventListener('mouseup', handleClick);
-  };
-  const removeListeners = () => {
-    document.removeEventListener('mouseup', handleClick);
-  };
-  const handleClick = (e: any) => {
-    if (prop.open && !menu.contains(e.target)) {
-      prop.onRequestClose();
-    }
-  };
+  const handleClick = useCallback(
+    (e: any) => {
+      if (prop.open && !menu.contains(e.target)) {
+        prop.onRequestClose();
+      }
+    },
+    [prop]
+  );
   const ref = (c: any) => {
     menu = c;
   };
+
+  const addListeners = useCallback(() => {
+    document.addEventListener('mouseup', handleClick);
+  }, [handleClick]);
+
+  const removeListeners = useCallback(() => {
+    document.removeEventListener('mouseup', handleClick);
+  }, [handleClick]);
 
   useEffect(() => {
     if (prop.open) addListeners();

@@ -15,7 +15,6 @@ const MenuItem = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  //   children: Element;
   children: JSX.Element;
   className: string;
   // can take an onClick prop, or take an href and build an onClick handler
