@@ -32,7 +32,7 @@ interface PropsInterface {
   children: JSX.Element;
   currentLocale: string;
   // Only checking key presence for messagesByLocale, no need to be more specific than object
-  messagesByLocale: object; // eslint-disable-line react/forbid-prop-types
+  messagesByLocale: any; // todo
   onChangeLanguage: any;
 }
 

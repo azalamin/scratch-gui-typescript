@@ -1,7 +1,4 @@
-import bindAll from 'lodash.bindall';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 /**
  * Turbo Mode component passes toggleTurboMode function to its child.
@@ -20,34 +17,41 @@ import {connect} from 'react-redux';
  * )}</TurboMode>
  */
 
-const TurboMode = (prop) => {
-    const toggleTurboMode = () => {
-        prop.vm.setTurboMode(!prop.turboMode);
-    }
-    const {
-            /* eslint-disable no-unused-vars */
-            children,
-            vm,
-            /* eslint-enable no-unused-vars */
-            ...props
-        } = prop;
-    return prop.children(toggleTurboMode, prop);
+const TurboMode = (prop: PropsInterface) => {
+  const toggleTurboMode = () => {
+    prop.vm.setTurboMode(!prop.turboMode);
+  };
+  const {
+    /* eslint-disable no-unused-vars */
+    children,
+    vm,
+    /* eslint-enable no-unused-vars */
+    ...props
+  } = prop;
+  return prop.children(toggleTurboMode, props);
 };
 
-TurboMode.propTypes = {
-    children: PropTypes.func,
-    turboMode: PropTypes.bool,
-    vm: PropTypes.shape({
-        setTurboMode: PropTypes.func
-    })
-};
+interface PropsInterface {
+  children: any;
+  turboMode: boolean;
+  vm: any;
+}
 
-const mapStateToProps = state => ({
-    vm: state.scratchGui.vm,
-    turboMode: state.scratchGui.vmStatus.turbo
+// TODO
+// TurboMode.propTypes = {
+//     children: PropTypes.func,
+//     turboMode: PropTypes.bool,
+//     vm: PropTypes.shape({
+//         setTurboMode: PropTypes.func
+//     })
+// };
+
+const mapStateToProps = (state: any) => ({
+  vm: state.scratchGui.vm,
+  turboMode: state.scratchGui.vmStatus.turbo,
 });
 
 export default connect(
-    mapStateToProps,
-    () => ({}) // omit dispatch prop
+  mapStateToProps,
+  () => ({}) // omit dispatch prop
 )(TurboMode);

@@ -1,8 +1,6 @@
 import { Map } from 'immutable';
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { connect } from 'react-redux';
-import VM from 'scratch-vm';
 import ListMonitorComponent from '../components/monitor/list-monitor.jsx';
 import { getEventXY } from '../lib/touch-utils';
 import { getVariableValue, setVariableValue } from '../lib/variable-utils';

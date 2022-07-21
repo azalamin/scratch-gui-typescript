@@ -1,12 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { FC } from 'react';
 import { connect } from 'react-redux';
 
 import { filterInlineAlerts } from '../reducers/alerts';
 
 import InlineMessageComponent from '../components/alerts/inline-message.jsx';
 
-const InlineMessages = ({ alertsList, className }) => {
+const InlineMessages: FC<PropsInterface> = ({ alertsList, className }) => {
   if (!alertsList) {
     return null;
   }
@@ -30,12 +29,12 @@ const InlineMessages = ({ alertsList, className }) => {
   );
 };
 
-InlineMessages.propTypes = {
-  alertsList: PropTypes.arrayOf(PropTypes.object),
-  className: PropTypes.string,
-};
+interface PropsInterface {
+  alertsList: any; // Todo PropTypes.arrayOf(PropTypes.object);
+  className: string;
+}
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
   alertsList: state.scratchGui.alerts.alertsList,
 });
 
