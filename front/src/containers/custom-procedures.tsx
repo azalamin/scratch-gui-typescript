@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 import { connect } from 'react-redux';
 import ScratchBlocks from 'scratch-blocks';
+import { boolean } from 'yup';
 import CustomProceduresComponent from '../components/custom-procedures/custom-procedures.jsx';
 
-const CustomProcedures = (props: any) => {
-  const [states, setStates] = useState({
+const CustomProcedures = (props: PropsInterface) => {
+  const [states, setStates] = useState<any>({
     rtlOffset: 0,
     warp: false,
   });
@@ -151,21 +152,29 @@ const CustomProcedures = (props: any) => {
   );
 };
 
-CustomProcedures.propTypes = {
-  isRtl: PropTypes.bool,
-  mutator: PropTypes.instanceOf(Element),
-  onRequestClose: PropTypes.func.isRequired,
-  options: PropTypes.shape({
-    media: PropTypes.string,
-    zoom: PropTypes.shape({
-      controls: PropTypes.bool,
-      wheel: PropTypes.bool,
-      startScale: PropTypes.number,
-    }),
-    comments: PropTypes.bool,
-    collapse: PropTypes.bool,
-  }),
-};
+interface PropsInterface {
+  isRtl: boolean;
+  mutator: any;
+  onRequestClose: any;
+  options: any;
+}
+
+// TODO
+// CustomProcedures.propTypes = {
+//   isRtl: PropTypes.bool,
+//   mutator: PropTypes.instanceOf(Element),
+//   onRequestClose: PropTypes.func.isRequired,
+//   options: PropTypes.shape({
+//     media: PropTypes.string,
+//     zoom: PropTypes.shape({
+//       controls: PropTypes.bool,
+//       wheel: PropTypes.bool,
+//       startScale: PropTypes.number,
+//     }),
+//     comments: PropTypes.bool,
+//     collapse: PropTypes.bool,
+//   }),
+// };
 
 CustomProcedures.defaultOptions = {
   zoom: {
