@@ -3,6 +3,6 @@ export {};
 declare global {
   interface Window {
     Sentry: any;
+    Wistia: any;
   }
-  interface IntrinsicAttributes extends React.Attributes {}
 }
