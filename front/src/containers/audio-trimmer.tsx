@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
-import bindAll from 'lodash.bindall';
+import { useRef } from 'react';
 import AudioTrimmerComponent from '../components/audio-trimmer/audio-trimmer.jsx';
 import DragRecognizer from '../lib/drag-recognizer';
 
@@ -70,8 +68,43 @@ const MIN_LENGTH = 0.01; // Used to stop sounds being trimmed smaller than 1%
 // }
 
 const AudioTrimmer = (props: PropsInterface) => {
-  let containerElement = useRef();
+  let containerElement: any = useRef();
   let containerSize: any;
+  let initialTrim: any;
+
+  const handleTrimStartMouseMove = (currentOffset: any, initialOffset: any) => {
+    const dx = (currentOffset.x - initialOffset.x) / containerSize;
+    const newTrim = Math.max(
+      0,
+      Math.min(props.trimEnd - MIN_LENGTH, initialTrim + dx)
+    );
+    props.onSetTrimStart(newTrim);
+  };
+  const handleTrimEndMouseMove = (currentOffset: any, initialOffset: any) => {
+    const dx = (currentOffset.x - initialOffset.x) / containerSize;
+    const newTrim = Math.min(
+      1,
+      Math.max(props.trimStart + MIN_LENGTH, initialTrim + dx)
+    );
+    props.onSetTrimEnd(newTrim);
+  };
+  const handleTrimStartMouseDown = (e: any) => {
+    containerSize = containerElement.getBoundingClientRect().width;
+    trimStartDragRecognizer.start(e);
+    initialTrim = props.trimStart;
+    e.stopPropagation();
+    e.preventDefault();
+  };
+  const handleTrimEndMouseDown = (e: any) => {
+    containerSize = containerElement.getBoundingClientRect().width;
+    trimEndDragRecognizer.start(e);
+    initialTrim = props.trimEnd;
+    e.stopPropagation();
+    e.preventDefault();
+  };
+  const storeRef = (el: any) => {
+    containerElement = el;
+  };
 
   const trimStartDragRecognizer = new DragRecognizer({
     onDrag: handleTrimStartMouseMove,
@@ -84,40 +117,6 @@ const AudioTrimmer = (props: PropsInterface) => {
     touchDragAngle: 90,
     distanceThreshold: 0,
   });
-
-  const handleTrimStartMouseMove = (currentOffset, initialOffset) => {
-    const dx = (currentOffset.x - initialOffset.x) / containerSize;
-    const newTrim = Math.max(
-      0,
-      Math.min(props.trimEnd - MIN_LENGTH, initialTrim + dx)
-    );
-    props.onSetTrimStart(newTrim);
-  };
-  const handleTrimEndMouseMove = (currentOffset, initialOffset) => {
-    const dx = (currentOffset.x - initialOffset.x) / containerSize;
-    const newTrim = Math.min(
-      1,
-      Math.max(props.trimStart + MIN_LENGTH, initialTrim + dx)
-    );
-    props.onSetTrimEnd(newTrim);
-  };
-  const handleTrimStartMouseDown = e => {
-    containerSize = containerElement.getBoundingClientRect().width;
-    trimStartDragRecognizer.start(e);
-    initialTrim = props.trimStart;
-    e.stopPropagation();
-    e.preventDefault();
-  };
-  const handleTrimEndMouseDown = e => {
-    containerSize = containerElement.getBoundingClientRect().width;
-    trimEndDragRecognizer.start(e);
-    initialTrim = props.trimEnd;
-    e.stopPropagation();
-    e.preventDefault();
-  };
-  const storeRef = el => {
-    containerElement = el;
-  };
 
   return (
     <AudioTrimmerComponent
