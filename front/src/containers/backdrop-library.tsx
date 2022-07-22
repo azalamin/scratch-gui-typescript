@@ -1,4 +1,4 @@
-import { defineMessages, injectIntl, intlShape } from 'react-intl';
+import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
 import LibraryComponent from '../components/library/library.jsx';
 import backdropTags from '../lib/libraries/backdrop-tags';
@@ -38,7 +38,7 @@ const BackdropLibrary = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  intl: intlShape;
+  intl: IntlShape;
   onRequestClose: any;
   vm: any;
 }
