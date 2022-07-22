@@ -157,21 +157,7 @@ const AudioSelector = (props: PropsInterface) => {
   let initialTrimStart: any;
   let containerSize: any;
 
-  let clickStartTime = 0;
-
-  const trimStartDragRecognizer = new DragRecognizer({
-    onDrag: handleTrimStartMouseMove,
-    onDragEnd: handleTrimStartMouseUp,
-    touchDragAngle: 90,
-    distanceThreshold: 0,
-  });
-
-  const trimEndDragRecognizer = new DragRecognizer({
-    onDrag: handleTrimEndMouseMove,
-    onDragEnd: handleTrimEndMouseUp,
-    touchDragAngle: 90,
-    distanceThreshold: 0,
-  });
+  let clickStartTime: any = 0;
 
   useEffect(() => {
     if (trimStartState === props.trimStart && trimEndState === props.trimEnd) {
@@ -183,7 +169,7 @@ const AudioSelector = (props: PropsInterface) => {
       trimStart: trimStartState,
       trimEnd: trimEndState,
     });
-  }, [props.trimStart, props.trimEnd]);
+  }, [props.trimStart, props.trimEnd, trimStartState, trimEndState]);
 
   const clearSelection = () => {
     props.onSetTrim(null, null);
@@ -250,7 +236,7 @@ const AudioSelector = (props: PropsInterface) => {
       props.onSetTrim(states.trimStart, states.trimEnd);
     }
   };
-  const handleTrimStartMouseDown = (e: ChangeEvent) => {
+  const handleTrimStartMouseDown = (e: any) => {
     containerSize = containerElement.getBoundingClientRect().width;
     trimStartDragRecognizer.start(e);
     initialTrimStart = props.trimStart;
@@ -258,7 +244,7 @@ const AudioSelector = (props: PropsInterface) => {
     e.stopPropagation();
     e.preventDefault();
   };
-  const handleTrimEndMouseDown = (e: ChangeEvent) => {
+  const handleTrimEndMouseDown = (e: any) => {
     containerSize = containerElement.getBoundingClientRect().width;
     trimEndDragRecognizer.start(e);
     initialTrimEnd = props.trimEnd;
@@ -269,6 +255,20 @@ const AudioSelector = (props: PropsInterface) => {
   const storeRef = (el: any) => {
     containerElement = el;
   };
+
+  const trimStartDragRecognizer = new DragRecognizer({
+    onDrag: handleTrimStartMouseMove,
+    onDragEnd: handleTrimStartMouseUp,
+    touchDragAngle: 90,
+    distanceThreshold: 0,
+  });
+
+  const trimEndDragRecognizer = new DragRecognizer({
+    onDrag: handleTrimEndMouseMove,
+    onDragEnd: handleTrimEndMouseUp,
+    touchDragAngle: 90,
+    distanceThreshold: 0,
+  });
 
   return (
     <AudioSelectorComponent
