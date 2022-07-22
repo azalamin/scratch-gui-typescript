@@ -41,7 +41,7 @@ const getProjectFilename = (curTitle: any, defaultTitle: any) => {
 interface PropsInterface {
   children: any;
   className: string;
-  onSaveFinished: any;
+  onSaveFinished?: any;
   projectFilename: string;
   saveProjectSb3: any;
 }

@@ -33,6 +33,7 @@ const Alert = (props: PropsInterface) => {
         <AlertComponent
           closeButton={closeButton}
           key={index}
+          message={message}
           content={content}
           extensionName={extensionName}
           iconSpinner={iconSpinner}
@@ -45,7 +46,6 @@ const Alert = (props: PropsInterface) => {
           onDownload={downloadProject}
           onReconnect={handleOnReconnect}
           onSaveNow={onSaveNow}
-          message={message}
         />
       )}
     </SB3Downloader>
