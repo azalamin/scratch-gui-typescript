@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import BrowserModalComponent from '../components/browser-modal/browser-modal.jsx';
 import CrashMessageComponent from '../components/crash-message/crash-message.jsx';
 import log from '../lib/log.js';
 import { recommendedBrowser } from '../lib/supported-browser';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component<PropsInterface, StateInterface> {
+  constructor(props: PropsInterface) {
     super(props);
     this.state = {
       hasError: false,
@@ -15,7 +14,7 @@ class ErrorBoundary extends React.Component {
     };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch(error: any, info: any) {
     // Error object may be undefined (IE?)
     error = error || {
       stack: 'Unknown stack',
@@ -24,7 +23,7 @@ class ErrorBoundary extends React.Component {
 
     // Log errors to analytics, leaving out browsers that are not in our recommended set
     if (recommendedBrowser() && window.Sentry) {
-      window.Sentry.withScope(scope => {
+      window.Sentry.withScope((scope: any) => {
         Object.keys(info).forEach(key => {
           scope.setExtra(key, info[key]);
         });
@@ -129,11 +128,16 @@ class ErrorBoundary extends React.Component {
 //     return props.children;
 // };
 
-ErrorBoundary.propTypes = {
-  action: PropTypes.string.isRequired, // Used for defining tracking action
-  children: PropTypes.node,
-  isRtl: PropTypes.bool,
-};
+interface PropsInterface {
+  action: string; // Used for defining tracking action
+  children: JSX.Element;
+  isRtl: boolean;
+}
+
+interface StateInterface {
+  hasError: boolean;
+  errorId: any;
+}
 
 // TODO
 // ErrorBoundary.propTypes = {
@@ -142,7 +146,7 @@ ErrorBoundary.propTypes = {
 //   isRtl: PropTypes.bool,
 // };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
   isRtl: state.locales.isRtl,
 });
 
