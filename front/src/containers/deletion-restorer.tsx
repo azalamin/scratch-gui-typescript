@@ -23,13 +23,7 @@ const DeletionRestorer = (prop: PropsInterface) => {
       prop.dispatchUpdateRestore({ restoreFun: null, deletedItem: '' });
     }
   };
-  const {
-    /* eslint-disable no-unused-vars */
-    children,
-    dispatchUpdateRestore,
-    /* eslint-enable no-unused-vars */
-    ...props
-  } = prop;
+  const { children, dispatchUpdateRestore, ...props } = prop;
   const restorable = typeof prop.restore === 'function';
   return prop.children(restoreDeletion, {
     ...props,
