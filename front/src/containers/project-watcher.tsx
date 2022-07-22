@@ -1,11 +1,7 @@
-import bindAll from 'lodash.bindall';
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
-import {connect} from 'react-redux';
+import { useCallback, useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 
-import {
-    getIsShowingWithId
-} from '../reducers/project-state';
+import { getIsShowingWithId } from '../reducers/project-state';
 
 /**
  * Watches for project to finish updating before taking some action.
@@ -16,49 +12,54 @@ import {
  * project is no longer updating.
  */
 
-const ProjectWatcher = () => {
-    const [waiting, setWaiting] = useState(false);
-    useEffect(() => {
+const ProjectWatcher = (props: PropsInterface) => {
+  const [waiting, setWaiting] = useState<any>(false);
+
+  const fulfill = useCallback(() => {
+    props.onDoneUpdating();
+    setWaiting(false);
+  }, [props]);
+
+  const waitForUpdate = (isUpdating: any) => {
+    if (isUpdating) {
+      setWaiting(true);
+    } else {
+      // fulfill immediately
       fulfill();
-    }, [waiting, props.isShowingWithId]);
-
-    const fulfill = () => {
-         props.onDoneUpdating();
-         setWaiting(false)
     }
-    const waitForUpdate = (isUpdating) => {
-        if (isUpdating) {
-             setWaiting(true)
-        } else { // fulfill immediately
-             fulfill();
-        }
-    }
+  };
 
-    return  props.children(
-             waitForUpdate
-        );
+  useEffect(() => {
+    fulfill();
+  }, [fulfill, waiting]);
+
+  return props.children(waitForUpdate);
 };
 
-ProjectWatcher.propTypes = {
-    children: PropTypes.func,
-    isShowingWithId: PropTypes.bool,
-    onDoneUpdating: PropTypes.func
-};
+interface PropsInterface {
+  children: any;
+  isShowingWithId: boolean;
+  onDoneUpdating: any;
+}
+
+// TODO
+// ProjectWatcher.propTypes = {
+//   children: PropTypes.func,
+//   isShowingWithId: PropTypes.bool,
+//   onDoneUpdating: PropTypes.func,
+// };
 
 ProjectWatcher.defaultProps = {
-    onDoneUpdating: () => {}
+  onDoneUpdating: () => {},
 };
 
-const mapStateToProps = state => {
-    const loadingState = state.scratchGui.projectState.loadingState;
-    return {
-        isShowingWithId: getIsShowingWithId(loadingState)
-    };
+const mapStateToProps = (state: any) => {
+  const loadingState = state.scratchGui.projectState.loadingState;
+  return {
+    isShowingWithId: getIsShowingWithId(loadingState),
+  };
 };
 
 const mapDispatchToProps = () => ({});
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(ProjectWatcher);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectWatcher);
