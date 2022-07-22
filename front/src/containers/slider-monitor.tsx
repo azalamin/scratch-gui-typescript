@@ -1,54 +1,57 @@
-import bindAll from 'lodash.bindall';
-import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
-import VM from 'scratch-vm';
-import {setVariableValue} from '../lib/variable-utils';
-import {connect} from 'react-redux';
+import { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { setVariableValue } from '../lib/variable-utils';
 
 import SliderMonitorComponent from '../components/monitor/slider-monitor.jsx';
 
-const SliderMonitor = (prop) => {
-    const [stateValue, setValue] = useState(prop.value);
+const SliderMonitor = (prop: PropsInterface) => {
+  const [stateValue, setValue] = useState<any>(prop.value);
 
-    useEffect(() => {
-      if (stateValue !== prop.value) {
-            setValue(prop.value);
-        }
-    }, [prop])
-    
-    
-    const handleSliderUpdate = (e) => {
-        setValue(Number(e.target.value));
-        const {vm, targetId, id: variableId} = prop;
-        setVariableValue(vm, targetId, variableId, Number(e.target.value));
-    };
+  useEffect(() => {
+    if (stateValue !== prop.value) {
+      setValue(prop.value);
+    }
+  }, [prop, stateValue]);
 
-    const {
-            vm, // eslint-disable-line no-unused-vars
-            value, // eslint-disable-line no-unused-vars
-            ...props
-        } = prop;
+  const handleSliderUpdate = (e: any) => {
+    setValue(Number(e.target.value));
+    const { vm, targetId, id: variableId } = prop;
+    setVariableValue(vm, targetId, variableId, Number(e.target.value));
+  };
 
-    return (
-            <SliderMonitorComponent
-                {...props}
-                value={stateValue}
-                onSliderUpdate={handleSliderUpdate}
-            />
-        );
+  const {
+    vm, // eslint-disable-line no-unused-vars
+    value, // eslint-disable-line no-unused-vars
+    ...props
+  } = prop;
+
+  return (
+    <SliderMonitorComponent
+      {...props}
+      value={stateValue}
+      onSliderUpdate={handleSliderUpdate}
+    />
+  );
 };
 
+interface PropsInterface {
+  id: string;
+  targetId: string;
+  value: any;
+  vm: any;
+}
 
-SliderMonitor.propTypes = {
-    id: PropTypes.string,
-    targetId: PropTypes.string,
-    value: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ]),
-    vm: PropTypes.instanceOf(VM)
-};
+// TODO
+// SliderMonitor.propTypes = {
+//     id: PropTypes.string,
+//     targetId: PropTypes.string,
+//     value: PropTypes.oneOfType([
+//         PropTypes.number,
+//         PropTypes.string
+//     ]),
+//     vm: PropTypes.instanceOf(VM)
+// };
 
-const mapStateToProps = state => ({vm: state.scratchGui.vm});
+const mapStateToProps = (state: any) => ({ vm: state.scratchGui.vm });
 
 export default connect(mapStateToProps)(SliderMonitor);
