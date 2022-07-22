@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import bindAll from 'lodash.bindall';
+import { useCallback, useEffect, useState } from 'react';
+import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 import RecordingStepComponent from '../components/record-modal/recording-step.jsx';
 import AudioRecorder from '../lib/audio/audio-recorder.js';
-import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 const messages = defineMessages({
-    alertMsg: {
-        defaultMessage: 'Could not start recording',
-        description: 'Alert for recording error',
-        id: 'gui.recordingStep.alertMsg'
-    }
+  alertMsg: {
+    defaultMessage: 'Could not start recording',
+    description: 'Alert for recording error',
+    id: 'gui.recordingStep.alertMsg',
+  },
 });
-
 
 // class RecordingStep extends React.Component {
 //     constructor (props) {
@@ -77,71 +74,89 @@ const messages = defineMessages({
 //     }
 // }
 
+let audioRecorder: any;
+const RecordingStep = (props: PropsInterface) => {
+  const [states, setStates] = useState<any>({
+    listening: false,
+    level: 0,
+    levels: null,
+  });
 
-let audioRecorder;
-const RecordingStep = (props) => {
-    const [states, setStates] = useState({
-            listening: false,
-            level: 0,
-            levels: null
-    });
+  const handleStarted = useCallback(() => {
+    setStates({ ...states, listening: true });
+  }, [states]);
 
-    useEffect(() => {
-        audioRecorder = new AudioRecorder();
-        audioRecorder.startListening(handleStarted, handleLevelUpdate, handleRecordingError);
-    
-      return () => {
-        audioRecorder.dispose();
-      }
-    }, [audioRecorder]);
+  const handleRecordingError = useCallback(() => {
+    alert(props.intl.formatMessage(messages.alertMsg)); // eslint-disable-line no-alert
+  }, [props.intl]);
 
-    const handleStarted = () => {
-        setStates({...states, listening: true});
-    }
-    const handleRecordingError = () => {
-        alert(props.intl.formatMessage(messages.alertMsg)); // eslint-disable-line no-alert
-    }
-    const handleLevelUpdate = (level) => {
-        setStates({
-            ...states,
-            level: level,
-            levels: props.recording ? (states.levels || []).concat([level]) : states.levels
-        });
-    }
-    const handleRecord = () => {
-        audioRecorder.startRecording();
-        props.onRecord();
-    }
-    const handleStopRecording = () => {
-        const {samples, sampleRate, levels, trimStart, trimEnd} = audioRecorder.stop();
-        props.onStopRecording(samples, sampleRate, levels, trimStart, trimEnd);
-    }
+  const handleLevelUpdate = useCallback(
+    (level: any) => {
+      setStates({
+        ...states,
+        level: level,
+        levels: props.recording
+          ? (states.levels || []).concat([level])
+          : states.levels,
+      });
+    },
+    [props.recording, states]
+  );
 
-    const {
-            onRecord, // eslint-disable-line no-unused-vars
-            onStopRecording, // eslint-disable-line no-unused-vars
-            ...componentProps
-        } = props;
-    
+  const handleRecord = () => {
+    audioRecorder.startRecording();
+    props.onRecord();
+  };
+  const handleStopRecording = () => {
+    const { samples, sampleRate, levels, trimStart, trimEnd } =
+      audioRecorder.stop();
+    props.onStopRecording(samples, sampleRate, levels, trimStart, trimEnd);
+  };
 
-    return (
-        <RecordingStepComponent
-            level={states.level}
-            levels={states.levels}
-            listening={states.listening}
-            onRecord={handleRecord}
-            onStopRecording={handleStopRecording}
-            {...componentProps}
-        />
+  useEffect(() => {
+    audioRecorder = new AudioRecorder();
+    audioRecorder.startListening(
+      handleStarted,
+      handleLevelUpdate,
+      handleRecordingError
     );
+
+    return () => {
+      audioRecorder.dispose();
+    };
+  }, [handleLevelUpdate, handleRecordingError, handleStarted]);
+
+  const {
+    onRecord, // eslint-disable-line no-unused-vars
+    onStopRecording, // eslint-disable-line no-unused-vars
+    ...componentProps
+  } = props;
+
+  return (
+    <RecordingStepComponent
+      level={states.level}
+      levels={states.levels}
+      listening={states.listening}
+      onRecord={handleRecord}
+      onStopRecording={handleStopRecording}
+      {...componentProps}
+    />
+  );
 };
 
+interface PropsInterface {
+  intl: IntlShape;
+  onRecord: any;
+  onStopRecording: any;
+  recording: boolean;
+}
 
-RecordingStep.propTypes = {
-    intl: intlShape.isRequired,
-    onRecord: PropTypes.func.isRequired,
-    onStopRecording: PropTypes.func.isRequired,
-    recording: PropTypes.bool
-};
+// TODO
+// RecordingStep.propTypes = {
+//     intl: intlShape.isRequired,
+//     onRecord: PropTypes.func.isRequired,
+//     onStopRecording: PropTypes.func.isRequired,
+//     recording: PropTypes.bool
+// };
 
 export default injectIntl(RecordingStep);
