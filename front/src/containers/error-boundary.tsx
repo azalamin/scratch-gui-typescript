@@ -1,76 +1,79 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import BrowserModalComponent from '../components/browser-modal/browser-modal.jsx';
 import CrashMessageComponent from '../components/crash-message/crash-message.jsx';
 import log from '../lib/log.js';
-import {recommendedBrowser} from '../lib/supported-browser';
+import { recommendedBrowser } from '../lib/supported-browser';
 
 class ErrorBoundary extends React.Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            hasError: false,
-            errorId: null
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      errorId: null,
+    };
+  }
 
-    componentDidCatch (error, info) {
-        // Error object may be undefined (IE?)
-        error = error || {
-            stack: 'Unknown stack',
-            message: 'Unknown error'
-        };
+  componentDidCatch(error, info) {
+    // Error object may be undefined (IE?)
+    error = error || {
+      stack: 'Unknown stack',
+      message: 'Unknown error',
+    };
 
-        // Log errors to analytics, leaving out browsers that are not in our recommended set
-        if (recommendedBrowser() && window.Sentry) {
-            window.Sentry.withScope(scope => {
-                Object.keys(info).forEach(key => {
-                    scope.setExtra(key, info[key]);
-                });
-                scope.setExtra('action', this.props.action);
-                window.Sentry.captureException(error);
-            });
-        }
-
-        // Display fallback UI
-        this.setState({
-            hasError: true,
-            errorId: window.Sentry ? window.Sentry.lastEventId() : null
+    // Log errors to analytics, leaving out browsers that are not in our recommended set
+    if (recommendedBrowser() && window.Sentry) {
+      window.Sentry.withScope(scope => {
+        Object.keys(info).forEach(key => {
+          scope.setExtra(key, info[key]);
         });
-
-        // Log error locally for debugging as well.
-        log.error(`Unhandled Error: ${error.stack}\nComponent stack: ${info.componentStack}`);
+        scope.setExtra('action', this.props.action);
+        window.Sentry.captureException(error);
+      });
     }
 
-    handleBack () {
-        window.history.back();
-    }
+    // Display fallback UI
+    this.setState({
+      hasError: true,
+      errorId: window.Sentry ? window.Sentry.lastEventId() : null,
+    });
 
-    handleReload () {
-        window.location.replace(window.location.origin + window.location.pathname);
-    }
+    // Log error locally for debugging as well.
+    log.error(
+      `Unhandled Error: ${error.stack}\nComponent stack: ${info.componentStack}`
+    );
+  }
 
-    render () {
-        if (this.state.hasError) {
-            if (recommendedBrowser()) {
-                return (
-                    <CrashMessageComponent
-                        eventId={this.state.errorId}
-                        onReload={this.handleReload}
-                    />
-                );
-            }
-            return (<BrowserModalComponent
-                error
-                isRtl={this.props.isRtl}
-                onBack={this.handleBack}
-            />);
-        }
-        return this.props.children;
+  handleBack() {
+    window.history.back();
+  }
+
+  handleReload() {
+    window.location.replace(window.location.origin + window.location.pathname);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      if (recommendedBrowser()) {
+        return (
+          <CrashMessageComponent
+            eventId={this.state.errorId}
+            onReload={this.handleReload}
+          />
+        );
+      }
+      return (
+        <BrowserModalComponent
+          error
+          isRtl={this.props.isRtl}
+          onBack={this.handleBack}
+        />
+      );
     }
+    return this.props.children;
+  }
 }
-
 
 // const ErrorBoundary = (props) => {
 //     const [hasError, setHasError] = useState(false);
@@ -126,15 +129,21 @@ class ErrorBoundary extends React.Component {
 //     return props.children;
 // };
 
-
 ErrorBoundary.propTypes = {
-    action: PropTypes.string.isRequired, // Used for defining tracking action
-    children: PropTypes.node,
-    isRtl: PropTypes.bool
+  action: PropTypes.string.isRequired, // Used for defining tracking action
+  children: PropTypes.node,
+  isRtl: PropTypes.bool,
 };
 
+// TODO
+// ErrorBoundary.propTypes = {
+//   action: PropTypes.string.isRequired, // Used for defining tracking action
+//   children: PropTypes.node,
+//   isRtl: PropTypes.bool,
+// };
+
 const mapStateToProps = state => ({
-    isRtl: state.locales.isRtl
+  isRtl: state.locales.isRtl,
 });
 
 // no-op function to prevent dispatch prop being passed to component

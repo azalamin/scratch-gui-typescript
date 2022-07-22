@@ -70,7 +70,7 @@ interface PropsInterface {
   intl: any; // todo
   onCategorySelected: any;
   onRequestClose: any;
-  visible: boolean;
+  visible: any;
   vm: any; // eslint-disable-line react/no-unused-prop-types
 }
 
