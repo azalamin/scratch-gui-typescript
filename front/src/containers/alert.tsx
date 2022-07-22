@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import AlertComponent from '../components/alerts/alert.jsx';
+import AlertComponent from '../components/alerts/alert.js';
 import { setConnectionModalExtensionId } from '../reducers/connection-modal';
 import { openConnectionModal } from '../reducers/modals';
 import { manualUpdateProject } from '../reducers/project-state';
-import SB3Downloader from './sb3-downloader.jsx';
+import SB3Downloader from './sb3-downloader';
 
 const Alert = (props: PropsInterface) => {
   const handleOnCloseAlert = () => {
@@ -29,7 +29,7 @@ const Alert = (props: PropsInterface) => {
   } = props;
   return (
     <SB3Downloader>
-      {(_, downloadProject) => (
+      {(_: any, downloadProject: any) => (
         <AlertComponent
           closeButton={closeButton}
           key={index}
@@ -38,7 +38,6 @@ const Alert = (props: PropsInterface) => {
           iconSpinner={iconSpinner}
           iconURL={iconURL}
           level={level}
-          message={message}
           showDownload={showDownload}
           showReconnect={showReconnect}
           showSaveNow={showSaveNow}
@@ -46,6 +45,7 @@ const Alert = (props: PropsInterface) => {
           onDownload={downloadProject}
           onReconnect={handleOnReconnect}
           onSaveNow={onSaveNow}
+          message={message}
         />
       )}
     </SB3Downloader>
@@ -66,20 +66,21 @@ const mapDispatchToProps = (dispatch: any) => ({
 
 interface PropsInterface {
   closeButton: boolean;
-  content: Element;
+  content: any;
   extensionId: string;
   extensionName: string;
   iconSpinner: boolean;
   iconURL: string;
   index: number;
   level: string;
-  message: string;
+  message: any;
   onCloseAlert: any;
   onOpenConnectionModal: any;
   onSaveNow: any;
   showDownload: boolean;
   showReconnect: boolean;
   showSaveNow: boolean;
+  onSaveFinished: any;
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Alert);
