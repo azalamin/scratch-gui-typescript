@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { useEffect, useRef, useState } from 'react';
-import { defineMessages, injectIntl, intlShape } from 'react-intl';
-import VM from 'scratch-vm';
+import { useEffect, useRef, useState } from 'react';
+import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
 import fileUploadIcon from '../components/action-menu/icon--file-upload.svg';
 import searchIcon from '../components/action-menu/icon--search.svg';
@@ -35,10 +33,10 @@ import { activateTab, COSTUMES_TAB_INDEX } from '../reducers/editor-tab';
 import { closeAlertWithId, showStandardAlert } from '../reducers/alerts';
 import { setRestore } from '../reducers/restore-deletion';
 
-const SoundTab = props => {
-  let fileInput = useRef();
-  const [selectedSoundIndex, setSelectedSoundIndex] = useState(0);
-  const [editingTargetState, setEditingTargetState] = useState(null);
+const SoundTab = (props: PropsInterface) => {
+  let fileInput: any = useRef();
+  const [selectedSoundIndex, setSelectedSoundIndex] = useState<any>(0);
+  const [editingTargetState, setEditingTargetState] = useState<any>(null);
 
   useEffect(() => {
     const target =
@@ -56,13 +54,19 @@ const SoundTab = props => {
     } else if (selectedSoundIndex > target.sounds.length - 1) {
       setSelectedSoundIndex(Math.max(target.sounds.length - 1, 0));
     }
-  }, [props.editingTarget, props.sprites, props.stage]);
+  }, [
+    editingTargetState,
+    props.editingTarget,
+    props.sprites,
+    props.stage,
+    selectedSoundIndex,
+  ]);
 
-  const handleSelectSound = soundIndex => {
+  const handleSelectSound = (soundIndex: any) => {
     setSelectedSoundIndex(soundIndex);
   };
 
-  const handleDeleteSound = soundIndex => {
+  const handleDeleteSound = (soundIndex: any) => {
     console.log(soundIndex);
     const restoreFun = props.vm.deleteSound(soundIndex);
     if (soundIndex >= selectedSoundIndex) {
@@ -71,7 +75,7 @@ const SoundTab = props => {
     props.dispatchUpdateRestore({ restoreFun, deletedItem: 'Sound' });
   };
 
-  const handleExportSound = soundIndex => {
+  const handleExportSound = (soundIndex: any) => {
     const item = props.vm.editingTarget.sprite.sounds[soundIndex];
     const blob = new Blob([item.asset.data], {
       type: item.asset.assetType.contentType,
@@ -79,7 +83,7 @@ const SoundTab = props => {
     downloadBlob(`${item.name}.${item.asset.dataFormat}`, blob);
   };
 
-  const handleDuplicateSound = soundIndex => {
+  const handleDuplicateSound = (soundIndex: any) => {
     props.vm.duplicateSound(soundIndex).then(() => {
       setSelectedSoundIndex(soundIndex + 1);
     });
@@ -115,18 +119,24 @@ const SoundTab = props => {
     fileInput.click();
   };
 
-  const handleSoundUpload = e => {
+  const handleSoundUpload = (e: any) => {
     const storage = props.vm.runtime.storage;
     const targetId = props.vm.editingTarget.id;
     props.onShowImporting();
     handleFileUpload(
       e.target,
-      (buffer, fileType, fileName, fileIndex, fileCount) => {
+      (
+        buffer: any,
+        fileType: any,
+        fileName: any,
+        fileIndex: any,
+        fileCount: any
+      ) => {
         soundUpload(
           buffer,
           fileType,
           storage,
-          newSound => {
+          (newSound: any) => {
             newSound.name = fileName;
             props.vm.addSound(newSound, targetId).then(() => {
               handleNewSound();
@@ -142,7 +152,7 @@ const SoundTab = props => {
     );
   };
 
-  const handleDrop = dropInfo => {
+  const handleDrop = (dropInfo: any) => {
     if (dropInfo.dragType === DragConstants.SOUND) {
       const sprite = props.vm.editingTarget.sprite;
       const activeSound = sprite.sounds[selectedSoundIndex];
@@ -169,7 +179,7 @@ const SoundTab = props => {
     }
   };
 
-  const setFileInput = input => {
+  const setFileInput = (input: any) => {
     fileInput = input;
   };
 
@@ -189,7 +199,7 @@ const SoundTab = props => {
   const sprite = vm.editingTarget.sprite;
 
   const sounds = sprite.sounds
-    ? sprite.sounds.map(sound => ({
+    ? sprite.sounds.map((sound: any) => ({
         url: isRtl ? soundIconRtl : soundIcon,
         name: sound.name,
         details: (sound.sampleCount / sound.rate).toFixed(2),
@@ -280,39 +290,58 @@ const SoundTab = props => {
   );
 };
 
-SoundTab.propTypes = {
-  dispatchUpdateRestore: PropTypes.func,
-  editingTarget: PropTypes.string,
-  intl: intlShape,
-  isRtl: PropTypes.bool,
-  onActivateCostumesTab: PropTypes.func.isRequired,
-  onCloseImporting: PropTypes.func.isRequired,
-  onNewSoundFromLibraryClick: PropTypes.func.isRequired,
-  onNewSoundFromRecordingClick: PropTypes.func.isRequired,
-  onRequestCloseSoundLibrary: PropTypes.func.isRequired,
-  onShowImporting: PropTypes.func.isRequired,
-  soundLibraryVisible: PropTypes.bool,
-  soundRecorderVisible: PropTypes.bool,
-  sprites: PropTypes.shape({
-    id: PropTypes.shape({
-      sounds: PropTypes.arrayOf(
-        PropTypes.shape({
-          name: PropTypes.string.isRequired,
-        })
-      ),
-    }),
-  }),
-  stage: PropTypes.shape({
-    sounds: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-      })
-    ),
-  }),
-  vm: PropTypes.instanceOf(VM).isRequired,
-};
+interface PropsInterface {
+  dispatchUpdateRestore: any;
+  editingTarget: string;
+  intl: IntlShape;
+  isRtl: boolean;
+  onActivateCostumesTab: any;
+  onCloseImporting: any;
+  onNewSoundFromLibraryClick: any;
+  onNewSoundFromRecordingClick: any;
+  onRequestCloseSoundLibrary: any;
+  onShowImporting: any;
+  soundLibraryVisible: boolean;
+  soundRecorderVisible: boolean;
+  sprites: any;
+  stage: any;
+  vm: any;
+}
 
-const mapStateToProps = state => ({
+// TODO
+// SoundTab.propTypes = {
+//   dispatchUpdateRestore: PropTypes.func,
+//   editingTarget: PropTypes.string,
+//   intl: intlShape,
+//   isRtl: PropTypes.bool,
+//   onActivateCostumesTab: PropTypes.func.isRequired,
+//   onCloseImporting: PropTypes.func.isRequired,
+//   onNewSoundFromLibraryClick: PropTypes.func.isRequired,
+//   onNewSoundFromRecordingClick: PropTypes.func.isRequired,
+//   onRequestCloseSoundLibrary: PropTypes.func.isRequired,
+//   onShowImporting: PropTypes.func.isRequired,
+//   soundLibraryVisible: PropTypes.bool,
+//   soundRecorderVisible: PropTypes.bool,
+//   sprites: PropTypes.shape({
+//     id: PropTypes.shape({
+//       sounds: PropTypes.arrayOf(
+//         PropTypes.shape({
+//           name: PropTypes.string.isRequired,
+//         })
+//       ),
+//     }),
+//   }),
+//   stage: PropTypes.shape({
+//     sounds: PropTypes.arrayOf(
+//       PropTypes.shape({
+//         name: PropTypes.string.isRequired,
+//       })
+//     ),
+//   }),
+//   vm: PropTypes.instanceOf(VM).isRequired,
+// };
+
+const mapStateToProps = (state: any) => ({
   editingTarget: state.scratchGui.targets.editingTarget,
   isRtl: state.locales.isRtl,
   sprites: state.scratchGui.targets.sprites,
@@ -321,9 +350,9 @@ const mapStateToProps = state => ({
   soundRecorderVisible: state.scratchGui.modals.soundRecorder,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: any) => ({
   onActivateCostumesTab: () => dispatch(activateTab(COSTUMES_TAB_INDEX)),
-  onNewSoundFromLibraryClick: e => {
+  onNewSoundFromLibraryClick: (e: any) => {
     e.preventDefault();
     dispatch(openSoundLibrary());
   },
@@ -333,7 +362,7 @@ const mapDispatchToProps = dispatch => ({
   onRequestCloseSoundLibrary: () => {
     dispatch(closeSoundLibrary());
   },
-  dispatchUpdateRestore: restoreState => {
+  dispatchUpdateRestore: (restoreState: any) => {
     dispatch(setRestore(restoreState));
   },
   onCloseImporting: () => dispatch(closeAlertWithId('importingAsset')),
