@@ -32,21 +32,10 @@ const ConnectionModalComponent = (props: PropsInterface) => (
   >
     <Box className={styles.body}>
       {props.phase === PHASES.scanning && !props.useAutoScan && (
-        <ScanningStep
-          extensionId={''}
-          onConnected={''}
-          onConnecting={''}
-          vm={''}
-          {...props}
-        />
+        <ScanningStep {...props} />
       )}
       {props.phase === PHASES.scanning && props.useAutoScan && (
-        <AutoScanningStep
-          extensionId={''}
-          onConnecting={''}
-          vm={''}
-          {...props}
-        />
+        <AutoScanningStep {...props} />
       )}
       {props.phase === PHASES.connecting && (
         <ConnectingStep
@@ -62,9 +51,7 @@ const ConnectionModalComponent = (props: PropsInterface) => (
           {...props}
         />
       )}
-      {props.phase === PHASES.error && (
-        <ErrorStep connectionIconURL={''} {...props} />
-      )}
+      {props.phase === PHASES.error && <ErrorStep {...props} />}
       {props.phase === PHASES.unavailable && <UnavailableStep {...props} />}
     </Box>
   </Modal>

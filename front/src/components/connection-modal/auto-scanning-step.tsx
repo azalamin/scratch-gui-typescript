@@ -132,7 +132,7 @@ interface PropsInterface {
   connectionTipIconURL: string;
   onRefresh: any;
   onStartScan: any;
-  phase: any;
+  phase?: any;
 }
 
 // TODO

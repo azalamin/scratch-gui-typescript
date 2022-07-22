@@ -70,9 +70,9 @@ const AutoScanningStep = (props: PropsInterface) => {
 
 interface PropsInterface {
   connectionTipIconURL: string;
-  extensionId: string;
-  onConnecting: any;
-  vm: any;
+  extensionId?: string;
+  onConnecting?: any;
+  vm?: any;
 }
 
 export default AutoScanningStep;

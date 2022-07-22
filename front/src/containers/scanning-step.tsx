@@ -64,10 +64,10 @@ const ScanningStep = (props: PropsInterface) => {
 
 interface PropsInterface {
   connectionSmallIconURL: string;
-  extensionId: string;
-  onConnected: any;
-  onConnecting: any;
-  vm: any;
+  extensionId?: string;
+  onConnected?: any;
+  onConnecting?: any;
+  vm?: any;
 }
 
 // TODO

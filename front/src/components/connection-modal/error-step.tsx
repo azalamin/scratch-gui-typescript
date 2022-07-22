@@ -57,9 +57,9 @@ const ErrorStep = (props: PropsInterface) => (
 );
 
 interface PropsInterface {
-  connectionIconURL: string;
-  onHelp: any;
-  onScanning: any;
+  connectionIconURL?: string;
+  onHelp?: any;
+  onScanning?: any;
 }
 
 // TODO
