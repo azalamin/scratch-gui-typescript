@@ -1,9 +1,6 @@
-import PropTypes from 'prop-types';
-import bindAll from 'lodash.bindall';
-import React, { useEffect } from 'react';
-import {connect} from 'react-redux';
+import { useCallback, useEffect } from 'react';
+import { connect } from 'react-redux';
 import ModalComponent from '../components/modal/modal.jsx';
-
 
 // class Modal extends React.Component {
 //     constructor (props) {
@@ -47,53 +44,59 @@ import ModalComponent from '../components/modal/modal.jsx';
 //     }
 // }
 
-const id = 244309;
-const Modal = (props) => {
-    useEffect(() => {
-        addEventListeners();
-        // Add a history event only if it's not currently for our modal. This
-        // avoids polluting the history with many entries. We only need one.
-        pushHistory( id, (history.state === null || history.state !==  id));
-    
-      return () => {
-        removeEventListeners();
-      }
-    }, []);
+const id: any = 244309;
+const Modal = (props: PropsInterface) => {
+  const handlePopState = useCallback(() => {
+    props.onRequestClose();
+  }, [props]);
 
+  const addEventListeners = useCallback(() => {
+    window.addEventListener('popstate', handlePopState);
+  }, [handlePopState]);
 
-    const addEventListeners = () => {
-        window.addEventListener('popstate',  handlePopState);
-    }
+  const removeEventListeners = useCallback(() => {
+    window.removeEventListener('popstate', handlePopState);
+  }, [handlePopState]);
 
-    const removeEventListeners = () => {
-        window.removeEventListener('popstate',  handlePopState);
-    }
+  const pushHistory = (state: any, push: any) => {
+    // eslint-disable-next-line no-restricted-globals
+    if (push) return history.pushState(state, id);
+    // eslint-disable-next-line no-restricted-globals
+    history.replaceState(state, id);
+  };
 
-    const handlePopState = () => {
-        // Whenever someone navigates, we want to be closed
-         props.onRequestClose();
-    }
+  useEffect(() => {
+    addEventListeners();
+    // Add a history event only if it's not currently for our modal. This
+    // avoids polluting the history with many entries. We only need one.
+    // eslint-disable-next-line no-restricted-globals
+    pushHistory(id, history.state === null || history.state !== id);
 
-    const pushHistory = (state, push) => {
-        if (push) return history.pushState(state, id);
-        history.replaceState(state, id);
-    }
-    
-   return <ModalComponent {...props} />;
+    return () => {
+      removeEventListeners();
+    };
+  }, [addEventListeners, removeEventListeners]);
+
+  return <ModalComponent {...props} />;
 };
 
+interface PropsInterface {
+  id: string;
+  isRtl: boolean;
+  onRequestClose: any;
+  onRequestOpen: any;
+}
 
-Modal.propTypes = {
-    id: PropTypes.string,
-    isRtl: PropTypes.bool,
-    onRequestClose: PropTypes.func,
-    onRequestOpen: PropTypes.func
-};
+// TODO
+// Modal.propTypes = {
+//     id: PropTypes.string,
+//     isRtl: PropTypes.bool,
+//     onRequestClose: PropTypes.func,
+//     onRequestOpen: PropTypes.func
+// };
 
-const mapStateToProps = state => ({
-    isRtl: state.locales.isRtl
+const mapStateToProps = (state: any) => ({
+  isRtl: state.locales.isRtl,
 });
 
-export default connect(
-    mapStateToProps
-)(Modal);
+export default connect(mapStateToProps)(Modal);
