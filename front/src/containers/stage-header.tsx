@@ -36,6 +36,7 @@ interface PropsInterface {
   showBranding: boolean;
   stageSizeMode: any;
   vm: any;
+  stageSize: any;
 }
 
 // TODO

@@ -35,7 +35,7 @@ const mapStateToProps = (state: any) => {
   const targets = state.scratchGui.targets;
   const currentTargetId = targets.editingTarget;
 
-  let asset;
+  let asset: any;
   if (currentTargetId) {
     if (targets.stage.id === currentTargetId) {
       asset = targets.stage.costume.asset;

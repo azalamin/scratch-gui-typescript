@@ -47,7 +47,7 @@ const TargetPane = (props: PropsInterface) => {
     props.vm.postSpriteInfo({ y });
   };
   const handleDeleteSprite = (id: any) => {
-    const restoreSprite = props.vm.deleteSprite(id);
+    const restoreSprite: any = props.vm.deleteSprite(id);
     const restoreFun = () => restoreSprite().then(handleActivateBlocksTab);
     props.dispatchUpdateRestore({
       restoreFun: restoreFun,
@@ -234,7 +234,7 @@ const TargetPane = (props: PropsInterface) => {
         );
       } else if (dragInfo.dragType === DragConstants.BACKPACK_CODE) {
         fetchCode(dragInfo.payload.bodyUrl)
-          .then((blocks: any) => shareBlocks(blocks, targetId))
+          .then((blocks: any) => shareBlocks(blocks, targetId, null))
           .then(() => props.vm.refreshWorkspace());
       }
     }
@@ -290,7 +290,7 @@ const {
   onSelectSprite, // eslint-disable-line no-unused-vars
   onActivateBlocksTab, // eslint-disable-line no-unused-vars
   ...targetPaneProps
-} = TargetPaneComponent;
+}: any = TargetPaneComponent;
 
 interface PropsInterface {
   intl: IntlShape;
@@ -306,6 +306,7 @@ interface PropsInterface {
   hoveredTarget: any;
   onReceivedBlocks: any;
   workspaceMetrics: any;
+  stageSize: any;
 }
 
 // TODO

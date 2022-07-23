@@ -148,6 +148,7 @@ class VideoStep extends React.Component<VideoStepInterface> {
 interface VideoStepInterface {
   expanded: boolean;
   video: string;
+  dragging: any;
 }
 
 // TODO
@@ -369,7 +370,7 @@ const Cards = (props: CardsPropsInterface) => {
     step,
     expanded,
     ...posProps
-  } = props;
+  }: any = props;
   let { x, y } = posProps;
 
   if (activeDeckId === null) return;
@@ -393,7 +394,7 @@ const Cards = (props: CardsPropsInterface) => {
     y = window.innerHeight - tallCardHeight - bottomMargin - menuBarHeight;
   }
 
-  const steps = content[activeDeckId].steps;
+  const steps: any = content[activeDeckId].steps;
 
   return (
     // Custom overlay to act as the bounding parent for the draggable, using values from above
@@ -470,25 +471,25 @@ const Cards = (props: CardsPropsInterface) => {
 };
 
 interface CardsPropsInterface {
-  activeDeckId: string;
-  content: any;
-  dragging: boolean;
-  expanded: boolean;
-  isRtl: boolean;
-  locale: string;
-  onActivateDeckFactory: any;
-  onCloseCards: any;
-  onDrag: any;
-  onEndDrag: any;
-  onNextStep: any;
-  onPrevStep: any;
-  onShowAll: any;
-  onShrinkExpandCards: any;
-  onStartDrag: any;
-  showVideos: boolean;
-  step: number;
-  x: number;
-  y: number;
+  activeDeckId?: string;
+  content?: any;
+  dragging?: boolean;
+  expanded?: boolean;
+  isRtl?: boolean;
+  locale?: string;
+  onActivateDeckFactory?: any;
+  onCloseCards?: any;
+  onDrag?: any;
+  onEndDrag?: any;
+  onNextStep?: any;
+  onPrevStep?: any;
+  onShowAll?: any;
+  onShrinkExpandCards?: any;
+  onStartDrag?: any;
+  showVideos?: boolean;
+  step?: number;
+  x?: number;
+  y?: number;
 }
 
 // TODO

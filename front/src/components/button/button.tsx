@@ -39,12 +39,13 @@ const ButtonComponent: FC<PropsInterface> = ({
 };
 
 interface PropsInterface {
-  children: JSX.Element;
-  className: string;
-  disabled: boolean;
-  iconClassName: string;
-  iconSrc: string;
-  onClick: any;
+  children?: JSX.Element;
+  className?: string;
+  disabled?: boolean;
+  iconClassName?: string;
+  iconSrc?: string;
+  onClick?: any;
+  onKeyPress?: any;
 }
 
 // TODO

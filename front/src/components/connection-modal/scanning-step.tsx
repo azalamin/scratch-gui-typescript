@@ -83,6 +83,9 @@ interface PropsInterface {
   onRefresh: any;
   peripheralList: any;
   scanning: boolean;
+  phase: any;
+  title: any;
+  onConnected: any;
 }
 
 // TODO

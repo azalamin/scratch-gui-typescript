@@ -184,7 +184,6 @@ const SoundTab = (props: PropsInterface) => {
   };
 
   const {
-    dispatchUpdateRestore, // eslint-disable-line no-unused-vars
     intl,
     isRtl,
     vm,

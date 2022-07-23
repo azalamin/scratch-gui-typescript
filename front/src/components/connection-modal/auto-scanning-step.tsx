@@ -133,6 +133,7 @@ interface PropsInterface {
   onRefresh: any;
   onStartScan: any;
   phase?: any;
+  title: any;
 }
 
 // TODO

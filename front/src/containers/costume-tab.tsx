@@ -154,7 +154,7 @@ const CostumeTab = (props: PropsInterface) => {
     const name = props.vm.editingTarget.isStage
       ? props.intl.formatMessage(messages.backdrop, { index: 1 })
       : props.intl.formatMessage(messages.costume, { index: 1 });
-    handleNewCostume(emptyCostume(name));
+    handleNewCostume(emptyCostume(name), null, null);
   };
   const handleSurpriseCostume = () => {
     const item =
@@ -169,7 +169,7 @@ const CostumeTab = (props: PropsInterface) => {
       bitmapResolution: item.bitmapResolution,
       skinId: null,
     };
-    handleNewCostume(vmCostume, true /*  */);
+    handleNewCostume(vmCostume, true, null);
   };
   const handleSurpriseBackdrop = () => {
     const item =
@@ -184,9 +184,9 @@ const CostumeTab = (props: PropsInterface) => {
       bitmapResolution: item.bitmapResolution,
       skinId: null,
     };
-    handleNewCostume(vmCostume);
+    handleNewCostume(vmCostume, null, null);
   };
-  const handleCostumeUpload = e => {
+  const handleCostumeUpload = (e: any) => {
     const storage = props.vm.runtime.storage;
     const targetId = props.vm.editingTarget.id;
     props.onShowImporting();
@@ -259,7 +259,6 @@ const CostumeTab = (props: PropsInterface) => {
   };
 
   const {
-    dispatchUpdateRestore, // eslint-disable-line no-unused-vars
     intl,
     isRtl,
     onNewLibraryBackdropClick,
