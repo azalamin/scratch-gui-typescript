@@ -350,7 +350,7 @@ interface PreviewsStepInterface {
 //   onShowAll: PropTypes.func.isRequired,
 // };
 
-const Cards = (props: CardsPropsInterface) => {
+const Cards: any = (props: CardsPropsInterface) => {
   const {
     activeDeckId,
     content,
