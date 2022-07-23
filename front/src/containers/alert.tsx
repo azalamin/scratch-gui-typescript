@@ -33,7 +33,6 @@ const Alert = (props: PropsInterface) => {
         <AlertComponent
           closeButton={closeButton}
           key={index}
-          message={message}
           content={content}
           extensionName={extensionName}
           iconSpinner={iconSpinner}
@@ -46,6 +45,7 @@ const Alert = (props: PropsInterface) => {
           onDownload={downloadProject}
           onReconnect={handleOnReconnect}
           onSaveNow={onSaveNow}
+          message={message}
         />
       )}
     </SB3Downloader>
@@ -65,22 +65,22 @@ const mapDispatchToProps = (dispatch: any) => ({
 });
 
 interface PropsInterface {
-  closeButton: boolean;
-  content: any;
-  extensionId: string;
-  extensionName: string;
-  iconSpinner: boolean;
-  iconURL: string;
-  index: number;
-  level: string;
-  message: any;
-  onCloseAlert: any;
-  onOpenConnectionModal: any;
-  onSaveNow: any;
-  showDownload: boolean;
-  showReconnect: boolean;
-  showSaveNow: boolean;
-  onSaveFinished: any;
+  closeButton?: boolean;
+  content?: any;
+  extensionId?: string;
+  extensionName?: string;
+  iconSpinner?: boolean;
+  iconURL?: string;
+  index?: number;
+  level?: string;
+  message?: any;
+  onCloseAlert?: any;
+  onOpenConnectionModal?: any;
+  onSaveNow?: any;
+  showDownload?: boolean;
+  showReconnect?: boolean;
+  showSaveNow?: boolean;
+  onSaveFinished?: any;
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Alert);

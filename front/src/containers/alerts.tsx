@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { closeAlert, filterPopupAlerts } from '../reducers/alerts';
 
-import AlertsComponent from '../components/alerts/alerts.tsx';
+import AlertsComponent from '../components/alerts/alerts';
 
 const Alerts: FC<PropsInterface> = ({
   alertsList,

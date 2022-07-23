@@ -153,11 +153,11 @@ interface PropsInterface {
   hidden: boolean;
   iconMd5: string;
   iconRawURL: string;
-  icons: any; // todo
+  icons: any;
   id: number;
   insetIconURL: string;
   internetConnectionRequired: boolean;
-  isPlaying: boolean;
+  isPlaying: any;
   name: string | JSX.Element;
   onMouseEnter: any;
   onMouseLeave: any;

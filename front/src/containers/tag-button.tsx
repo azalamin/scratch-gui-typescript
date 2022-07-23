@@ -11,6 +11,8 @@ const TagButton = (props: PropsInterface) => {
 interface PropsInterface {
   onClick: any;
   tag: any; //todo
+  active?: any;
+  className: any;
 }
 
 export default TagButton;

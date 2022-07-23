@@ -96,19 +96,20 @@ const AlertComponent: FC<PropsInterface> = ({
 );
 
 interface PropsInterface {
-  closeButton: boolean;
+  closeButton: any;
   content: JSX.Element | string;
-  extensionName: string;
-  iconSpinner: boolean;
-  iconURL: string;
-  level: string;
+  extensionName: any;
+  iconSpinner: any;
+  iconURL: any;
+  level: any;
   onCloseAlert: any;
   onDownload: any;
   onReconnect: any;
   onSaveNow: any;
   showDownload: any;
-  showReconnect: boolean;
+  showReconnect: any;
   showSaveNow: any;
+  message: any;
 }
 
 // TODO

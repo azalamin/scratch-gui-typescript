@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
 import { connect } from 'react-redux';
-import ModalComponent from '../components/modal/modal.jsx';
+import ModalComponent from '../components/modal/modal.js';
 
 // class Modal extends React.Component {
 //     constructor (props) {
@@ -45,7 +45,7 @@ import ModalComponent from '../components/modal/modal.jsx';
 // }
 
 const id: any = 244309;
-const Modal = (props: PropsInterface) => {
+const Modal: any = (props: PropsInterface): any => {
   const handlePopState = useCallback(() => {
     props.onRequestClose();
   }, [props]);

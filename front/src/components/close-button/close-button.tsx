@@ -50,11 +50,11 @@ closeIcons = {
 };
 
 interface PropsInterface {
-  buttonType: any;
-  className: string;
-  color: string;
-  onClick: any;
-  size: any;
+  buttonType?: any;
+  className?: string;
+  color?: any;
+  onClick?: any;
+  size?: any;
 }
 
 // TODO

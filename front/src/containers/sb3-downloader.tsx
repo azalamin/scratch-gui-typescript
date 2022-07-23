@@ -42,8 +42,8 @@ interface PropsInterface {
   children: any;
   className: string;
   onSaveFinished?: any;
-  projectFilename: string;
-  saveProjectSb3: any;
+  projectFilename?: string;
+  saveProjectSb3?: any;
 }
 
 // TODO

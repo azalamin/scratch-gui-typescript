@@ -1,5 +1,5 @@
 import bindAll from 'lodash.bindall';
-import React, { useRef } from 'react';
+import React from 'react';
 import AudioTrimmerComponent from '../components/audio-trimmer/audio-trimmer.jsx';
 import DragRecognizer from '../lib/drag-recognizer';
 

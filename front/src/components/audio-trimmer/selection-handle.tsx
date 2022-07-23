@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-import React from 'react';
 import classNames from 'classnames';
 import Box from '../box/box.jsx';
 import styles from './audioTrimmer.module.css';

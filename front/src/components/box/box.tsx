@@ -117,6 +117,9 @@ interface PropsInterface {
   /** How whitespace should wrap within this block. */
   wrap?: any;
   dir?: any;
+  onMouseDown?: any;
+  onTouchStart?: any;
+  bounds?: any;
 }
 
 // TODO
