@@ -5,7 +5,7 @@ eventually be consolidated.
 */
 
 import classNames from 'classnames';
-import React, { FC } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import MenuItemContainer from '../../containers/menu-item.js';
