@@ -21,10 +21,10 @@ const MenuComponent: FC<PropsInterface> = ({
 );
 
 interface PropsInterface {
-  children: JSX.Element;
-  className: string;
-  componentRef: any;
-  place: any;
+  children?: JSX.Element;
+  className?: any;
+  componentRef?: any;
+  place?: any;
 }
 
 // TODO
@@ -45,9 +45,9 @@ const MenuItem: FC<PropsInterface> = ({ children, className, onClick }) => (
 );
 
 interface PropsInterface {
-  children: JSX.Element;
-  className: string;
-  onClick: any;
+  children?: JSX.Element;
+  className?: any;
+  onClick?: any;
 }
 
 // TODO
@@ -71,7 +71,7 @@ const MenuSection: FC<PropsInterface> = ({ children }) => (
 );
 
 interface PropsInterface {
-  children: JSX.Element;
+  children?: JSX.Element;
 }
 
 // TODO
