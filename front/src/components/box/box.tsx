@@ -120,6 +120,14 @@ interface PropsInterface {
   onMouseDown?: any;
   onTouchStart?: any;
   bounds?: any;
+  role?: any;
+  tabIndex?: any;
+  onBlur?: any;
+  onClick?: any;
+  onFocus?: any;
+  onKeyPress?: any;
+  onMouseEnter?: any;
+  onMouseLeave?: any;
 }
 
 // TODO

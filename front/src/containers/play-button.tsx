@@ -101,7 +101,7 @@ const PlayButton = (props: PropInterface) => {
 };
 
 interface PropInterface {
-  className: string;
+  className?: string;
   isPlaying: boolean;
   onPlay: any;
   onStop: any;
