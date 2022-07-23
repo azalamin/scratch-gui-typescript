@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 
 import AccountNavComponent from '../components/menu-bar/account-nav.jsx';
 
-const AccountNav = function (props: PropsInterface) {
+const AccountNav: any = function (props: PropsInterface) {
   const { ...componentProps } = props;
   return <AccountNavComponent {...componentProps} />;
 };
@@ -22,6 +22,7 @@ interface PropsInterface {
   profileUrl: string;
   thumbnailUrl: string;
   username: string;
+  className: any;
 }
 
 const mapStateToProps = (state: any) => ({

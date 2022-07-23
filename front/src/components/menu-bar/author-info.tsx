@@ -37,7 +37,7 @@ interface PropsInterface {
   imageUrl: string;
   projectTitle: string;
   userId: string | boolean;
-  username: string | boolean;
+  username: any;
 }
 
 // TODO

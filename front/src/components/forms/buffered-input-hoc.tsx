@@ -45,6 +45,11 @@ export default function (Input: any) {
   interface PropsInterface {
     onSubmit: any;
     value: string | number;
+    className?: any;
+    maxLength?: any;
+    placeholder?: any;
+    tabIndex?: any;
+    type?: any;
   }
 
   // TODO

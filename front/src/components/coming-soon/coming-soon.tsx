@@ -132,7 +132,8 @@ interface TooltipInterface {
   delayShow: number;
   place: any;
   tooltipClassName: string;
-  tooltipId: string;
+  tooltipId: any;
+  isRtl?: any;
 }
 
 // TODO

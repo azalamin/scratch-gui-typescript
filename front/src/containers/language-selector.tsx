@@ -29,11 +29,12 @@ const LanguageSelector = (prop: PropsInterface) => {
 };
 
 interface PropsInterface {
-  children: JSX.Element;
+  children?: JSX.Element;
   currentLocale: string;
   // Only checking key presence for messagesByLocale, no need to be more specific than object
   messagesByLocale: any; // todo
   onChangeLanguage: any;
+  label?: any;
 }
 
 const mapStateToProps = (state: any) => ({

@@ -35,7 +35,11 @@ interface PropsInterface {
 //     place: PropTypes.oneOf(['left', 'right'])
 // };
 
-const MenuItem: FC<PropsInterface> = ({ children, className, onClick }) => (
+const MenuItem: any = ({
+  children,
+  className,
+  onClick,
+}: PropsInterfaceMenuItem) => (
   <li
     className={classNames(styles.menuItem, styles.hoverable, className)}
     onClick={onClick}
@@ -44,10 +48,11 @@ const MenuItem: FC<PropsInterface> = ({ children, className, onClick }) => (
   </li>
 );
 
-interface PropsInterface {
+interface PropsInterfaceMenuItem {
   children?: JSX.Element;
   className?: any;
   onClick?: any;
+  isRtl: any;
 }
 
 // TODO
@@ -64,13 +69,13 @@ const addDividerClassToFirstChild = (child: any, id: any) =>
     key: id,
   });
 
-const MenuSection: FC<PropsInterface> = ({ children }) => (
+const MenuSection: any = ({ children }: MenuSectionInterface) => (
   <React.Fragment>
     {React.Children.map(children, addDividerClassToFirstChild)}
   </React.Fragment>
 );
 
-interface PropsInterface {
+interface MenuSectionInterface {
   children?: JSX.Element;
 }
 

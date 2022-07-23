@@ -49,6 +49,7 @@ interface PropsInterface {
   // children: PropTypes.node,
   onRequestClose: any;
   open: boolean;
+  place: any;
 }
 
 export default Menu;

@@ -16,7 +16,7 @@ import UserAvatar from './user-avatar.jsx';
 
 import styles from './accountNav.module.css';
 
-const AccountNavComponent: FC<PropsInterface> = ({
+const AccountNavComponent: any = ({
   className,
   classroomId,
   isEducator,
@@ -30,7 +30,7 @@ const AccountNavComponent: FC<PropsInterface> = ({
   profileUrl,
   thumbnailUrl,
   username,
-}) => (
+}: PropsInterface) => (
   <React.Fragment>
     <div className={classNames(styles.userInfo, className)} onMouseUp={onClick}>
       {thumbnailUrl ? (

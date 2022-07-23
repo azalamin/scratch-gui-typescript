@@ -29,7 +29,7 @@ const LanguageSelector: FC<PropsInterface> = ({
 
 interface PropsInterface {
   currentLocale: string;
-  label: string;
+  label?: string;
   onChange: any;
 }
 
