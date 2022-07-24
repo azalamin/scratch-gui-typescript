@@ -15,8 +15,12 @@ const Input = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  className: string;
-  small: boolean;
+  className?: string;
+  small?: boolean;
+  autoFocus?: any;
+  value?: any;
+  onChange?: any;
+  onKeyPress?: any;
 }
 
 // TODO
