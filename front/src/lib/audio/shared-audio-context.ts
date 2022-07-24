@@ -1,7 +1,7 @@
 import StartAudioContext from 'startaudiocontext';
 import bowser from 'bowser';
 
-let AUDIO_CONTEXT;
+let AUDIO_CONTEXT: any;
 
 if (!bowser.msie) {
     /**
@@ -24,6 +24,7 @@ if (!bowser.msie) {
  * Wrap browser AudioContext because we shouldn't create more than one
  * @return {AudioContext} The singleton AudioContext
  */
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
     return AUDIO_CONTEXT;
 }

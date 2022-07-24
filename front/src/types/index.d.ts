@@ -5,6 +5,7 @@ declare global {
     Sentry: any;
     Wistia: any;
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
+    webkitAudioContext: any;
   }
 
   interface Document {
