@@ -15,3 +15,4 @@ declare module 'scratch-svg-renderer';
 declare module 'scratch-storage';
 declare module 'omggif';
 declare module 'papaparse';
+declare module 'scratch-audio';
