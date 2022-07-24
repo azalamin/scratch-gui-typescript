@@ -16,3 +16,5 @@ declare module 'scratch-storage';
 declare module 'omggif';
 declare module 'papaparse';
 declare module 'scratch-audio';
+declare module 'redux-throttle';
+declare module 'scratch-l10n/locales/editor-msgs';

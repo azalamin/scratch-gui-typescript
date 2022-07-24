@@ -36,6 +36,7 @@
 		"react-scripts": "5.0.0",
 		"react-tabs": "^5.1.0",
 		"react-tooltip": "^4.2.21",
+		"redux-throttle": "^0.1.1",
 		"scratch-audio": "^0.1.0-prerelease.20200528195344",
 		"scratch-blocks": "^0.1.0-prerelease.20220524062105",
 		"scratch-l10n": "^3.14.20220723031544",
