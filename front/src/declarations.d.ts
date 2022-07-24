@@ -6,3 +6,4 @@ declare module 'get-user-media-promise';
 declare module 'wav-encoder';
 declare module 'computed-style-to-inline-style';
 declare module 'scratch-blocks';
+declare module 'js-base64';
