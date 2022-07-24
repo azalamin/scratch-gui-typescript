@@ -807,9 +807,9 @@ const xmlClose = '</xml>';
  * @returns {string} - a ScratchBlocks-style XML document for the contents of the toolbox.
  */
 const makeToolboxXML = function (
-  isInitialSetup: any,
+  isInitialSetup?: any,
   isStage: boolean | null = true,
-  targetId: any,
+  targetId?: any,
   categoriesXML: any = [],
   costumeName: any = '',
   backdropName: any = '',
