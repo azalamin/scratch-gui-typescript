@@ -6,6 +6,7 @@ declare global {
     Wistia: any;
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
     webkitAudioContext: any;
+    webkitOfflineAudioContext: any;
   }
 
   interface Document {
