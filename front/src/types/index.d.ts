@@ -17,5 +17,6 @@ declare global {
   }
   interface Navigator {
     userLanguage: any;
+    msSaveOrOpenBlob: any;
   }
 }

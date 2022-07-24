@@ -2,6 +2,12 @@ import bindAll from 'lodash.bindall';
 import { getEventXY } from './touch-utils';
 
 class DragRecognizer {
+  private _touchDragAngle: any;
+  _onDrag: any;
+  _onDragEnd: any;
+  private _distanceThreshold: any;
+  private _initialOffset: any;
+  private _gestureState: any;
   /* Gesture states */
   static get STATE_UNIDENTIFIED() {
     return 'unidentified';
@@ -36,7 +42,7 @@ class DragRecognizer {
     ]);
   }
 
-  start(event) {
+  start(event: any) {
     this._initialOffset = getEventXY(event);
     this._bindListeners();
   }
@@ -68,11 +74,11 @@ class DragRecognizer {
     window.removeEventListener('mousemove', this._handleMove);
     window.removeEventListener('touchend', this._handleEnd);
     window.removeEventListener('touchmove', this._handleMove, {
-      passive: false,
+      // passive: false,
     });
   }
 
-  _handleMove(event) {
+  _handleMove(event: any) {
     // For gestures identified as vertical scrolls, do not process movement events
     if (this._isScroll()) return;
 
