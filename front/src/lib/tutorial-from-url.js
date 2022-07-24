@@ -3,8 +3,8 @@
  * Utility function to detect tutorial id from query paramenter on the URL.
  */
 
-import tutorials from './libraries/decks/index.jsx';
 import analytics from './analytics';
+import tutorials from './libraries/decks/index.js';
 
 /**
  * Get the tutorial id from the given numerical id (representing the
@@ -14,17 +14,17 @@ import analytics from './analytics';
  * was not found.
  */
 const getDeckIdFromUrlId = urlId => {
-    for (const deckId in tutorials) {
-        if (tutorials[deckId].urlId === urlId) {
-            analytics.event({
-                category: 'how-to',
-                action: 'load from url',
-                label: `${deckId}`
-            });
-            return deckId;
-        }
+  for (const deckId in tutorials) {
+    if (tutorials[deckId].urlId === urlId) {
+      analytics.event({
+        category: 'how-to',
+        action: 'load from url',
+        label: `${deckId}`,
+      });
+      return deckId;
     }
-    return null;
+  }
+  return null;
 };
 
 /**
@@ -35,14 +35,12 @@ const getDeckIdFromUrlId = urlId => {
  * requested or found.
  */
 const detectTutorialId = queryParams => {
-    const tutorialID = Array.isArray(queryParams.tutorial) ?
-        queryParams.tutorial[0] :
-        queryParams.tutorial;
-    if (typeof tutorialID === 'undefined') return null;
-    if (tutorialID === 'all') return tutorialID;
-    return getDeckIdFromUrlId(tutorialID);
+  const tutorialID = Array.isArray(queryParams.tutorial)
+    ? queryParams.tutorial[0]
+    : queryParams.tutorial;
+  if (typeof tutorialID === 'undefined') return null;
+  if (tutorialID === 'all') return tutorialID;
+  return getDeckIdFromUrlId(tutorialID);
 };
 
-export {
-    detectTutorialId
-};
+export { detectTutorialId };
