@@ -37,6 +37,7 @@
 		"scratch-blocks": "^0.1.0-prerelease.20220524062105",
 		"scratch-l10n": "^3.14.20220723031544",
 		"scratch-render": "^0.1.0-prerelease.20211028200436",
+		"scratch-svg-renderer": "^0.2.0-prerelease.20210727023023",
 		"scratch-vm": "^1.0.1",
 		"startaudiocontext": "^1.2.1",
 		"wav-encoder": "^1.3.0",
