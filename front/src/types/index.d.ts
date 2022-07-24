@@ -14,9 +14,14 @@ declare global {
 
   interface Document {
     fonts: any;
+    documentElement: any;
   }
   interface Navigator {
     userLanguage: any;
     msSaveOrOpenBlob: any;
+  }
+  interface HTMLElement {
+    webkitRequestFullScreen: any;
+    mozRequestFullScreen: any;
   }
 }
