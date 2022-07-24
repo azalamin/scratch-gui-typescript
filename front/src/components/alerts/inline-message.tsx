@@ -22,6 +22,7 @@ interface PropsInterface {
   content: any;
   iconSpinner: any;
   level: string;
+  className: any;
 }
 
 // InlineMessageComponent.propTypes = {
