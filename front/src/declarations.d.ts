@@ -18,3 +18,4 @@ declare module 'papaparse';
 declare module 'scratch-audio';
 declare module 'redux-throttle';
 declare module 'scratch-l10n/locales/editor-msgs';
+declare module 'scratch-paint';
