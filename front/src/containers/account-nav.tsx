@@ -15,6 +15,7 @@ const AccountNav: any = function (props: PropsInterface) {
 };
 
 interface PropsInterface {
+  className: any;
   classroomId: string;
   isEducator: boolean;
   isRtl: boolean;
@@ -22,7 +23,6 @@ interface PropsInterface {
   profileUrl: string;
   thumbnailUrl: string;
   username: string;
-  className: any;
 }
 
 const mapStateToProps = (state: any) => ({

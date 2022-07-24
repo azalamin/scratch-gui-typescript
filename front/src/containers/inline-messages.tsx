@@ -31,7 +31,7 @@ const InlineMessages: FC<PropsInterface> = ({ alertsList, className }) => {
 
 interface PropsInterface {
   alertsList: any; // Todo PropTypes.arrayOf(PropTypes.object);
-  className: string;
+  className?: string;
 }
 
 const mapStateToProps = (state: any) => ({

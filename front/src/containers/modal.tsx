@@ -46,19 +46,19 @@ import ModalComponent from '../components/modal/modal.js';
 
 const id: any = 244309;
 const Modal: any = (props: PropsInterface): any => {
-  const handlePopState = useCallback(() => {
+  const handlePopState: any = useCallback(() => {
     props.onRequestClose();
   }, [props]);
 
-  const addEventListeners = useCallback(() => {
+  const addEventListeners: any = useCallback(() => {
     window.addEventListener('popstate', handlePopState);
   }, [handlePopState]);
 
-  const removeEventListeners = useCallback(() => {
+  const removeEventListeners: any = useCallback(() => {
     window.removeEventListener('popstate', handlePopState);
   }, [handlePopState]);
 
-  const pushHistory = (state: any, push: any) => {
+  const pushHistory: any = (state: any, push: any) => {
     // eslint-disable-next-line no-restricted-globals
     if (push) return history.pushState(state, id);
     // eslint-disable-next-line no-restricted-globals
@@ -85,6 +85,7 @@ interface PropsInterface {
   isRtl: boolean;
   onRequestClose: any;
   onRequestOpen: any;
+  children?: any;
 }
 
 // TODO

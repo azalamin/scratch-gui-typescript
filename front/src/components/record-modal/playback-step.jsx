@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Box from '../box/box.jsx';
 import Waveform from '../waveform/waveform.jsx';
-import Meter from '../meter/meter.jsx';
+import Meter from '../meter/meter.js';
 import AudioTrimmer from '../../containers/audio-trimmer.jsx';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 

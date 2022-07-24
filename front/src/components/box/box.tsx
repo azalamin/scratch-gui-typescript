@@ -128,6 +128,7 @@ interface PropsInterface {
   onKeyPress?: any;
   onMouseEnter?: any;
   onMouseLeave?: any;
+  onDoubleClick?: any;
 }
 
 // TODO
