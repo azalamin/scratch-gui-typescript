@@ -12,3 +12,5 @@ declare module '!arraybuffer-loader!./83c36d806dc92327b9e7049a565c6bff.wav';
 declare module 'scratch-vm/src/extension-support/argument-type';
 declare module 'scratch-vm/src/extension-support/block-type';
 declare module 'scratch-svg-renderer';
+declare module 'scratch-storage';
+declare module 'omggif';
