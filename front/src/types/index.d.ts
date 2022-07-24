@@ -9,9 +9,13 @@ declare global {
     webkitOfflineAudioContext: any;
     GA_ID: any;
     ga: any;
+    navigator: any;
   }
 
   interface Document {
     fonts: any;
+  }
+  interface Navigator {
+    userLanguage: any;
   }
 }
