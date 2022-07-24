@@ -25,10 +25,10 @@ const IconButton: FC<PropsInterface> = ({
 
 interface PropsInterface {
   className: string;
-  disabled: boolean;
+  disabled?: boolean;
   img: string;
   onClick: any;
-  title: JSX.Element;
+  title: any;
 }
 
 // IconButton.propTypes = {

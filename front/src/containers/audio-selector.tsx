@@ -288,6 +288,8 @@ interface PropsInterface {
   playhead: number;
   trimEnd: number;
   trimStart: number;
+  onPlay?: any;
+  onStop?: any;
 }
 
 export default AudioSelector;

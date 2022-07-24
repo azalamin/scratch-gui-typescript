@@ -14,10 +14,10 @@ const Label = (props: PropsInterface) => (
 );
 
 interface PropsInterface {
-  above: boolean;
-  children: JSX.Element;
-  secondary: boolean;
-  text: string | JSX.Element;
+  above?: boolean;
+  children?: JSX.Element;
+  secondary?: boolean;
+  text?: string | JSX.Element;
 }
 
 // TODO

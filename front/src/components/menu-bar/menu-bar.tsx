@@ -66,6 +66,7 @@ import collectMetadata from '../../lib/collect-metadata';
 
 import styles from './menuBar.module.css';
 
+import bowser from 'bowser';
 import helpIcon from '../../lib/assets/icon--tutorials.svg';
 import languageIcon from '../language-selector/language-icon.svg';
 import dropdownCaret from './dropdown-caret.svg';
@@ -73,11 +74,9 @@ import aboutIcon from './icon--about.svg';
 import mystuffIcon from './icon--mystuff.png';
 import profileIcon from './icon--profile.png';
 import remixIcon from './icon--remix.svg';
-
 import scratchLogo from './scratch-logo.svg';
 
 import sharedMessages from '../../lib/shared-messages';
-const bowser: any = require('bowser');
 
 const ariaMessages = defineMessages({
   language: {

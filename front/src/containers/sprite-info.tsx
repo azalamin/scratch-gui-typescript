@@ -41,6 +41,14 @@ interface PropsInterface {
   onChangeY: any;
   x: number;
   y: number;
+  direction?: any;
+  disabled?: any;
+  name?: any;
+  rotationStyle?: any;
+  size?: any;
+  stageSize?: any;
+  visible?: any;
+  onChangeRotationStyle?: any;
 }
 
 // TODO

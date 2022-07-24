@@ -53,6 +53,14 @@ interface PropsInterface {
   onSetPlayhead: any;
   onStopPlaying: any;
   onPlay: any;
+  encoding?: any;
+  levels?: any;
+  playhead?: any;
+  playing?: any;
+  onBack?: any;
+  onSetTrimEnd?: any;
+  onSetTrimStart?: any;
+  onSubmit?: any;
   // ...PlaybackStepComponent.propTypes
 }
 

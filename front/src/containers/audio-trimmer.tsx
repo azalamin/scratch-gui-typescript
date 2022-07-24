@@ -145,9 +145,9 @@ class AudioTrimmer extends React.Component<PropsInterface> {
 interface PropsInterface {
   onSetTrimEnd: any;
   onSetTrimStart: any;
-  playhead: number;
-  trimEnd: number;
-  trimStart: number;
+  playhead?: any;
+  trimEnd?: any;
+  trimStart?: any;
 }
 
 export default AudioTrimmer;
