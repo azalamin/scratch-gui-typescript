@@ -13,7 +13,7 @@ const codePayload = async ({ blockObjects, topBlockId }: any) => {
   };
 
   const dataUrl = await blockToImage(topBlockId);
-  const thumbnail = await jpegThumbnail(dataUrl);
+  const thumbnail: any = await jpegThumbnail(dataUrl);
   payload.thumbnail = thumbnail.replace('data:image/jpeg;base64,', '');
   return payload;
 };
