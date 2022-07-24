@@ -24,7 +24,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
                         only rendering modals, not the GUI.
  * @returns {React.Component} component with redux and intl state provided
  */
-const AppStateHOC = function (WrappedComponent: any, localesOnly: any) {
+const AppStateHOC: any = function (WrappedComponent: any, localesOnly: any) {
   class AppStateWrapper extends React.Component<PropsInterface> {
     store: any;
     constructor(props: PropsInterface) {
