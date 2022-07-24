@@ -34,10 +34,11 @@ class SortableAsset extends React.Component<PropsInterface> {
 
 interface PropsInterface {
   children: JSX.Element;
-  className: string;
-  index: number;
-  onAddSortable: any;
-  onRemoveSortable: any;
+  className?: string;
+  index?: number;
+  onAddSortable?: any;
+  onRemoveSortable?: any;
+  id?: any;
 }
 
 // TODO

@@ -9,8 +9,8 @@ const AssetPanel = (props: any) => (
   </Box>
 );
 
-AssetPanel.propTypes = {
-  ...Selector.propTypes,
-};
+// AssetPanel.propTypes = {
+//   ...Selector.propTypes,
+// };
 
 export default AssetPanel;

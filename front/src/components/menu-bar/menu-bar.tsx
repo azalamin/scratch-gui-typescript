@@ -10,9 +10,9 @@ import {
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import AccountNav from '../../containers/account-nav.js';
-import DeletionRestorer from '../../containers/deletion-restorer.js';
-import LanguageSelector from '../../containers/language-selector.js';
+import AccountNav from '../../containers/account-nav';
+import DeletionRestorer from '../../containers/deletion-restorer';
+import LanguageSelector from '../../containers/language-selector';
 import MenuBarHOC from '../../containers/menu-bar-hoc.js';
 import ProjectWatcher from '../../containers/project-watcher.js';
 import SB3Downloader from '../../containers/sb3-downloader.js';

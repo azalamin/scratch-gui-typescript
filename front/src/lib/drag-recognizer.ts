@@ -20,7 +20,7 @@ class DragRecognizer {
   }
 
   constructor({
-    onDrag = () => {},
+    onDrag = (currentOffset: any, initialOffset: any) => {},
     onDragEnd = () => {},
     touchDragAngle = 70, // Angle and distance thresholds are the same as scratch-blocks
     distanceThreshold = 3,
