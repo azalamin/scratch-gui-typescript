@@ -6,4 +6,8 @@ declare global {
     Wistia: any;
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
   }
+
+  interface Document {
+    fonts: any;
+  }
 }
