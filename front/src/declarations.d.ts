@@ -14,3 +14,4 @@ declare module 'scratch-vm/src/extension-support/block-type';
 declare module 'scratch-svg-renderer';
 declare module 'scratch-storage';
 declare module 'omggif';
+declare module 'papaparse';
