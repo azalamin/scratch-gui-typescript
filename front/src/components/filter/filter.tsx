@@ -40,7 +40,7 @@ interface PropsInterface {
   inputClassName: string;
   onChange: any;
   onClear: any;
-  placeholderText: string;
+  placeholderText: string | any;
 }
 
 // TODO

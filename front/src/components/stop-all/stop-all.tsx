@@ -24,7 +24,7 @@ interface PropsInterface {
   active?: boolean;
   className?: string;
   onClick?: any;
-  title?: string;
+  title?: any;
 }
 
 // TODO

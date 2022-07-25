@@ -5,39 +5,39 @@ import UserAvatar from './user-avatar';
 import styles from './authorInfo.module.css';
 
 const AuthorInfo: any = ({
-	className,
-	imageUrl,
-	projectTitle,
-	// TODO: use userId to link to user's profile
-	userId,
-	username,
+  className,
+  imageUrl,
+  projectTitle,
+  // TODO: use userId to link to user's profile
+  userId,
+  username,
 }: PropsInterface) => (
-	<div className={classNames(className, styles.authorInfo)}>
-		<UserAvatar className={styles.avatar} imageUrl={imageUrl} />
-		<div className={styles.titleAuthor}>
-			<span className={styles.projectTitle}>{projectTitle}</span>
-			<div>
-				<span className={styles.usernameLine}>
-					<FormattedMessage
-						defaultMessage='by {username}'
-						description='Shows that a project was created by this user'
-						id='gui.authorInfo.byUser'
-						values={{
-							username: <span className={styles.username}>{username}</span>,
-						}}
-					/>
-				</span>
-			</div>
-		</div>
-	</div>
+  <div className={classNames(className, styles.authorInfo)}>
+    <UserAvatar className={styles.avatar} imageUrl={imageUrl} />
+    <div className={styles.titleAuthor}>
+      <span className={styles.projectTitle}>{projectTitle}</span>
+      <div>
+        <span className={styles.usernameLine}>
+          <FormattedMessage
+            defaultMessage='by {username}'
+            description='Shows that a project was created by this user'
+            id='gui.authorInfo.byUser'
+            values={{
+              username: <span className={styles.username}>{username}</span>,
+            }}
+          />
+        </span>
+      </div>
+    </div>
+  </div>
 );
 
 interface PropsInterface {
-	className: string;
-	imageUrl: string;
-	projectTitle: string;
-	userId: string | boolean;
-	username: any;
+  className?: string;
+  imageUrl: string;
+  projectTitle: string;
+  userId: string | boolean;
+  username: any;
 }
 
 // TODO
