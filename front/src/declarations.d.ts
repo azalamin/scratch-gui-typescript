@@ -22,3 +22,4 @@ declare module 'scratch-paint';
 declare module 'scratch-render';
 declare module 'react-style-proptype';
 declare module 'to-style';
+declare module 'react-tabs';
