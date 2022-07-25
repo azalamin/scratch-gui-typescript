@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import SpriteLibrary from '../../containers/sprite-library.js';
-import StageSelector from '../../containers/stage-selector.js';
-import SpriteSelectorComponent from '../sprite-selector/sprite-selector.jsx';
+import SpriteLibrary from '../../containers/sprite-library';
+import StageSelector from '../../containers/stage-selector';
+import SpriteSelectorComponent from '../sprite-selector/sprite-selector';
 
 import styles from './targetPane.module.css';
 

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import Monitor from '../../containers/monitor.js';
+import Monitor from '../../containers/monitor';
 import { stageSizeToTransform } from '../../lib/screen-utils';
-import Box from '../box/box.js';
+import Box from '../box/box';
 
 import styles from './monitorList.module.css';
 

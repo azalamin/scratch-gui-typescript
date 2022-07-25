@@ -12,26 +12,26 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import tabStyles from 'react-tabs/style/react-tabs.module.css'; // Can be crash tabStyles
 import Renderer from 'scratch-render';
 
-import BackdropLibrary from '../../containers/backdrop-library.js';
-import Blocks from '../../containers/blocks.js';
-import CostumeLibrary from '../../containers/costume-library.js';
-import CostumeTab from '../../containers/costume-tab.js';
-import SoundTab from '../../containers/sound-tab.js';
-import StageWrapper from '../../containers/stage-wrapper.js';
-import TargetPane from '../../containers/target-pane.js';
-import Watermark from '../../containers/watermark.js';
-import Box from '../box/box.jsx';
-import Loader from '../loader/loader.jsx';
-import MenuBar from '../menu-bar/menu-bar.jsx';
+import BackdropLibrary from '../../containers/backdrop-library';
+import Blocks from '../../containers/blocks';
+import CostumeLibrary from '../../containers/costume-library';
+import CostumeTab from '../../containers/costume-tab';
+import SoundTab from '../../containers/sound-tab';
+import StageWrapper from '../../containers/stage-wrapper';
+import TargetPane from '../../containers/target-pane';
+import Watermark from '../../containers/watermark';
+import Box from '../box/box';
+import Loader from '../loader/loader';
+import MenuBar from '../menu-bar/menu-bar';
 
-import Alerts from '../../containers/alerts.js';
-import Backpack from '../../containers/backpack.js';
-import Cards from '../../containers/cards.js';
-import ConnectionModal from '../../containers/connection-modal.js';
-import DragLayer from '../../containers/drag-layer.js';
-import TipsLibrary from '../../containers/tips-library.js';
-import WebGlModal from '../../containers/webgl-modal.js';
-import TelemetryModal from '../telemetry-modal/telemetry-modal.jsx';
+import Alerts from '../../containers/alerts';
+import Backpack from '../../containers/backpack';
+import Cards from '../../containers/cards';
+import ConnectionModal from '../../containers/connection-modal';
+import DragLayer from '../../containers/drag-layer';
+import TipsLibrary from '../../containers/tips-library';
+import WebGlModal from '../../containers/webgl-modal';
+import TelemetryModal from '../telemetry-modal/telemetry-modal';
 
 import layout, { STAGE_SIZE_MODES } from '../../lib/layout-constants';
 import { resolveStageSize } from '../../lib/screen-utils';

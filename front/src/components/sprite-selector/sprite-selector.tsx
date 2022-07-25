@@ -1,10 +1,10 @@
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
 import { isRtl } from 'scratch-l10n';
-import SpriteInfo from '../../containers/sprite-info.js';
-import ActionMenu from '../action-menu/action-menu.js';
-import Box from '../box/box.js';
-import SpriteList from './sprite-list.js';
+import SpriteInfo from '../../containers/sprite-info';
+import ActionMenu from '../action-menu/action-menu';
+import Box from '../box/box';
+import SpriteList from './sprite-list';
 
 import styles from './spriteSelector.module.css';
 

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
-import ListMonitorScroller from './list-monitor-scroller.js';
+import ListMonitorScroller from './list-monitor-scroller';
 import styles from './monitor.module.css';
 
 const ListMonitor = ({

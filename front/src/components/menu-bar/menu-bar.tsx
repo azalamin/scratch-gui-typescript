@@ -13,22 +13,22 @@ import { compose } from 'redux';
 import AccountNav from '../../containers/account-nav';
 import DeletionRestorer from '../../containers/deletion-restorer';
 import LanguageSelector from '../../containers/language-selector';
-import MenuBarHOC from '../../containers/menu-bar-hoc.js';
-import ProjectWatcher from '../../containers/project-watcher.js';
-import SB3Downloader from '../../containers/sb3-downloader.js';
-import TurboMode from '../../containers/turbo-mode.js';
-import Box from '../box/box.js';
-import Button from '../button/button.js';
-import { ComingSoonTooltip } from '../coming-soon/coming-soon.js';
-import Divider from '../divider/divider.js';
-import { MenuItem, MenuSection } from '../menu/menu.js';
+import MenuBarHOC from '../../containers/menu-bar-hoc';
+import ProjectWatcher from '../../containers/project-watcher';
+import SB3Downloader from '../../containers/sb3-downloader';
+import TurboMode from '../../containers/turbo-mode';
+import Box from '../box/box';
+import Button from '../button/button';
+import { ComingSoonTooltip } from '../coming-soon/coming-soon';
+import Divider from '../divider/divider';
+import { MenuItem, MenuSection } from '../menu/menu';
 import AuthorInfo from './author-info';
 import CommunityButton from './community-button';
-import LoginDropdown from './login-dropdown.js';
-import MenuBarMenu from './menu-bar-menu.js';
-import ProjectTitleInput from './project-title-input.jsx';
-import SaveStatus from './save-status.jsx';
-import ShareButton from './share-button.jsx';
+import LoginDropdown from './login-dropdown';
+import MenuBarMenu from './menu-bar-menu';
+import ProjectTitleInput from './project-title-input';
+import SaveStatus from './save-status';
+import ShareButton from './share-button';
 
 import {
   aboutMenuOpen,

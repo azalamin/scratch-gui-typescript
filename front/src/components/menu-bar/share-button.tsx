@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
-import Button from '../button/button.js';
+import Button from '../button/button';
 
 import styles from './shareButton.module.css';
 

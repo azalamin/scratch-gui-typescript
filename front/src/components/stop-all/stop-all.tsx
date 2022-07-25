@@ -21,10 +21,10 @@ const StopAllComponent = function (props: PropsInterface) {
 };
 
 interface PropsInterface {
-  active: boolean;
-  className: string;
-  onClick: any;
-  title: string;
+  active?: boolean;
+  className?: string;
+  onClick?: any;
+  title?: string;
 }
 
 // TODO

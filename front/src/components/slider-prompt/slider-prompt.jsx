@@ -1,9 +1,8 @@
-import {defineMessages, FormattedMessage, intlShape, injectIntl} from 'react-intl';
 import PropTypes from 'prop-types';
-import React from 'react';
+import { defineMessages, FormattedMessage, injectIntl, intlShape } from 'react-intl';
 
-import Box from '../box/box.js';
-import Modal from '../../containers/modal.js';
+import Modal from '../../containers/modal';
+import Box from '../box/box';
 
 import styles from './slider-prompt.css';
 

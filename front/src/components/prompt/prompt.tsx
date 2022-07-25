@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { defineMessages, FormattedMessage } from 'react-intl';
 
-import Modal from '../../containers/modal.js';
-import Box from '../box/box.js';
+import Modal from '../../containers/modal';
+import Box from '../box/box';
 
 import styles from './prompt.module.css';
 

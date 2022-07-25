@@ -2,8 +2,8 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import classNames from 'classnames';
-import PlayButton from '../../containers/play-button.js';
-import Box from '../box/box.js';
+import PlayButton from '../../containers/play-button';
+import Box from '../box/box';
 import styles from './libraryItem.module.css';
 
 import bluetoothIconURL from './bluetooth.svg';

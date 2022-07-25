@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
 
-import Box from '../box/box.jsx';
-import Dots from './dots.js';
-import PeripheralTile from './peripheral-tile.js';
+import Box from '../box/box';
+import Dots from './dots';
+import PeripheralTile from './peripheral-tile';
 
 import refreshIcon from './icons/refresh.svg';
 import radarIcon from './icons/searching.png';

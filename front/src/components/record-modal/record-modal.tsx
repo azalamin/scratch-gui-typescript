@@ -1,8 +1,8 @@
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
-import Modal from '../../containers/modal.js';
-import PlaybackStep from '../../containers/playback-step.js';
-import RecordingStep from '../../containers/recording-step.js';
-import Box from '../box/box.js';
+import Modal from '../../containers/modal';
+import PlaybackStep from '../../containers/playback-step';
+import RecordingStep from '../../containers/recording-step';
+import Box from '../box/box';
 import styles from './recordModal.module.css';
 
 const messages = defineMessages({

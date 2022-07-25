@@ -1,4 +1,4 @@
-import Menu from '../../containers/menu.js';
+import Menu from '../../containers/menu';
 
 const MenuBarMenu: any = ({
   children,

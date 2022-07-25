@@ -1,7 +1,7 @@
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 
-import InlineMessages from '../../containers/inline-messages.js';
+import InlineMessages from '../../containers/inline-messages';
 
 import { manualUpdateProject } from '../../reducers/project-state';
 

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import BackpackComponent from '../components/backpack/backpack.jsx';
+import BackpackComponent from '../components/backpack/backpack';
 import {
   codePayload,
   costumePayload,
@@ -10,7 +10,7 @@ import {
   spritePayload,
 } from '../lib/backpack-api';
 import DragConstants from '../lib/drag-constants';
-import DropAreaHOC from '../lib/drop-area-hoc.jsx';
+import DropAreaHOC from '../lib/drop-area-hoc';
 
 import { connect } from 'react-redux';
 import storage from '../lib/storage';

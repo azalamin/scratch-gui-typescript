@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react';
-import AudioSelectorComponent from '../components/audio-trimmer/audio-selector.jsx';
+import AudioSelectorComponent from '../components/audio-trimmer/audio-selector';
 import DragRecognizer from '../lib/drag-recognizer';
 import { getEventXY } from '../lib/touch-utils';
 

@@ -6,13 +6,13 @@ import {
   IntlShape,
 } from 'react-intl';
 
-import Input from '../forms/input.js';
-import Label from '../forms/label.js';
-import Waveform from '../waveform/waveform.js';
+import Input from '../forms/input';
+import Label from '../forms/label';
+import Waveform from '../waveform/waveform';
 
-import AudioSelector from '../../containers/audio-selector.js';
-import BufferedInputHOC from '../forms/buffered-input-hoc.js';
-import IconButton from '../icon-button/icon-button.js';
+import AudioSelector from '../../containers/audio-selector';
+import BufferedInputHOC from '../forms/buffered-input-hoc';
+import IconButton from '../icon-button/icon-button';
 
 import styles from './soundEditor.module.css';
 

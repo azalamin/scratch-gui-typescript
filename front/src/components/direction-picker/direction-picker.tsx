@@ -7,10 +7,10 @@ import {
 } from 'react-intl';
 import Popover from 'react-popover';
 
-import BufferedInputHOC from '../forms/buffered-input-hoc.jsx';
-import Input from '../forms/input.jsx';
-import Label from '../forms/label.jsx';
-import Dial from './dial.js';
+import BufferedInputHOC from '../forms/buffered-input-hoc';
+import Input from '../forms/input';
+import Label from '../forms/label';
+import Dial from './dial';
 
 import styles from './directionPicker.module.css';
 

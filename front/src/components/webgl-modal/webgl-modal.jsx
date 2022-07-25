@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
 
 import styles from './webgl-modal.css';

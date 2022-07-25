@@ -1,6 +1,6 @@
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
-import LibraryComponent from '../components/library/library.jsx';
+import LibraryComponent from '../components/library/library';
 import backdropTags from '../lib/libraries/backdrop-tags';
 import backdropLibraryContent from '../lib/libraries/backdrops.json';
 

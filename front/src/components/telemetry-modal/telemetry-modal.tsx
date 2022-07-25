@@ -7,7 +7,7 @@ import {
 } from 'react-intl';
 import ReactModal from 'react-modal';
 
-import Box from '../box/box.js';
+import Box from '../box/box';
 
 import styles from './telemetryModal.module.css';
 

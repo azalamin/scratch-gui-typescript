@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
 import ReactModal from 'react-modal';
 
-import Box from '../box/box.js';
-import Button from '../button/button.js';
-import CloseButton from '../close-button/close-button.js';
+import Box from '../box/box';
+import Button from '../button/button';
+import CloseButton from '../close-button/close-button';
 
 import backIcon from '../../lib/assets/icon--back.svg';
 import helpIcon from '../../lib/assets/icon--help.svg';

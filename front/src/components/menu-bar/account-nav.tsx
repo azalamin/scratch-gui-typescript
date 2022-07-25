@@ -8,11 +8,11 @@ import classNames from 'classnames';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import MenuItemContainer from '../../containers/menu-item.js';
-import { MenuSection } from '../menu/menu.js';
+import MenuItemContainer from '../../containers/menu-item';
+import { MenuSection } from '../menu/menu';
 import dropdownCaret from './dropdown-caret.svg';
-import MenuBarMenu from './menu-bar-menu.jsx';
-import UserAvatar from './user-avatar.jsx';
+import MenuBarMenu from './menu-bar-menu';
+import UserAvatar from './user-avatar';
 
 import styles from './accountNav.module.css';
 

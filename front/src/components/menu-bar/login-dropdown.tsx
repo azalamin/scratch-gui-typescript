@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import { FC } from 'react';
 import { defineMessages } from 'react-intl';
 
-import MenuBarMenu from './menu-bar-menu.jsx';
+import MenuBarMenu from './menu-bar-menu';
 
 import styles from './loginDropdown.module.css';
 

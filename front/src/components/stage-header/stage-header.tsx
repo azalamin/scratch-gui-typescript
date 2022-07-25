@@ -2,11 +2,11 @@ import classNames from 'classnames';
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 import { connect } from 'react-redux';
 
-import Controls from '../../containers/controls.js';
+import Controls from '../../containers/controls';
 import { STAGE_SIZE_MODES } from '../../lib/layout-constants';
 import { getStageDimensions } from '../../lib/screen-utils';
-import Box from '../box/box.js';
-import Button from '../button/button.js';
+import Box from '../box/box';
+import Button from '../button/button';
 
 import fullScreenIcon from './icon--fullscreen.svg';
 import largeStageIcon from './icon--large-stage.svg';

@@ -7,8 +7,8 @@ import {
 } from 'react-intl';
 
 import { isRtl } from 'scratch-l10n';
-import ActionMenu from '../action-menu/action-menu.js';
-import Box from '../box/box.js';
+import ActionMenu from '../action-menu/action-menu';
+import Box from '../box/box';
 import styles from './stageSelector.module.css';
 
 import backdropIcon from '../action-menu/icon--backdrop.svg';

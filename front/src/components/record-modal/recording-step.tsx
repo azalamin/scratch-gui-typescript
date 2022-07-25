@@ -1,7 +1,7 @@
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
-import Box from '../box/box.js';
-import Meter from '../meter/meter.js';
-import Waveform from '../waveform/waveform.jsx';
+import Box from '../box/box';
+import Meter from '../meter/meter';
+import Waveform from '../waveform/waveform';
 
 import stopIcon from './icon--stop-recording.svg';
 import styles from './recordModal.module.css';

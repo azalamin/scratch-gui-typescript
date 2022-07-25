@@ -7,7 +7,7 @@ eventually be consolidated.
 import { injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 
-import AccountNavComponent from '../components/menu-bar/account-nav.jsx';
+import AccountNavComponent from '../components/menu-bar/account-nav';
 
 const AccountNav: any = function (props: PropsInterface) {
   const { ...componentProps } = props;

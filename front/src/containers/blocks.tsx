@@ -5,17 +5,17 @@ import React from 'react';
 import VMScratchBlocks from '../lib/blocks';
 import makeToolboxXML from '../lib/make-toolbox-xml';
 
-import BlocksComponent from '../components/blocks/blocks.jsx';
+import BlocksComponent from '../components/blocks/blocks';
 import defineDynamicBlock from '../lib/define-dynamic-block';
 import DragConstants from '../lib/drag-constants';
-import DropAreaHOC from '../lib/drop-area-hoc.jsx';
-import errorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
+import DropAreaHOC from '../lib/drop-area-hoc';
+import errorBoundaryHOC from '../lib/error-boundary-hoc';
 import { BLOCKS_DEFAULT_SCALE } from '../lib/layout-constants';
-import extensionData from '../lib/libraries/extensions/index.jsx';
-import log from '../lib/log.js';
-import CustomProcedures from './custom-procedures.jsx';
+import extensionData from '../lib/libraries/extensions/index';
+import log from '../lib/log';
+import CustomProcedures from './custom-procedures';
 import ExtensionLibrary from './extension-library';
-import Prompt from './prompt.jsx';
+import Prompt from './prompt';
 
 import { connect } from 'react-redux';
 import { activateColorPicker } from '../reducers/color-picker';

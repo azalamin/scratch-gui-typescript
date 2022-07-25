@@ -1,4 +1,4 @@
-import Input from '../forms/input.js';
+import Input from '../forms/input';
 import enterIcon from './icon--enter.svg';
 import styles from './question.module.css';
 

@@ -4,8 +4,8 @@ import {
   injectIntl,
   IntlShape,
 } from 'react-intl';
-import Modal from '../../containers/modal.jsx';
-import Box from '../box/box.jsx';
+import Modal from '../../containers/modal';
+import Box from '../box/box';
 
 import booleanInputIcon from './icon--boolean-input.svg';
 import labelIcon from './icon--label.svg';

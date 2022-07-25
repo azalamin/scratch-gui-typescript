@@ -2,11 +2,11 @@ import classNames from 'classnames';
 
 import DragConstants from '../../lib/drag-constants';
 
-import SpriteSelectorItem from '../../containers/sprite-selector-item.js';
-import SortableHOC from '../../lib/sortable-hoc.jsx';
-import ThrottledPropertyHOC from '../../lib/throttled-property-hoc.js';
-import SortableAsset from '../asset-panel/sortable-asset.js';
-import Box from '../box/box.js';
+import SpriteSelectorItem from '../../containers/sprite-selector-item';
+import SortableHOC from '../../lib/sortable-hoc';
+import ThrottledPropertyHOC from '../../lib/throttled-property-hoc';
+import SortableAsset from '../asset-panel/sortable-asset';
+import Box from '../box/box';
 
 import styles from './spriteSelector.module.css';
 

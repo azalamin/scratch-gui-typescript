@@ -2,12 +2,12 @@ import classNames from 'classnames';
 import { useCallback, useEffect, useState } from 'react';
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
-import LibraryItem from '../../containers/library-item.js';
-import Modal from '../../containers/modal.js';
-import TagButton from '../../containers/tag-button.js';
-import Divider from '../divider/divider.js';
-import Filter from '../filter/filter.js';
-import Spinner from '../spinner/spinner.jsx';
+import LibraryItem from '../../containers/library-item';
+import Modal from '../../containers/modal';
+import TagButton from '../../containers/tag-button';
+import Divider from '../divider/divider';
+import Filter from '../filter/filter';
+import Spinner from '../spinner/spinner';
 
 import styles from './library.module.css';
 
@@ -262,18 +262,18 @@ const LibraryComponent = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  data: any;
-  filterable: boolean;
-  id: string;
+  data?: any;
+  filterable?: boolean;
+  id?: string;
   intl: IntlShape;
-  onItemMouseEnter: any;
-  onItemMouseLeave: any;
-  onItemSelected: any;
-  onRequestClose: any;
-  setStopHandler: any;
-  showPlayButton: any;
-  tags: any;
-  title: string;
+  onItemMouseEnter?: any;
+  onItemMouseLeave?: any;
+  onItemSelected?: any;
+  onRequestClose?: any;
+  setStopHandler?: any;
+  showPlayButton?: any;
+  tags?: any;
+  title?: string;
 }
 
 // TODO

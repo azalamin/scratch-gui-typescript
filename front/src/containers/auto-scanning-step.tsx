@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import ScanningStepComponent, {
   PHASES,
-} from '../components/connection-modal/auto-scanning-step.jsx';
+} from '../components/connection-modal/auto-scanning-step';
 
 const AutoScanningStep = (props: PropsInterface) => {
   const [phase, setPhase] = useState(PHASES.prescan);

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import UserAvatar from './user-avatar.jsx';
+import UserAvatar from './user-avatar';
 
 import styles from './authorInfo.module.css';
 

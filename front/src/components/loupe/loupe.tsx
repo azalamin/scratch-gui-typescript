@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
 
-import Box from '../box/box.js';
+import Box from '../box/box';
 import styles from './loupe.module.css';
 
 const zoomScale: any = 3;

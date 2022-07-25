@@ -1,8 +1,8 @@
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
-import AudioTrimmer from '../../containers/audio-trimmer.js';
-import Box from '../box/box.js';
-import Meter from '../meter/meter.js';
-import Waveform from '../waveform/waveform.js';
+import AudioTrimmer from '../../containers/audio-trimmer';
+import Box from '../box/box';
+import Meter from '../meter/meter';
+import Waveform from '../waveform/waveform';
 
 import backIcon from './icon--back.svg';
 import playIcon from './icon--play.svg';

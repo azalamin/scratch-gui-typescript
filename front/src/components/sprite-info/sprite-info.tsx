@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import DirectionPicker from '../../containers/direction-picker.js';
-import Box from '../box/box.js';
-import BufferedInputHOC from '../forms/buffered-input-hoc.js';
-import Input from '../forms/input.js';
-import Label from '../forms/label.js';
+import DirectionPicker from '../../containers/direction-picker';
+import Box from '../box/box';
+import BufferedInputHOC from '../forms/buffered-input-hoc';
+import Input from '../forms/input';
+import Label from '../forms/label';
 
 import {
   defineMessages,
@@ -14,8 +14,8 @@ import {
   IntlShape,
 } from 'react-intl';
 
-import { STAGE_DISPLAY_SIZES } from '../../lib/layout-constants.js';
-import { isWideLocale } from '../../lib/locale-utils.js';
+import { STAGE_DISPLAY_SIZES } from '../../lib/layout-constants';
+import { isWideLocale } from '../../lib/locale-utils';
 
 import styles from './spriteInfo.module.css';
 

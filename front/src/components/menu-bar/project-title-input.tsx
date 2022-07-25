@@ -3,8 +3,8 @@ import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 import { connect } from 'react-redux';
 import { setProjectTitle } from '../../reducers/project-title';
 
-import BufferedInputHOC from '../forms/buffered-input-hoc.js';
-import Input from '../forms/input.js';
+import BufferedInputHOC from '../forms/buffered-input-hoc';
+import Input from '../forms/input';
 import styles from './projectTitleInput.module.css';
 const BufferedInput = BufferedInputHOC(Input);
 

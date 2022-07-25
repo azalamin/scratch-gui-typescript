@@ -3,16 +3,16 @@ import { ContextMenuTrigger } from 'react-contextmenu';
 import ReactDOM from 'react-dom';
 import Draggable from 'react-draggable';
 import { FormattedMessage } from 'react-intl';
-import ListMonitor from '../../containers/list-monitor.js';
-import SliderMonitor from '../../containers/slider-monitor.js';
-import Box from '../box/box.js';
+import ListMonitor from '../../containers/list-monitor';
+import SliderMonitor from '../../containers/slider-monitor';
+import Box from '../box/box';
 import {
   BorderedMenuItem,
   ContextMenu,
   MenuItem,
-} from '../context-menu/context-menu.js';
-import DefaultMonitor from './default-monitor.js';
-import LargeMonitor from './large-monitor.js';
+} from '../context-menu/context-menu';
+import DefaultMonitor from './default-monitor';
+import LargeMonitor from './large-monitor';
 
 import styles from './monitor.module.css';
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import AlertComponent from '../components/alerts/alert.js';
+import AlertComponent from '../components/alerts/alert';
 import { setConnectionModalExtensionId } from '../reducers/connection-modal';
 import { openConnectionModal } from '../reducers/modals';
 import { manualUpdateProject } from '../reducers/project-state';

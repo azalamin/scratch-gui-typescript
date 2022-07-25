@@ -1,15 +1,15 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import DOMElementRenderer from '../../containers/dom-element-renderer.js';
-import GreenFlagOverlay from '../../containers/green-flag-overlay.js';
-import MonitorList from '../../containers/monitor-list.js';
-import Question from '../../containers/question.js';
-import TargetHighlight from '../../containers/target-highlight.js';
-import { getStageDimensions } from '../../lib/screen-utils.js';
-import Box from '../box/box.js';
-import Loupe from '../loupe/loupe.js';
-import MicIndicator from '../mic-indicator/mic-indicator.js';
+import DOMElementRenderer from '../../containers/dom-element-renderer';
+import GreenFlagOverlay from '../../containers/green-flag-overlay';
+import MonitorList from '../../containers/monitor-list';
+import Question from '../../containers/question';
+import TargetHighlight from '../../containers/target-highlight';
+import { getStageDimensions } from '../../lib/screen-utils';
+import Box from '../box/box';
+import Loupe from '../loupe/loupe';
+import MicIndicator from '../mic-indicator/mic-indicator';
 import styles from './stage.module.css';
 
 const StageComponent = (props: PropsInterface) => {

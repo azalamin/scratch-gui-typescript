@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
-import GreenFlag from '../green-flag/green-flag.jsx';
-import StopAll from '../stop-all/stop-all.jsx';
-import TurboMode from '../turbo-mode/turbo-mode.jsx';
+import GreenFlag from '../green-flag/green-flag';
+import StopAll from '../stop-all/stop-all';
+import TurboMode from '../turbo-mode/turbo-mode';
 
 import styles from './controls.module.css';
 

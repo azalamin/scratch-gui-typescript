@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 
-import StageHeader from '../../containers/stage-header.js';
-import Stage from '../../containers/stage.js';
-import Box from '../box/box.jsx';
-import Loader from '../loader/loader.jsx';
+import StageHeader from '../../containers/stage-header';
+import Stage from '../../containers/stage';
+import Box from '../box/box';
+import Loader from '../loader/loader';
 
 import styles from './stage-wrapper.module.css';
 
