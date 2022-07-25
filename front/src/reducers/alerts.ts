@@ -1,5 +1,5 @@
-import alertsData, { AlertLevels, AlertTypes } from '../lib/alerts/index.js';
-import extensionData from '../lib/libraries/extensions/index.jsx';
+import alertsData, { AlertLevels, AlertTypes } from '../lib/alerts/index';
+import extensionData from '../lib/libraries/extensions/index';
 
 const SHOW_ALERT = 'scratch-gui/alerts/SHOW_ALERT';
 const SHOW_EXTENSION_ALERT = 'scratch-gui/alerts/SHOW_EXTENSION_ALERT';

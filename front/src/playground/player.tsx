@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import Box from '../components/box/box.js';
-import GUI from '../containers/gui.js';
-import AppStateHOC from '../lib/app-state-hoc.js';
-import HashParserHOC from '../lib/hash-parser-hoc.js';
+import Box from '../components/box/box';
+import GUI from '../containers/gui';
+import AppStateHOC from '../lib/app-state-hoc';
+import HashParserHOC from '../lib/hash-parser-hoc';
 
 import { setPlayer } from '../reducers/mode';
 import styles from './player.module.css';

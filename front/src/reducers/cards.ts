@@ -1,6 +1,6 @@
 import analytics from '../lib/analytics';
 
-import decks from '../lib/libraries/decks/index.js';
+import decks from '../lib/libraries/decks/index';
 
 const CLOSE_CARDS = 'scratch-gui/cards/CLOSE_CARDS';
 const SHRINK_EXPAND_CARDS = 'scratch-gui/cards/SHRINK_EXPAND_CARDS';

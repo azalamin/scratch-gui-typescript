@@ -1,10 +1,10 @@
 import ReactDOM from 'react-dom';
 import { compose } from 'redux';
 
-import GUI from '../containers/gui.js';
-import AppStateHOC from '../lib/app-state-hoc.js';
-import HashParserHOC from '../lib/hash-parser-hoc.js';
-import log from '../lib/log.js';
+import GUI from '../containers/gui';
+import AppStateHOC from '../lib/app-state-hoc';
+import HashParserHOC from '../lib/hash-parser-hoc';
+import log from '../lib/log';
 
 const onClickLogo = () => {
   window.location = 'https://scratch.mit.edu';
