@@ -45,7 +45,7 @@ import ModalComponent from '../components/modal/modal.js';
 // }
 
 const id: any = 244309;
-const Modal: any = (props: PropsInterface): any => {
+const Modal = (props: PropsInterface) => {
   const handlePopState: any = useCallback(() => {
     props.onRequestClose();
   }, [props]);
@@ -85,7 +85,7 @@ interface PropsInterface {
   isRtl: boolean;
   onRequestClose: any;
   onRequestOpen: any;
-  children?: any;
+  children: any;
 }
 
 // TODO
