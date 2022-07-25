@@ -20,7 +20,7 @@ const dragTypes = [
   DragConstants.SOUND,
   DragConstants.SPRITE,
 ];
-const DroppableBackpack = DropAreaHOC(dragTypes)(BackpackComponent);
+const DroppableBackpack: any = DropAreaHOC(dragTypes)(BackpackComponent);
 
 const Backpack = (props: PropsInterface) => {
   const [states, setStates] = useState<any>({
@@ -257,7 +257,7 @@ const Backpack = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  host: string;
+  host: any;
   token: string;
   username: string;
   vm: any;

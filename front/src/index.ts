@@ -1,5 +1,8 @@
-import GUI from './containers/gui.js';
-import AppStateHOC from './lib/app-state-hoc.js';
+import { setAppElement } from 'react-modal';
+import { ScratchPaintReducer } from 'scratch-paint';
+import GUI from './containers/gui';
+import AppStateHOC from './lib/app-state-hoc';
+import totallyNormalStrings from './lib/l10n';
 import GuiReducer, {
   guiInitialState,
   guiMiddleware,
@@ -8,14 +11,11 @@ import GuiReducer, {
   initPlayer,
 } from './reducers/gui';
 import LocalesReducer, {
-  localesInitialState,
   initLocale,
+  localesInitialState,
 } from './reducers/locales';
-import { ScratchPaintReducer } from 'scratch-paint';
 import { setFullScreen, setPlayer } from './reducers/mode';
 import { remixProject } from './reducers/project-state';
-import { setAppElement } from 'react-modal';
-import totallyNormalStrings from './lib/l10n.js';
 
 const guiReducers = {
   locales: LocalesReducer,

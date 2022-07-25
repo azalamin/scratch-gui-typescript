@@ -42,7 +42,7 @@ import workspaceMetricsReducer, {
   workspaceMetricsInitialState,
 } from './workspace-metrics';
 
-import decks from '../lib/libraries/decks/index.js';
+import decks from '../lib/libraries/decks/index';
 
 const guiMiddleware = compose(
   applyMiddleware(throttle(300, { leading: true, trailing: true }))

@@ -4,7 +4,7 @@ import ReactModal from 'react-modal';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import ErrorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
+import ErrorBoundaryHOC from '../lib/error-boundary-hoc';
 import {
   activateTab,
   BLOCKS_TAB_INDEX,
@@ -20,20 +20,20 @@ import {
   openExtensionLibrary,
 } from '../reducers/modals';
 
-import cloudManagerHOC from '../lib/cloud-manager-hoc.jsx';
-import FontLoaderHOC from '../lib/font-loader-hoc.jsx';
-import LocalizationHOC from '../lib/localization-hoc.jsx';
-import ProjectFetcherHOC from '../lib/project-fetcher-hoc.jsx';
-import ProjectSaverHOC from '../lib/project-saver-hoc.jsx';
-import QueryParserHOC from '../lib/query-parser-hoc.jsx';
-import SBFileUploaderHOC from '../lib/sb-file-uploader-hoc.jsx';
+import cloudManagerHOC from '../lib/cloud-manager-hoc';
+import FontLoaderHOC from '../lib/font-loader-hoc';
+import LocalizationHOC from '../lib/localization-hoc';
+import ProjectFetcherHOC from '../lib/project-fetcher-hoc';
+import ProjectSaverHOC from '../lib/project-saver-hoc';
+import QueryParserHOC from '../lib/query-parser-hoc';
+import SBFileUploaderHOC from '../lib/sb-file-uploader-hoc';
 import storage from '../lib/storage';
-import TitledHOC from '../lib/titled-hoc.jsx';
-import vmListenerHOC from '../lib/vm-listener-hoc.jsx';
-import vmManagerHOC from '../lib/vm-manager-hoc.jsx';
+import TitledHOC from '../lib/titled-hoc';
+import vmListenerHOC from '../lib/vm-listener-hoc';
+import vmManagerHOC from '../lib/vm-manager-hoc';
 
-import GUIComponent from '../components/gui/gui.jsx';
-import { setIsScratchDesktop } from '../lib/isScratchDesktop.js';
+import GUIComponent from '../components/gui/gui';
+import { setIsScratchDesktop } from '../lib/isScratchDesktop';
 
 const GUI = (props: PropsInterface) => {
   useEffect(() => {

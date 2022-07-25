@@ -8,7 +8,7 @@ const WebGlModal = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  isRtl: boolean;
+  isRtl: any;
 }
 
 export default WebGlModal;

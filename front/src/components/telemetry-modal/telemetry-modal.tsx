@@ -208,7 +208,7 @@ const TelemetryModal = (props: PropsInterface) => {
 
 interface PropsInterface {
   intl: IntlShape;
-  isRtl: boolean;
+  isRtl: any;
   isTelemetryEnabled: boolean;
   onCancel: any;
   onOptIn: any;

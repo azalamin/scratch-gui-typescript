@@ -84,8 +84,10 @@ interface PropsInterface {
   id: string;
   isRtl: boolean;
   onRequestClose: any;
-  onRequestOpen: any;
-  children: any;
+  onRequestOpen?: any;
+  children?: any;
+  fullScreen?: any;
+  contentLabel?: any;
 }
 
 // TODO
