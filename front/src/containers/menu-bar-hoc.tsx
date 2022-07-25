@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-const MenuBarHOC = function (WrappedComponent: any) {
+const MenuBarHOC: any = function (WrappedComponent: any) {
   const MenuBarContainer = (prop: PropsInterface) => {
     const confirmReadyToReplaceProject = (message: any) => {
       let readyToReplaceProject = true;

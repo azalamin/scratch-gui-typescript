@@ -30,7 +30,7 @@ const AccountNavComponent: any = ({
   profileUrl,
   thumbnailUrl,
   username,
-}: PropsInterface) => (
+}: PropsInterface): any => (
   <React.Fragment>
     <div className={classNames(styles.userInfo, className)} onMouseUp={onClick}>
       {thumbnailUrl ? (

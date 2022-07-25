@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
 import { connect } from 'react-redux';
-import ModalComponent from '../components/modal/modal.js';
+import ModalComponent from '../components/modal/modal';
 
 // class Modal extends React.Component {
 //     constructor (props) {
@@ -81,13 +81,14 @@ const Modal = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  id: string;
-  isRtl: boolean;
+  id?: string;
+  isRtl?: boolean;
   onRequestClose: any;
   onRequestOpen?: any;
   children?: any;
   fullScreen?: any;
   contentLabel?: any;
+  className?: any;
 }
 
 // TODO

@@ -15,7 +15,7 @@ const AccountNav: any = function (props: PropsInterface) {
 };
 
 interface PropsInterface {
-  className: string;
+  className?: any;
   classroomId: string;
   isEducator: boolean;
   isRtl: boolean;
