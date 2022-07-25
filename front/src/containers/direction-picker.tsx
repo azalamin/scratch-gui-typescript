@@ -42,11 +42,11 @@ const DirectionPicker = (props: PropsInterface) => {
 
 interface PropsInterface {
   direction: number;
-  disabled: boolean;
+  disabled: any;
   labelAbove: boolean;
   onChangeDirection: any;
   onChangeRotationStyle: any;
-  rotationStyle: string;
+  rotationStyle: any;
 }
 
 export default DirectionPicker;

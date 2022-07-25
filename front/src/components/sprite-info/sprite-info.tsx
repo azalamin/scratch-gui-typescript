@@ -239,26 +239,26 @@ class SpriteInfo extends React.Component<PropsInterface> {
 }
 
 interface PropsInterface {
-  direction: any;
-  disabled: boolean;
+  direction?: any;
+  disabled?: boolean;
   intl: IntlShape;
-  name: string;
-  onChangeDirection: any;
-  onChangeName: any;
-  onChangeRotationStyle: any;
-  onChangeSize: any;
-  onChangeX: any;
-  onChangeY: any;
-  onClickNotVisible: any;
-  onClickVisible: any;
-  onPressNotVisible: any;
-  onPressVisible: any;
-  rotationStyle: string;
-  size: any;
-  stageSize: any;
-  visible: boolean;
-  x: any;
-  y: any;
+  name?: string;
+  onChangeDirection?: any;
+  onChangeName?: any;
+  onChangeRotationStyle?: any;
+  onChangeSize?: any;
+  onChangeX?: any;
+  onChangeY?: any;
+  onClickNotVisible?: any;
+  onClickVisible?: any;
+  onPressNotVisible?: any;
+  onPressVisible?: any;
+  rotationStyle?: string;
+  size?: any;
+  stageSize?: any;
+  visible?: boolean;
+  x?: any;
+  y?: any;
 }
 
 // TODO
