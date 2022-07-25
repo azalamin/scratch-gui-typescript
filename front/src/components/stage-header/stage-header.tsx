@@ -79,11 +79,23 @@ const StageHeaderComponent = function (props: PropsInterface) {
         onKeyPress={onKeyPress}
       >
         <img
-          alt={props.intl.formatMessage(messages.unFullStageSizeMessage)}
+          alt={props.intl.formatMessage(
+            messages.unFullStageSizeMessage,
+            '',
+            '',
+            '',
+            ''
+          )}
           className={styles.stageButtonIcon}
           draggable={false}
           src={unFullScreenIcon}
-          title={props.intl.formatMessage(messages.fullscreenControl)}
+          title={props.intl.formatMessage(
+            messages.fullscreenControl,
+            '',
+            '',
+            '',
+            ''
+          )}
         />
       </Button>
     );
@@ -115,7 +127,13 @@ const StageHeaderComponent = function (props: PropsInterface) {
             onClick={onSetStageSmall}
           >
             <img
-              alt={props.intl.formatMessage(messages.smallStageSizeMessage)}
+              alt={props.intl.formatMessage(
+                messages.smallStageSizeMessage,
+                '',
+                '',
+                '',
+                ''
+              )}
               className={styles.stageButtonIcon}
               draggable={false}
               src={smallStageIcon}
@@ -134,7 +152,13 @@ const StageHeaderComponent = function (props: PropsInterface) {
             onClick={onSetStageLarge}
           >
             <img
-              alt={props.intl.formatMessage(messages.largeStageSizeMessage)}
+              alt={props.intl.formatMessage(
+                messages.largeStageSizeMessage,
+                '',
+                '',
+                '',
+                ''
+              )}
               className={styles.stageButtonIcon}
               draggable={false}
               src={largeStageIcon}
@@ -152,11 +176,23 @@ const StageHeaderComponent = function (props: PropsInterface) {
             <div>
               <Button className={styles.stageButton} onClick={onSetStageFull}>
                 <img
-                  alt={props.intl.formatMessage(messages.fullStageSizeMessage)}
+                  alt={props.intl.formatMessage(
+                    messages.fullStageSizeMessage,
+                    '',
+                    '',
+                    '',
+                    ''
+                  )}
                   className={styles.stageButtonIcon}
                   draggable={false}
                   src={fullScreenIcon}
-                  title={props.intl.formatMessage(messages.fullscreenControl)}
+                  title={props.intl.formatMessage(
+                    messages.fullscreenControl,
+                    '',
+                    '',
+                    '',
+                    ''
+                  )}
                 />
               </Button>
             </div>

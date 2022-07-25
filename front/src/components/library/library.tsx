@@ -132,7 +132,13 @@ const LibraryComponent = (props: PropsInterface) => {
                 ? (typeof dataItem.name === 'string'
                     ? // Use the name if it is a string, else use formatMessage to get the translated name
                       dataItem.name
-                    : props.intl.formatMessage(dataItem.name.props)
+                    : props.intl.formatMessage(
+                        dataItem.name.props,
+                        '',
+                        '',
+                        '',
+                        ''
+                      )
                   ).toLowerCase()
                 : null
             )
@@ -183,7 +189,11 @@ const LibraryComponent = (props: PropsInterface) => {
               filterQuery={states.filterQuery}
               inputClassName={styles.filterInput}
               placeholderText={props.intl.formatMessage(
-                messages.filterPlaceholder
+                messages.filterPlaceholder,
+                '',
+                '',
+                '',
+                ''
               )}
               onChange={handleFilterChange}
               onClear={handleFilterClear}
@@ -273,7 +283,7 @@ interface PropsInterface {
   setStopHandler?: any;
   showPlayButton?: any;
   tags?: any;
-  title?: string;
+  title?: any;
   visible?: any;
 }
 

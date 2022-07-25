@@ -68,7 +68,9 @@ const TipsLibrary = (props: PropsInterface) => {
             })
             .catch((error: any) => {
               console.log(error);
-              alert(props.intl.formatMessage(messages.loadError)); // eslint-disable-line no-alert
+              alert(
+                props.intl.formatMessage(messages.loadError, '', '', '', '')
+              ); // eslint-disable-line no-alert
             })
             .then(() => {
               props.onLoadingFinished(props.loadingState, loadingSuccess, true);
@@ -112,7 +114,13 @@ const TipsLibrary = (props: PropsInterface) => {
       data={decksLibraryThumbnailData}
       id='tipsLibrary'
       tags={tutorialTags}
-      title={props.intl.formatMessage(messages.tipsLibraryTitle)}
+      title={props.intl.formatMessage(
+        messages.tipsLibraryTitle,
+        '',
+        '',
+        '',
+        ''
+      )}
       visible={props.visible}
       onItemSelected={handleItemSelect}
       onRequestClose={props.onRequestClose}

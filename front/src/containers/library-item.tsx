@@ -144,7 +144,7 @@ const LibraryItem: any = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  bluetoothRequired: boolean;
+  bluetoothRequired?: any;
   collaborator: string;
   description: string | JSX.Element;
   disabled: boolean;

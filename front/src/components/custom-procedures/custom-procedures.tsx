@@ -24,7 +24,13 @@ const messages = defineMessages({
 const CustomProcedures = (props: PropsInterface) => (
   <Modal
     className={styles.modalContent}
-    contentLabel={props.intl.formatMessage(messages.myblockModalTitle)}
+    contentLabel={props.intl.formatMessage(
+      messages.myblockModalTitle,
+      '',
+      '',
+      '',
+      ''
+    )}
     onRequestClose={props.onCancel}
   >
     <Box className={styles.workspace} componentRef={props.componentRef} />

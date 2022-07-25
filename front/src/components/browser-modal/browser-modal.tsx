@@ -30,7 +30,7 @@ const BrowserModal: any = ({ intl, ...props }: PropsInterface) => {
     <ReactModal
       isOpen
       className={styles.modalContent}
-      contentLabel={intl.formatMessage({ ...messages.label })}
+      contentLabel={intl.formatMessage({ ...messages.label }, '', '', '', '')}
       overlayClassName={styles.modalOverlay}
       onRequestClose={props.onBack}
     >

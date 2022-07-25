@@ -87,7 +87,7 @@ const RecordingStep = (props: PropsInterface) => {
   }, [states]);
 
   const handleRecordingError = useCallback(() => {
-    alert(props.intl.formatMessage(messages.alertMsg)); // eslint-disable-line no-alert
+    alert(props.intl.formatMessage(messages.alertMsg, '', '', '', '')); // eslint-disable-line no-alert
   }, [props.intl]);
 
   const handleLevelUpdate = useCallback(

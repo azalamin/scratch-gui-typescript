@@ -93,7 +93,7 @@ const SBFileUploaderHOC = function (WrappedComponent: any): any {
         loadingState,
         projectChanged,
         userOwnsProject,
-      } = this.props;
+      }: any = this.props;
       const thisFileInput = e.target;
       if (thisFileInput.files) {
         // Don't attempt to load if no file was selected
@@ -163,7 +163,9 @@ const SBFileUploaderHOC = function (WrappedComponent: any): any {
           })
           .catch((error: any) => {
             log.warn(error);
-            alert(this.props.intl.formatMessage(messages.loadError)); // eslint-disable-line no-alert
+            alert(
+              this.props.intl.formatMessage(messages.loadError, '', '', '', '')
+            ); // eslint-disable-line no-alert
           })
           .then(() => {
             this.props.onLoadingFinished(

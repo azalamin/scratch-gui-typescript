@@ -32,8 +32,8 @@ const PlayButtonComponent = ({
   ...props
 }: PropsInterface) => {
   const label = isPlaying
-    ? intl.formatMessage(messages.stop)
-    : intl.formatMessage(messages.play);
+    ? intl.formatMessage(messages.stop, '', '', '', '')
+    : intl.formatMessage(messages.play, '', '', '', '');
 
   return (
     <div

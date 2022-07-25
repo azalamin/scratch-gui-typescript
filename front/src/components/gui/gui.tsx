@@ -299,7 +299,13 @@ const GUIComponent = (props: PropsInterface) => {
                       <Box className={styles.extensionButtonContainer}>
                         <button
                           className={styles.extensionButton}
-                          title={intl.formatMessage(messages.addExtension)}
+                          title={intl.formatMessage(
+                            messages.addExtension,
+                            '',
+                            '',
+                            '',
+                            ''
+                          )}
                           onClick={onExtensionButtonClick}
                         >
                           <img
