@@ -121,7 +121,7 @@ interface PropsInterface {
   ordering: any;
   raised: boolean;
   selectedId: string;
-  editingTarget?: string;
+  editingTarget: any;
 }
 
 // TODO

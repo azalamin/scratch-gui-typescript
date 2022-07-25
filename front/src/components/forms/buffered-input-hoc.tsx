@@ -6,7 +6,7 @@ import React, { useState } from 'react';
  * @returns {React.Component} Buffered input that calls onSubmit on blur and <enter>
  */
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function (Input: any) {
+export default function (Input: any): any {
   const BufferedInput = (props: PropsInterface) => {
     const [value, setValue] = useState<any>(null);
 

@@ -164,7 +164,7 @@ interface PropsInterface {
   onSelectSprite: any;
   onSpriteUpload: any;
   onSurpriseSpriteClick: any;
-  raised: boolean;
+  raised: any;
   selectedId: string;
   spriteFileInput: any;
   sprites: any;

@@ -181,7 +181,7 @@ interface AboutButtonInterface {
 // };
 
 class MenuBar extends React.Component<PropsInterface> {
-  static defaultProps: { logo: string; onShare: () => void };
+  static defaultProps: { logo: string; onShare: any };
   constructor(props: PropsInterface) {
     super(props);
     bindAll(this, [

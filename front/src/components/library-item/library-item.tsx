@@ -179,6 +179,8 @@ interface PropsInterface {
   onPlay: any;
   onStop: any;
   showPlayButton: boolean;
+  icons?: any;
+  id?: any;
 }
 
 // TODO

@@ -88,7 +88,7 @@ const RecordingStep = (props: PropsInterface) => (
 
 interface PropsInterface {
   intl: IntlShape;
-  isRtl: boolean;
+  isRtl?: boolean;
   level: number;
   levels: any;
   listening: boolean;
