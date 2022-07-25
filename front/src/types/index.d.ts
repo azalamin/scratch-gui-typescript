@@ -25,3 +25,5 @@ declare global {
     mozRequestFullScreen: any;
   }
 }
+
+declare module '*.module.css';

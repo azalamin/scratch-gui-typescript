@@ -1,6 +1,5 @@
 import omit from 'lodash.omit';
 import { useEffect, useRef } from 'react';
-import stylePropType from 'react-style-proptype';
 import Style from 'to-style';
 
 /*
@@ -43,7 +42,7 @@ const DOMElementRenderer = (props: PropsInterface) => {
 
 interface PropsInterface {
   domElement: any;
-  style: stylePropType;
+  style: any;
 }
 
 export default DOMElementRenderer;
