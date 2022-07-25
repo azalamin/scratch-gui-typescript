@@ -102,7 +102,7 @@ const AccountNavComponent: any = ({
 );
 
 interface PropsInterface {
-  className: string;
+  className: any;
   classroomId: string;
   isEducator: boolean;
   isOpen: boolean;
