@@ -6,14 +6,14 @@ import {
   ContextMenu,
   DangerousMenuItem,
   MenuItem,
-} from '../context-menu/context-menu.js';
-import DeleteButton from '../delete-button/delete-button.js';
+} from '../context-menu/context-menu';
+import DeleteButton from '../delete-button/delete-button';
 import styles from './spriteSelectorItem.module.css';
 
 // react-contextmenu requires unique id to match trigger and context menu
 let contextMenuId = 0;
 
-const SpriteSelectorItem = (props: PropsInterface) => (
+const SpriteSelectorItem: any = (props: PropsInterface) => (
   <ContextMenuTrigger
     attributes={{
       className: classNames(props.className, styles.spriteSelectorItem, {

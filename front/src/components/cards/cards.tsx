@@ -14,8 +14,8 @@ import leftArrow from './icon--prev.svg';
 import helpIcon from '../../lib/assets/icon--tutorials.svg';
 import closeIcon from './icon--close.svg';
 
-import { translateImage } from '../../lib/libraries/decks/translate-image.js';
-import { translateVideo } from '../../lib/libraries/decks/translate-video.js';
+import { translateImage } from '../../lib/libraries/decks/translate-image';
+import { translateVideo } from '../../lib/libraries/decks/translate-video';
 
 const CardHeader: FC<CardHeaderInterface> = ({
   onCloseCards,

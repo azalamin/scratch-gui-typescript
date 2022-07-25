@@ -6,9 +6,9 @@ import {
   injectIntl,
   IntlShape,
 } from 'react-intl';
-import SpriteSelectorItem from '../../containers/sprite-selector-item.js';
+import SpriteSelectorItem from '../../containers/sprite-selector-item';
 import DragConstants from '../../lib/drag-constants';
-import { ComingSoonTooltip } from '../coming-soon/coming-soon.jsx';
+import { ComingSoonTooltip } from '../coming-soon/coming-soon';
 import styles from './backpack.module.css';
 
 // TODO make sprite selector item not require onClick

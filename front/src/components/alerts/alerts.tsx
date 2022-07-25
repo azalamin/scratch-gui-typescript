@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import Alert from '../../containers/alert.js';
-import Box from '../box/box.jsx';
+import Alert from '../../containers/alert';
+import Box from '../box/box';
 
 import styles from './alerts.module.css';
 

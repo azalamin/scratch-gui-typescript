@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import SpriteSelectorItem from '../../containers/sprite-selector-item.js';
-import SortableHOC from '../../lib/sortable-hoc.jsx';
-import ActionMenu from '../action-menu/action-menu.js';
-import Box from '../box/box.jsx';
-import SortableAsset from './sortable-asset.jsx';
+import SpriteSelectorItem from '../../containers/sprite-selector-item';
+import SortableHOC from '../../lib/sortable-hoc';
+import ActionMenu from '../action-menu/action-menu';
+import Box from '../box/box';
+import SortableAsset from './sortable-asset';
 
 import styles from './selector.module.css';
 

@@ -6,7 +6,7 @@ import {
   IntlShape,
 } from 'react-intl';
 import ReactModal from 'react-modal';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 
 import styles from './browserModal.module.css';
 import unhappyBrowser from './unsupported-browser.svg';

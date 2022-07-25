@@ -89,6 +89,9 @@ interface PropsInterface {
   fullScreen?: any;
   contentLabel?: any;
   className?: any;
+  headerClassName?: any;
+  headerImage?: any;
+  onHelp?: any;
 }
 
 // TODO

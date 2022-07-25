@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { FC } from 'react';
 
-import { AlertLevels } from '../../lib/alerts/index.jsx';
-import Spinner from '../spinner/spinner.jsx';
+import { AlertLevels } from '../../lib/alerts/index';
+import Spinner from '../spinner/spinner';
 
 import styles from './inlineMessage.module.css';
 

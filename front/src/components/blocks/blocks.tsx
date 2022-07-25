@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 import styles from './blocks.module.css';
 
 const BlocksComponent = (props: PropsInterface) => {

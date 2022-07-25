@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 import styles from './audioTrimmer.module.css';
 import handleIcon from './icon--handle.svg';
 
@@ -20,7 +20,7 @@ const SelectionHandle = (props: PropsInterface) => (
 
 interface PropsInterface {
   handleStyle: string;
-  onMouseDown: any;
+  onMouseDown?: any;
 }
 
 // TODO

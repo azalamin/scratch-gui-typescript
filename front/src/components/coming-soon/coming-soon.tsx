@@ -127,12 +127,12 @@ const ComingSoonTooltip = (props: TooltipInterface) => (
 
 interface TooltipInterface {
   children: JSX.Element;
-  className: string;
-  delayHide: number;
-  delayShow: number;
-  place: any;
-  tooltipClassName: string;
-  tooltipId: any;
+  className?: string;
+  delayHide?: number;
+  delayShow?: number;
+  place?: any;
+  tooltipClassName?: string;
+  tooltipId?: any;
   isRtl?: any;
 }
 

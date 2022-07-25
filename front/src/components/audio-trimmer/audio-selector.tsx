@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 import styles from './audioTrimmer.module.css';
-import Playhead from './playhead.jsx';
-import SelectionHandle from './selection-handle.jsx';
+import Playhead from './playhead';
+import SelectionHandle from './selection-handle';
 
 const AudioSelector = (props: PropsInterface) => (
   <div

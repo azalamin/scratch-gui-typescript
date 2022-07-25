@@ -1,9 +1,9 @@
 import { FormattedMessage } from 'react-intl';
 
 import classNames from 'classnames';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 import styles from './connectionModal.module.css';
-import Dots from './dots.jsx';
+import Dots from './dots';
 import bluetoothIcon from './icons/bluetooth-white.svg';
 
 const ConnectedStep = (props: PropsInterface) => (

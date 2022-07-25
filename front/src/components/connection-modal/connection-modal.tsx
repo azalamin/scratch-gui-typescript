@@ -1,14 +1,14 @@
 import keyMirror from 'keymirror';
 
-import Modal from '../../containers/modal.jsx';
-import Box from '../box/box.jsx';
+import Modal from '../../containers/modal';
+import Box from '../box/box';
 
-import AutoScanningStep from '../../containers/auto-scanning-step.js';
-import ScanningStep from '../../containers/scanning-step.js';
-import ConnectedStep from './connected-step.js';
-import ConnectingStep from './connecting-step.js';
-import ErrorStep from './error-step.jsx';
-import UnavailableStep from './unavailable-step.jsx';
+import AutoScanningStep from '../../containers/auto-scanning-step';
+import ScanningStep from '../../containers/scanning-step';
+import ConnectedStep from './connected-step';
+import ConnectingStep from './connecting-step';
+import ErrorStep from './error-step';
+import UnavailableStep from './unavailable-step';
 
 import styles from './connectionModal.module.css';
 

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
 
-import Box from '../box/box.jsx';
-import Dots from './dots.jsx';
+import Box from '../box/box';
+import Dots from './dots';
 
 import closeIcon from '../close-button/icon--close.svg';
 import bluetoothIcon from './icons/bluetooth-white.svg';

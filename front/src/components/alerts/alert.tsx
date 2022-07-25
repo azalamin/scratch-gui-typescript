@@ -2,10 +2,10 @@ import classNames from 'classnames';
 import { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { AlertLevels } from '../../lib/alerts/index.jsx';
-import Box from '../box/box.jsx';
-import CloseButton from '../close-button/close-button.jsx';
-import Spinner from '../spinner/spinner.jsx';
+import { AlertLevels } from '../../lib/alerts/index';
+import Box from '../box/box';
+import CloseButton from '../close-button/close-button';
+import Spinner from '../spinner/spinner';
 
 import styles from './alert.module.css';
 

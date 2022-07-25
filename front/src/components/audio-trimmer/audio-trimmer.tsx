@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { FC } from 'react';
 import classNames from 'classnames';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 import styles from './audioTrimmer.module.css';
-import SelectionHandle from './selection-handle.jsx';
-import Playhead from './playhead.jsx';
+import Playhead from './playhead';
+import SelectionHandle from './selection-handle';
 
 const AudioTrimmer = (props: PropsInterface) => (
   <div

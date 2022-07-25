@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
-import Box from '../box/box.jsx';
+import Box from '../box/box';
 
 import styles from './connectionModal.module.css';
 

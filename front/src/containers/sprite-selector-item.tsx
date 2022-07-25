@@ -7,7 +7,7 @@ import { getEventXY } from '../lib/touch-utils';
 import { updateAssetDrag } from '../reducers/asset-drag';
 import { setHoveredSprite } from '../reducers/hovered-target';
 
-import SpriteSelectorItemComponent from '../components/sprite-selector-item/sprite-selector-item.jsx';
+import SpriteSelectorItemComponent from '../components/sprite-selector-item/sprite-selector-item';
 
 const SpriteSelectorItem = (prop: PropsInterface) => {
   let noClick: any;
