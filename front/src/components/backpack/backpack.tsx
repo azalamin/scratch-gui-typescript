@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { FC } from 'react';
 import {
   defineMessages,
   FormattedMessage,
@@ -45,7 +44,7 @@ const labelMap: any = defineMessages({
   },
 });
 
-const Backpack: FC<PropsInterface> = ({
+const Backpack: any = ({
   blockDragOver,
   containerRef,
   contents,
@@ -60,7 +59,7 @@ const Backpack: FC<PropsInterface> = ({
   onMouseEnter,
   onMouseLeave,
   onMore,
-}) => (
+}: PropsInterface) => (
   <div className={styles.backpackContainer}>
     <div className={styles.backpackHeader} onClick={onToggle}>
       {onToggle ? (

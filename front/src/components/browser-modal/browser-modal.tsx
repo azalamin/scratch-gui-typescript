@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import {
   defineMessages,
   FormattedMessage,
@@ -25,7 +24,7 @@ const messages = defineMessages({
   },
 });
 
-const BrowserModal: FC<PropsInterface> = ({ intl, ...props }) => {
+const BrowserModal: any = ({ intl, ...props }: PropsInterface) => {
   const label = props.error ? messages.error : messages.label;
   return (
     <ReactModal
