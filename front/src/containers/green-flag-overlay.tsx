@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Box from '../components/box/box.jsx';
+import Box from '../components/box/box';
 import greenFlag from '../components/green-flag/icon--green-flag.svg';
 
 const GreenFlagOverlay = (props: PropsInterface) => {

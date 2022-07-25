@@ -4,20 +4,20 @@ import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 import fileUploadIcon from '../components/action-menu/icon--file-upload.svg';
 import searchIcon from '../components/action-menu/icon--search.svg';
 import surpriseIcon from '../components/action-menu/icon--surprise.svg';
-import AssetPanel from '../components/asset-panel/asset-panel.jsx';
+import AssetPanel from '../components/asset-panel/asset-panel';
 import addSoundFromLibraryIcon from '../components/asset-panel/icon--add-sound-lib.svg';
 import addSoundFromRecordingIcon from '../components/asset-panel/icon--add-sound-record.svg';
 import soundIconRtl from '../components/asset-panel/icon--sound-rtl.svg';
 import soundIcon from '../components/asset-panel/icon--sound.svg';
 
-import RecordModal from './record-modal.js';
-import SoundEditor from './sound-editor.js';
-import SoundLibrary from './sound-library.js';
+import RecordModal from './record-modal';
+import SoundEditor from './sound-editor';
+import SoundLibrary from './sound-library';
 
 import downloadBlob from '../lib/download-blob';
 import DragConstants from '../lib/drag-constants';
-import errorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
-import { handleFileUpload, soundUpload } from '../lib/file-uploader.js';
+import errorBoundaryHOC from '../lib/error-boundary-hoc';
+import { handleFileUpload, soundUpload } from '../lib/file-uploader';
 import soundLibraryContent from '../lib/libraries/sounds.json';
 
 import { connect } from 'react-redux';

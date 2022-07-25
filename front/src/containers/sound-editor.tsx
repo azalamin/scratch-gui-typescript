@@ -3,16 +3,16 @@ import WavEncoder from 'wav-encoder';
 
 import { connect } from 'react-redux';
 
-import SoundEditorComponent from '../components/sound-editor/sound-editor.jsx';
-import AudioBufferPlayer from '../lib/audio/audio-buffer-player.js';
-import AudioEffects from '../lib/audio/audio-effects.js';
+import SoundEditorComponent from '../components/sound-editor/sound-editor';
+import AudioBufferPlayer from '../lib/audio/audio-buffer-player';
+import AudioEffects from '../lib/audio/audio-effects';
 import {
   computeChunkedRMS,
   downsampleIfNeeded,
   dropEveryOtherSample,
   encodeAndAddSoundToVM,
-} from '../lib/audio/audio-util.js';
-import log from '../lib/log.js';
+} from '../lib/audio/audio-util';
+import log from '../lib/log';
 
 const UNDO_STACK_SIZE = 99;
 const MAX_RMS = 1.2;
@@ -553,7 +553,7 @@ interface PropsInterface {
 //   vm: PropTypes.instanceOf(VM).isRequired,
 // };
 
-const mapStateToProps = (state, { soundIndex }) => {
+const mapStateToProps = (state: any, { soundIndex }: any) => {
   const sprite = state.scratchGui.vm.editingTarget.sprite;
   // Make sure the sound index doesn't go out of range.
   const index =

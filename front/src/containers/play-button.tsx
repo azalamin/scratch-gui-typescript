@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import PlayButtonComponent from '../components/play-button/play-button.jsx';
+import PlayButtonComponent from '../components/play-button/play-button';
 
 const PlayButton = (props: PropInterface) => {
   const [touchStarted, setTouchStarted] = useState<boolean>(false);

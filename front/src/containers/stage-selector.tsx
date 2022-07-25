@@ -5,19 +5,19 @@ import { injectIntl, IntlShape } from 'react-intl';
 import { connect } from 'react-redux';
 import { fetchCode } from '../lib/backpack-api';
 import DragConstants from '../lib/drag-constants';
-import DropAreaHOC from '../lib/drop-area-hoc.jsx';
+import DropAreaHOC from '../lib/drop-area-hoc';
 import { emptyCostume } from '../lib/empty-assets';
 import sharedMessages from '../lib/shared-messages';
-import ThrottledPropertyHOC from '../lib/throttled-property-hoc.jsx';
+import ThrottledPropertyHOC from '../lib/throttled-property-hoc';
 import { getEventXY } from '../lib/touch-utils';
 import { closeAlertWithId, showStandardAlert } from '../reducers/alerts';
 import { activateTab, COSTUMES_TAB_INDEX } from '../reducers/editor-tab';
 import { setHoveredSprite } from '../reducers/hovered-target';
 import { openBackdropLibrary } from '../reducers/modals';
 
-import StageSelectorComponent from '../components/stage-selector/stage-selector.jsx';
+import StageSelectorComponent from '../components/stage-selector/stage-selector';
 
-import { costumeUpload, handleFileUpload } from '../lib/file-uploader.js';
+import { costumeUpload, handleFileUpload } from '../lib/file-uploader';
 import backdropLibraryContent from '../lib/libraries/backdrops.json';
 
 const dragTypes = [
@@ -28,7 +28,7 @@ const dragTypes = [
   DragConstants.BACKPACK_CODE,
 ];
 
-const DroppableThrottledStage = DropAreaHOC(dragTypes)(
+const DroppableThrottledStage: any = DropAreaHOC(dragTypes)(
   ThrottledPropertyHOC('url', 500)(StageSelectorComponent)
 );
 
@@ -215,6 +215,10 @@ interface PropsInterface {
   vm: any;
   onActivateTab: any;
   dispatchSetHoveredSprite: any;
+  fileInputRef?: any;
+  onBackdropFileUpload?: any;
+  onBackdropFileUploadClick?: any;
+  onClick?: any;
 }
 
 // TODO

@@ -1,9 +1,9 @@
 import { defineMessages, injectIntl } from 'react-intl';
 
-import extensionLibraryContent from '../lib/libraries/extensions/index.jsx';
+import extensionLibraryContent from '../lib/libraries/extensions/index';
 
 import extensionIcon from '../components/action-menu/icon--sprite.svg';
-import LibraryComponent from '../components/library/library.jsx';
+import LibraryComponent from '../components/library/library';
 
 const messages = defineMessages({
   extensionTitle: {

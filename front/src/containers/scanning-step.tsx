@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import ScanningStepComponent from '../components/connection-modal/scanning-step.jsx';
+import ScanningStepComponent from '../components/connection-modal/scanning-step';
 
 const ScanningStep = (props: PropsInterface) => {
   const [states, setStates] = useState<any>({

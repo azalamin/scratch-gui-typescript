@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import DirectionComponent, {
   RotationStyles,
-} from '../components/direction-picker/direction-picker.jsx';
+} from '../components/direction-picker/direction-picker';
 
 const DirectionPicker = (props: PropsInterface) => {
   const [popoverOpen, setPopoverOpen] = useState(false);

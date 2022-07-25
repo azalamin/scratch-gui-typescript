@@ -32,7 +32,7 @@ const reducer = function (state: any, action: any) {
   }
 };
 
-const activateColorPicker = (callback: any) => ({
+const activateColorPicker: any = (callback: any) => ({
   type: ACTIVATE_COLOR_PICKER,
   callback: callback,
 });

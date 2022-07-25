@@ -1,5 +1,5 @@
 import throttle from 'lodash.throttle';
-import log from './log.js';
+import log from './log';
 
 class CloudProvider {
   vm: any;

@@ -1,10 +1,8 @@
 import defaultsDeep from 'lodash.defaultsdeep';
-import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 import { connect } from 'react-redux';
 import ScratchBlocks from 'scratch-blocks';
-import { boolean } from 'yup';
-import CustomProceduresComponent from '../components/custom-procedures/custom-procedures.jsx';
+import CustomProceduresComponent from '../components/custom-procedures/custom-procedures';
 
 const CustomProcedures = (props: PropsInterface) => {
   const [states, setStates] = useState<any>({

@@ -1,4 +1,4 @@
-import TagButtonComponent from '../components/tag-button/tag-button.jsx';
+import TagButtonComponent from '../components/tag-button/tag-button';
 
 const TagButton = (props: PropsInterface) => {
   const handleClick = () => {

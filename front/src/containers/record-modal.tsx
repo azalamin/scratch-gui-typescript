@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { encodeAndAddSoundToVM } from '../lib/audio/audio-util.js';
+import { encodeAndAddSoundToVM } from '../lib/audio/audio-util';
 
-import RecordModalComponent from '../components/record-modal/record-modal.jsx';
+import RecordModalComponent from '../components/record-modal/record-modal';
 
 import { closeSoundRecorder } from '../reducers/modals';
 

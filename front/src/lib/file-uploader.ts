@@ -1,7 +1,7 @@
 import { BitmapAdapter } from 'scratch-svg-renderer';
 import bmpConverter from './bmp-converter';
 import gifDecoder from './gif-decoder';
-import randomizeSpritePosition from './randomize-sprite-position.js';
+import randomizeSpritePosition from './randomize-sprite-position';
 
 /**
  * Extract the file name given a string of the form fileName + ext

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import OpcodeLabels from './opcode-labels.js';
+import OpcodeLabels from './opcode-labels';
 
 const isUndefined = (a: any) => typeof a === 'undefined';
 

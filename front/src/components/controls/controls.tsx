@@ -52,7 +52,7 @@ const Controls = function (props: PropsInterface) {
 
 interface PropsInterface {
   active: boolean;
-  className: string;
+  className?: string;
   intl: IntlShape;
   onGreenFlagClick: any;
   onStopAllClick: any;

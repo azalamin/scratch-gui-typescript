@@ -2,12 +2,12 @@ import { useCallback, useEffect } from 'react';
 import { injectIntl, IntlShape } from 'react-intl';
 import { connect } from 'react-redux';
 
-import TargetPaneComponent from '../components/target-pane/target-pane.jsx';
+import TargetPaneComponent from '../components/target-pane/target-pane';
 import { fetchCode, fetchSprite } from '../lib/backpack-api';
 import downloadBlob from '../lib/download-blob';
 import DragConstants from '../lib/drag-constants';
 import { emptySprite } from '../lib/empty-assets';
-import { handleFileUpload, spriteUpload } from '../lib/file-uploader.js';
+import { handleFileUpload, spriteUpload } from '../lib/file-uploader';
 import { BLOCKS_DEFAULT_SCALE } from '../lib/layout-constants';
 import spriteLibraryContent from '../lib/libraries/sprites.json';
 import randomizeSpritePosition from '../lib/randomize-sprite-position';

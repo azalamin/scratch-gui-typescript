@@ -6,7 +6,7 @@ import ScratchBlocks from 'scratch-blocks';
  * @return {ScratchBlocks} ScratchBlocks connected with the vm
  */
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function (vm: any) {
+export default function (vm: any): any {
   const jsonForMenuBlock = function (
     name: any,
     menuOptionsFn: any,

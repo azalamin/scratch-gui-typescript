@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { setVariableValue } from '../lib/variable-utils';
 
-import SliderMonitorComponent from '../components/monitor/slider-monitor.jsx';
+import SliderMonitorComponent from '../components/monitor/slider-monitor';
 
 const SliderMonitor = (prop: PropsInterface) => {
   const [stateValue, setValue] = useState<any>(prop.value);

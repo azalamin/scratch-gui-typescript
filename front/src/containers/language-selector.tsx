@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { selectLocale } from '../reducers/locales';
 import { closeLanguageMenu } from '../reducers/menus';
 
-import LanguageSelectorComponent from '../components/language-selector/language-selector.jsx';
+import LanguageSelectorComponent from '../components/language-selector/language-selector';
 
 const LanguageSelector = (prop: PropsInterface) => {
   document.documentElement.lang = prop.currentLocale;

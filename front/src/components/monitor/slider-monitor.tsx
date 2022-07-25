@@ -33,13 +33,13 @@ const SliderMonitor = ({
 );
 
 interface PropsInterface {
-  categoryColor: string;
-  isDiscrete: boolean;
-  label: string;
-  max: number;
-  min: number;
-  onSliderUpdate: any;
-  value: string | number;
+  categoryColor?: string;
+  isDiscrete?: boolean;
+  label?: string;
+  max?: number;
+  min?: number;
+  onSliderUpdate?: any;
+  value?: string | number;
 }
 
 // TODO

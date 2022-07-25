@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 
-import Blocks from '../containers/blocks.js';
-import Controls from '../containers/controls.js';
-import GUI from '../containers/gui.js';
-import AppStateHOC from '../lib/app-state-hoc.js';
-import HashParserHOC from '../lib/hash-parser-hoc.jsx';
+import Blocks from '../containers/blocks';
+import Controls from '../containers/controls';
+import GUI from '../containers/gui';
+import AppStateHOC from '../lib/app-state-hoc';
+import HashParserHOC from '../lib/hash-parser-hoc';
 
 import styles from './blocksOnly.module.css';
 

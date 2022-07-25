@@ -1,14 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { combineReducers, compose, createStore } from 'redux';
-import ConnectedIntlProvider from './connected-intl-provider.jsx';
+import ConnectedIntlProvider from './connected-intl-provider';
 
 import localesReducer, {
   initLocale,
   localesInitialState,
 } from '../reducers/locales';
 
-import { setFullScreen, setPlayer } from '../reducers/mode.js';
+import { setFullScreen, setPlayer } from '../reducers/mode';
 
 import locales from 'scratch-l10n';
 import { detectLocale } from './detect-locale';

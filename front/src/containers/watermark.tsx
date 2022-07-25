@@ -1,11 +1,11 @@
 import omit from 'lodash.omit';
 import { connect } from 'react-redux';
 
-import ThrottledPropertyHOC from '../lib/throttled-property-hoc.jsx';
+import ThrottledPropertyHOC from '../lib/throttled-property-hoc';
 
 import getCostumeUrl from '../lib/get-costume-url';
 
-import WatermarkComponent from '../components/watermark/watermark.jsx';
+import WatermarkComponent from '../components/watermark/watermark';
 
 const Watermark = (props: PropsInterface) => {
   const getCostumeData = () => {

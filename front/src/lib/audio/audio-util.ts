@@ -25,7 +25,7 @@ const computeChunkedRMS = function (samples: any, chunkSize = 1024) {
   return chunkLevels;
 };
 
-const encodeAndAddSoundToVM = function (
+const encodeAndAddSoundToVM: any = function (
   vm: any,
   samples: any,
   sampleRate: any,

@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import ConnectionModalComponent, {
   PHASES,
-} from '../components/connection-modal/connection-modal.jsx';
+} from '../components/connection-modal/connection-modal';
 import analytics from '../lib/analytics';
-import extensionData from '../lib/libraries/extensions/index.jsx';
+import extensionData from '../lib/libraries/extensions/index';
 import { closeConnectionModal } from '../reducers/modals';
 
 const ConnectionModal = (props: PropsInterface) => {
-  const [states, setStates] = useState({
+  const [states, setStates] = useState<any>({
     extension: extensionData.find(
       (ext: any) => ext.extensionId === props.extensionId
     ),

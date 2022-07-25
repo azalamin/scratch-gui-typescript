@@ -3,10 +3,10 @@ import { injectIntl, IntlShape } from 'react-intl';
 import { connect } from 'react-redux';
 import { moveMonitorRect } from '../reducers/monitor-layout';
 
-import errorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
+import errorBoundaryHOC from '../lib/error-boundary-hoc';
 import OpcodeLabels from '../lib/opcode-labels';
 
-import MonitorListComponent from '../components/monitor-list/monitor-list.jsx';
+import MonitorListComponent from '../components/monitor-list/monitor-list';
 
 const MonitorList = (props: PropsInterface) => {
   OpcodeLabels.setTranslatorFunction(props.intl.formatMessage);

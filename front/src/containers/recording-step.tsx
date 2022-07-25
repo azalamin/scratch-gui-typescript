@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
-import RecordingStepComponent from '../components/record-modal/recording-step.jsx';
-import AudioRecorder from '../lib/audio/audio-recorder.js';
+import RecordingStepComponent from '../components/record-modal/recording-step';
+import AudioRecorder from '../lib/audio/audio-recorder';
 
 const messages = defineMessages({
   alertMsg: {

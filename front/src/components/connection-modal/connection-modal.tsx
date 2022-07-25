@@ -67,6 +67,13 @@ interface PropsInterface {
   phase: any;
   title: string;
   useAutoScan: boolean;
+  connectionIconURL?: any;
+  extensionId?: any;
+  vm?: any;
+  onConnected?: any;
+  onConnecting?: any;
+  onDisconnect?: any;
+  onScanning?: any;
 }
 
 // TODO

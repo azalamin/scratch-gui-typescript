@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PromptComponent from '../components/prompt/prompt.jsx';
+import PromptComponent from '../components/prompt/prompt';
 
 const Prompt = (props: PropsInterface) => {
   const [states, setStates] = useState<any>({

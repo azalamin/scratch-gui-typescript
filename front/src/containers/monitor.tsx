@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
-import MonitorComponent, {
-  monitorModes,
-} from '../components/monitor/monitor.jsx';
+import MonitorComponent, { monitorModes } from '../components/monitor/monitor';
 import downloadBlob from '../lib/download-blob';
 import importCSV from '../lib/import-csv';
-import monitorAdapter from '../lib/monitor-adapter.js';
+import monitorAdapter from '../lib/monitor-adapter';
 import { getVariable, setVariableValue } from '../lib/variable-utils';
 import {
   addMonitorRect,
@@ -14,7 +12,7 @@ import {
   removeMonitorRect,
   resizeMonitorRect,
 } from '../reducers/monitor-layout';
-import SliderPrompt from './slider-prompt.jsx';
+import SliderPrompt from './slider-prompt';
 
 import { Map } from 'immutable';
 import { connect } from 'react-redux';
@@ -232,7 +230,7 @@ const Monitor = (props: PropsInterface) => {
 
 interface PropsInterface {
   addMonitorRect: any;
-  draggable: boolean;
+  draggable: any;
   height: number;
   id: string;
   intl: IntlShape;

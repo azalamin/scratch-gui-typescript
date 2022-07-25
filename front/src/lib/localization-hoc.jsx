@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 
-import ConnectedIntlProvider from './connected-intl-provider.jsx';
+import ConnectedIntlProvider from './connected-intl-provider';
 
 /*
  * Higher Order Component to provide localiztion state. Creates a nested IntlProvider

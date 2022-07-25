@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 import { useState } from 'react';
 import { connect } from 'react-redux';
-import ListMonitorComponent from '../components/monitor/list-monitor.jsx';
+import ListMonitorComponent from '../components/monitor/list-monitor';
 import { getEventXY } from '../lib/touch-utils';
 import { getVariableValue, setVariableValue } from '../lib/variable-utils';
 

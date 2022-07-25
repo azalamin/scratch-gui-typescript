@@ -14,9 +14,9 @@ import {
 
 import { openTipsLibrary } from '../reducers/modals';
 
-import CardsComponent from '../components/cards/cards.jsx';
+import CardsComponent from '../components/cards/cards';
 import { notScratchDesktop } from '../lib/isScratchDesktop';
-import { loadImageData } from '../lib/libraries/decks/translate-image.js';
+import { loadImageData } from '../lib/libraries/decks/translate-image';
 
 const Cards = (props: PropsInterface) => {
   useEffect(() => {

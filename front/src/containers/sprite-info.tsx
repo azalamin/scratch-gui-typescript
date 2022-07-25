@@ -1,4 +1,4 @@
-import SpriteInfoComponent from '../components/sprite-info/sprite-info.jsx';
+import SpriteInfoComponent from '../components/sprite-info/sprite-info';
 
 const SpriteInfo = (props: PropsInterface) => {
   const handleClickVisible = (e: any) => {

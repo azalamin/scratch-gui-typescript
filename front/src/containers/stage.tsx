@@ -1,16 +1,13 @@
 import bindAll from 'lodash.bindall';
-import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import Renderer from 'scratch-render';
-import VM from 'scratch-vm';
+import React from 'react';
 import { connect } from 'react-redux';
+import Renderer from 'scratch-render';
 
-import { STAGE_DISPLAY_SIZES } from '../lib/layout-constants';
+import { BitmapAdapter as V2BitmapAdapter } from 'scratch-svg-renderer';
 import { getEventXY } from '../lib/touch-utils';
 import VideoProvider from '../lib/video/video-provider';
-import { BitmapAdapter as V2BitmapAdapter } from 'scratch-svg-renderer';
 
-import StageComponent from '../components/stage/stage.jsx';
+import StageComponent from '../components/stage/stage';
 
 import {
   activateColorPicker,

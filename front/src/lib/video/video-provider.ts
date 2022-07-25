@@ -1,5 +1,5 @@
-import log from '../log.js';
-import { requestDisableVideo, requestVideoStream } from './camera.js';
+import log from '../log';
+import { requestDisableVideo, requestVideoStream } from './camera';
 
 /**
  * Video Manager for video extensions.

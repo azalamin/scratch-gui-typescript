@@ -1,4 +1,4 @@
-import messages from './tag-messages.js';
+import messages from './tag-messages';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   { tag: 'animals', intlLabel: messages.animals },

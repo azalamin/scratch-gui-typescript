@@ -1,4 +1,4 @@
-import StageWrapperComponent from '../components/stage-wrapper/stage-wrapper.jsx';
+import StageWrapperComponent from '../components/stage-wrapper/stage-wrapper';
 
 const StageWrapper = (props: any) => <StageWrapperComponent {...props} />;
 

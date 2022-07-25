@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import BrowserModalComponent from '../components/browser-modal/browser-modal.jsx';
-import CrashMessageComponent from '../components/crash-message/crash-message.jsx';
-import log from '../lib/log.js';
+import BrowserModalComponent from '../components/browser-modal/browser-modal';
+import CrashMessageComponent from '../components/crash-message/crash-message';
+import log from '../lib/log';
 import { recommendedBrowser } from '../lib/supported-browser';
 
 class ErrorBoundary extends React.Component<PropsInterface, StateInterface> {

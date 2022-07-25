@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { defineMessages, injectIntl, intlShape } from 'react-intl';
+import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
-import decksLibraryContent from '../lib/libraries/decks/index.jsx';
+import decksLibraryContent from '../lib/libraries/decks/index';
 import tutorialTags from '../lib/libraries/tutorial-tags';
 
 import analytics from '../lib/analytics';
 import { notScratchDesktop } from '../lib/isScratchDesktop';
 
-import LibraryComponent from '../components/library/library.jsx';
+import LibraryComponent from '../components/library/library';
 
 import { connect } from 'react-redux';
 
@@ -19,7 +19,7 @@ import {
   LoadingState,
   onFetchedProjectData,
   onLoadedProject,
-} from '../reducers/project-state.js';
+} from '../reducers/project-state';
 
 const messages: any = defineMessages({
   tipsLibraryTitle: {
@@ -83,7 +83,7 @@ const TipsLibrary = (props: PropsInterface) => {
   const decksLibraryThumbnailData = Object.keys(decksLibraryContent)
     .filter(id => {
       if (notScratchDesktop()) return true; // Do not filter anything in online editor
-      const deck = decksLibraryContent[id];
+      const deck = (decksLibraryContent as any)[id];
       // Scratch Desktop doesn't want tutorials with `requiredProjectId`
       if (deck.hasOwnProperty('requiredProjectId')) return false;
       // Scratch Desktop should not load tutorials that are _only_ videos
@@ -93,15 +93,15 @@ const TipsLibrary = (props: PropsInterface) => {
     })
 
     .map(id => ({
-      rawURL: decksLibraryContent[id].img,
+      rawURL: (decksLibraryContent as any)[id].img,
       id: id,
-      name: decksLibraryContent[id].name,
-      path: decksLibraryContent[id].path,
+      name: (decksLibraryContent as any).name,
+      path: (decksLibraryContent as any)[id].path,
       featured: true,
-      tags: decksLibraryContent[id].tags,
-      urlId: decksLibraryContent[id].urlId,
-      requiredProjectId: decksLibraryContent[id].requiredProjectId,
-      hidden: decksLibraryContent[id].hidden || false,
+      tags: (decksLibraryContent as any)[id].tags,
+      urlId: (decksLibraryContent as any)[id].urlId,
+      requiredProjectId: (decksLibraryContent as any)[id].requiredProjectId,
+      hidden: (decksLibraryContent as any)[id].hidden || false,
     }));
 
   if (!props.visible) return null;
@@ -121,7 +121,7 @@ const TipsLibrary = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  intl: intlShape;
+  intl: IntlShape;
   onActivateDeck: any;
   onLoadingFinished: any;
   isShowingWitPath: boolean;

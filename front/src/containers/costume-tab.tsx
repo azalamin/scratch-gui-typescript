@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import { defineMessages, injectIntl } from 'react-intl';
 
 import { connect } from 'react-redux';
-import AssetPanel from '../components/asset-panel/asset-panel.jsx';
+import AssetPanel from '../components/asset-panel/asset-panel';
 import downloadBlob from '../lib/download-blob';
 import DragConstants from '../lib/drag-constants';
 import { emptyCostume } from '../lib/empty-assets';
-import errorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
-import { costumeUpload, handleFileUpload } from '../lib/file-uploader.js';
+import errorBoundaryHOC from '../lib/error-boundary-hoc';
+import { costumeUpload, handleFileUpload } from '../lib/file-uploader';
 import sharedMessages from '../lib/shared-messages';
-import PaintEditorWrapper from './paint-editor-wrapper.jsx';
+import PaintEditorWrapper from './paint-editor-wrapper';
 
 import { openBackdropLibrary, openCostumeLibrary } from '../reducers/modals';
 

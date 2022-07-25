@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ControlsComponent from '../components/controls/controls.jsx';
+import ControlsComponent from '../components/controls/controls';
 
 const Controls = (prop: PropsInterface) => {
   const handleGreenFlagClick = (e: any) => {

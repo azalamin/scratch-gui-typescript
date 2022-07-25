@@ -1,7 +1,7 @@
 import 'get-float-time-domain-data';
 import getUserMedia from 'get-user-media-promise';
-import { computeChunkedRMS, computeRMS } from './audio-util.js';
-import SharedAudioContext from './shared-audio-context.js';
+import { computeChunkedRMS, computeRMS } from './audio-util';
+import SharedAudioContext from './shared-audio-context';
 
 class AudioRecorder {
   audioContext: any;

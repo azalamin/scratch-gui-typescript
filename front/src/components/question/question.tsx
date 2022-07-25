@@ -32,12 +32,12 @@ const QuestionComponent = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  answer: string;
-  className: string;
-  onChange: any;
-  onClick: any;
-  onKeyPress: any;
-  question: string;
+  answer?: string;
+  className?: string;
+  onChange?: any;
+  onClick?: any;
+  onKeyPress?: any;
+  question?: string;
 }
 
 // QuestionComponent.propTypes = {

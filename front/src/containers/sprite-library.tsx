@@ -4,7 +4,7 @@ import spriteTags from '../lib/libraries/sprite-tags';
 import spriteLibraryContent from '../lib/libraries/sprites.json';
 import randomizeSpritePosition from '../lib/randomize-sprite-position';
 
-import LibraryComponent from '../components/library/library.jsx';
+import LibraryComponent from '../components/library/library';
 
 const messages = defineMessages({
   libraryTitle: {

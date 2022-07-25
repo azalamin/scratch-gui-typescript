@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import PlaybackStepComponent from '../components/record-modal/playback-step.jsx';
-import AudioBufferPlayer from '../lib/audio/audio-buffer-player.js';
+import PlaybackStepComponent from '../components/record-modal/playback-step';
+import AudioBufferPlayer from '../lib/audio/audio-buffer-player';
 
 const PlaybackStep = (props: PropsInterface) => {
   let audioBufferPlayer: any;

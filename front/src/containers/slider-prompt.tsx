@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SliderPromptComponent from '../components/slider-prompt/slider-prompt.jsx';
+import SliderPromptComponent from '../components/slider-prompt/slider-prompt';
 
 const SliderPrompt = (props: PropsInterface) => {
   const { isDiscrete, minValue, maxValue } = props;

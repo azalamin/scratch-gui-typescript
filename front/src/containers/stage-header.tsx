@@ -5,7 +5,7 @@ import { setStageSize } from '../reducers/stage-size';
 
 import { connect } from 'react-redux';
 
-import StageHeaderComponent from '../components/stage-header/stage-header.jsx';
+import StageHeaderComponent from '../components/stage-header/stage-header';
 
 const StageHeader = (prop: PropsInterface) => {
   const handleKeyPress = useCallback(

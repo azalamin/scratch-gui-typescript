@@ -1,4 +1,4 @@
-import { MenuItem as MenuItemComponent } from '../components/menu/menu.jsx';
+import { MenuItem as MenuItemComponent } from '../components/menu/menu';
 
 const MenuItem = (props: PropsInterface) => {
   const navigateToHref = () => {

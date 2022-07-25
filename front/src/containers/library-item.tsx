@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { injectIntl } from 'react-intl';
 
-import LibraryItemComponent from '../components/library-item/library-item.jsx';
+import LibraryItemComponent from '../components/library-item/library-item';
 
 const LibraryItem: any = (props: PropsInterface) => {
   const [iconStatus, setIconStatus] = useState<any>({

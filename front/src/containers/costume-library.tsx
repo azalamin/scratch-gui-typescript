@@ -1,6 +1,6 @@
-import { defineMessages, injectIntl, intlShape } from 'react-intl';
+import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 
-import LibraryComponent from '../components/library/library.jsx';
+import LibraryComponent from '../components/library/library';
 import costumeLibraryContent from '../lib/libraries/costumes.json';
 import spriteTags from '../lib/libraries/sprite-tags';
 
@@ -36,7 +36,7 @@ const CostumeLibrary = (props: PropsInterface) => {
 };
 
 interface PropsInterface {
-  intl: intlShape;
+  intl: IntlShape;
   onRequestClose: any;
   vm: any;
 }

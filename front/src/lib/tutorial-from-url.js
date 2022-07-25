@@ -4,7 +4,7 @@
  */
 
 import analytics from './analytics';
-import tutorials from './libraries/decks/index.js';
+import tutorials from './libraries/decks/index';
 
 /**
  * Get the tutorial id from the given numerical id (representing the

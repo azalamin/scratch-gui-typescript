@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import QuestionComponent from '../components/question/question.jsx';
+import QuestionComponent from '../components/question/question';
 
 const Question = (props: PropsInterface) => {
   const [answer, setAnswer] = useState('');

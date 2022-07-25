@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import MenuComponent from '../components/menu/menu.jsx';
+import MenuComponent from '../components/menu/menu';
 
 const Menu = (prop: PropsInterface) => {
   let menu: any = useRef();

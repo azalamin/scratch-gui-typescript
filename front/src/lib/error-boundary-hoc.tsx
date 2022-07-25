@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorBoundary from '../containers/error-boundary.js';
+import ErrorBoundary from '../containers/error-boundary';
 
 /*
  * Higher Order Component to provide error boundary for wrapped component.
@@ -13,7 +13,7 @@ const ErrorBoundaryHOC = function (action: any) {
    * @param {React.Component} WrappedComponent - Component to wrap with an error boundary.
    * @returns {React.Component} the component wrapped with an error boundary.
    */
-  return function (WrappedComponent: any) {
+  return function (WrappedComponent: any): any {
     const ErrorBoundaryWrapper = (props: any) => (
       <ErrorBoundary action={action}>
         <WrappedComponent {...props} />

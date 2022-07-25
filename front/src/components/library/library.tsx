@@ -274,6 +274,7 @@ interface PropsInterface {
   showPlayButton?: any;
   tags?: any;
   title?: string;
+  visible?: any;
 }
 
 // TODO

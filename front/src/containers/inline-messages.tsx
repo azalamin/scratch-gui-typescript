@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { filterInlineAlerts } from '../reducers/alerts';
 
-import InlineMessageComponent from '../components/alerts/inline-message.jsx';
+import InlineMessageComponent from '../components/alerts/inline-message';
 
 const InlineMessages: FC<PropsInterface> = ({ alertsList, className }) => {
   if (!alertsList) {

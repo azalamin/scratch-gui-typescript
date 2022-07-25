@@ -3,68 +3,68 @@
  * Utility functions for handling tutorial images in multiple languages
  */
 
-import { enImages as defaultImages } from './en-steps.js';
+import { enImages as defaultImages } from './en-steps';
 
 let savedImages: any = {};
 let savedLocale = '';
 
 const loadSpanish = () =>
-  import(/* webpackChunkName: "es-steps" */ './es-steps.js').then(
+  import(/* webpackChunkName: "es-steps" */ './es-steps').then(
     ({ esImages: imageData }) => imageData
   );
 
 const loadSimplifiedChinese = () =>
-  import(/* webpackChunkName: "zh_CN-steps" */ './zh_CN-steps.js').then(
+  import(/* webpackChunkName: "zh_CN-steps" */ './zh_CN-steps').then(
     ({ zhCnImages: imageData }) => imageData
   );
 
 const loadTraditionalChinese = () =>
-  import(/* webpackChunkName: "zh_TW-steps" */ './zh_TW-steps.js').then(
+  import(/* webpackChunkName: "zh_TW-steps" */ './zh_TW-steps').then(
     ({ zhTwImages: imageData }) => imageData
   );
 
 const loadTurkish = () =>
-  import(/* webpackChunkName: "tr-steps" */ './tr-steps.js').then(
+  import(/* webpackChunkName: "tr-steps" */ './tr-steps').then(
     ({ trImages: imageData }) => imageData
   );
 
 const loadFrench = () =>
-  import(/* webpackChunkName: "fr-steps" */ './fr-steps.js').then(
+  import(/* webpackChunkName: "fr-steps" */ './fr-steps').then(
     ({ frImages: imageData }) => imageData
   );
 
 const loadPortugueseBrazilian = () =>
-  import(/* webpackChunkName: "pt_BR-steps" */ './pt_BR-steps.js').then(
+  import(/* webpackChunkName: "pt_BR-steps" */ './pt_BR-steps').then(
     ({ ptBrImages: imageData }) => imageData
   );
 
 const loadArabic = () =>
-  import(/* webpackChunkName: "ar-steps" */ './ar-steps.js').then(
+  import(/* webpackChunkName: "ar-steps" */ './ar-steps').then(
     ({ arImages: imageData }) => imageData
   );
 
 const loadAmharic = () =>
-  import(/* webpackChunkName: "am-steps" */ './am-steps.js').then(
+  import(/* webpackChunkName: "am-steps" */ './am-steps').then(
     ({ amImages: imageData }) => imageData
   );
 
 const loadKiswahili = () =>
-  import(/* webpackChunkName: "sw-steps" */ './sw-steps.js').then(
+  import(/* webpackChunkName: "sw-steps" */ './sw-steps').then(
     ({ swImages: imageData }) => imageData
   );
 
 const loadIsiZulu = () =>
-  import(/* webpackChunkName: "zu-steps" */ './zu-steps.js').then(
+  import(/* webpackChunkName: "zu-steps" */ './zu-steps').then(
     ({ zuImages: imageData }) => imageData
   );
 
 const loadUkrainian = () =>
-  import(/* webpackChunkName: "uk-steps" */ './uk-steps.js').then(
+  import(/* webpackChunkName: "uk-steps" */ './uk-steps').then(
     ({ ukImages: imageData }) => imageData
   );
 
 const loadJapanese = () =>
-  import(/* webpackChunkName: "ja-steps" */ './ja-steps.js').then(
+  import(/* webpackChunkName: "ja-steps" */ './ja-steps').then(
     ({ jaImages: imageData }) => imageData
   );
 

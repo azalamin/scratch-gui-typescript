@@ -47,10 +47,10 @@ const MonitorList = (props: PropsInterface) => (
 );
 
 interface PropsInterface {
-  draggable: boolean;
-  monitors: any;
-  onMonitorChange: any;
-  stageSize: any;
+  draggable?: boolean;
+  monitors?: any;
+  onMonitorChange?: any;
+  stageSize?: any;
 }
 
 // TODO

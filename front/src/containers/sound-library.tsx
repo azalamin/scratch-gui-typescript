@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { defineMessages, injectIntl, IntlShape } from 'react-intl';
 import AudioEngine from 'scratch-audio';
 
-import LibraryComponent from '../components/library/library.jsx';
+import LibraryComponent from '../components/library/library';
 
 import soundIconRtl from '../components/library-item/lib-icon--sound-rtl.svg';
 import soundIcon from '../components/library-item/lib-icon--sound.svg';

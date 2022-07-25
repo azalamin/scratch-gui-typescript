@@ -1,4 +1,4 @@
-import WebGlModalComponent from '../components/webgl-modal/webgl-modal.jsx';
+import WebGlModalComponent from '../components/webgl-modal/webgl-modal';
 
 const WebGlModal = (props: PropsInterface) => {
   const handleCancel = () => {

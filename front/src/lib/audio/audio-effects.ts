@@ -1,8 +1,8 @@
-import EchoEffect from './effects/echo-effect.js';
-import FadeEffect from './effects/fade-effect.js';
-import MuteEffect from './effects/mute-effect.js';
-import RobotEffect from './effects/robot-effect.js';
-import VolumeEffect from './effects/volume-effect.js';
+import EchoEffect from './effects/echo-effect';
+import FadeEffect from './effects/fade-effect';
+import MuteEffect from './effects/mute-effect';
+import RobotEffect from './effects/robot-effect';
+import VolumeEffect from './effects/volume-effect';
 
 const effectTypes = {
   ROBOT: 'robot',

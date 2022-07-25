@@ -59,7 +59,7 @@ const PlayButtonComponent = ({
 };
 
 interface PropsInterface {
-  className: string;
+  className: any;
   intl: IntlShape;
   isPlaying: boolean;
   onClick: any;
