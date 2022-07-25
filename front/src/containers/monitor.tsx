@@ -159,10 +159,10 @@ const Monitor = (props: PropsInterface) => {
     );
     handleSliderPromptClose();
   };
-  const setElement = (monitorElt: any) => {
+  const setElement: any = (monitorElt: any) => {
     element = monitorElt;
   };
-  const handleImport = () => {
+  const handleImport: any = () => {
     importCSV().then((rows: any) => {
       const numberOfColumns = rows[0].length;
       let columnNumber: any = 1;

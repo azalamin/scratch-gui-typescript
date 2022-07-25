@@ -4,7 +4,7 @@ import log from './log';
 
 const GA_ID: any = process.env.GA_ID || window.GA_ID;
 if (GA_ID) {
-  GoogleAnalytics.initialize(GA_ID, null, {
+  GoogleAnalytics.initialize(GA_ID, {
     debug: process.env.NODE_ENV !== 'production',
     titleCase: true,
     sampleRate: process.env.NODE_ENV === 'production' ? 100 : 0,
