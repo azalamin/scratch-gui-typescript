@@ -15,14 +15,14 @@ const AccountNav: any = function (props: PropsInterface) {
 };
 
 interface PropsInterface {
-  className: string;
-  classroomId: string;
-  isEducator: boolean;
-  isRtl: boolean;
-  isStudent: boolean;
-  profileUrl: string;
-  thumbnailUrl: string;
-  username: string;
+  className?: string;
+  classroomId?: string;
+  isEducator?: boolean;
+  isRtl?: boolean;
+  isStudent?: boolean;
+  profileUrl?: string;
+  thumbnailUrl?: string;
+  username?: string;
 }
 
 const mapStateToProps = (state: any) => ({
