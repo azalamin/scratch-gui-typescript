@@ -84,11 +84,11 @@ const TargetPane = (props: PropsInterface) => {
     props.vm.addSprite(JSON.stringify(item)).then(handleActivateBlocksTab);
   };
   const handlePaintSpriteClick = () => {
-    const formatMessage = props.intl.formatMessage;
+    const formatMessage: any = props.intl.formatMessage;
     const emptyItem = emptySprite(
-      formatMessage(sharedMessages.sprite, { index: 1 }),
-      formatMessage(sharedMessages.pop),
-      formatMessage(sharedMessages.costume, { index: 1 })
+      formatMessage(sharedMessages.sprite, { index: 1 }, '', '', ''),
+      formatMessage(sharedMessages.pop, '', '', '', ''),
+      formatMessage(sharedMessages.costume, { index: 1 }, '', '', '')
     );
     props.vm.addSprite(JSON.stringify(emptyItem)).then(() => {
       setTimeout(() => {

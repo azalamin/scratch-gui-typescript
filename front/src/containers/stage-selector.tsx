@@ -74,7 +74,13 @@ const StageSelector = (props: PropsInterface) => {
     props.vm.setEditingTarget(props.id);
     handleNewBackdrop(
       emptyCostume(
-        props.intl.formatMessage(sharedMessages.backdrop, { index: 1 })
+        props.intl.formatMessage(
+          sharedMessages.backdrop,
+          { index: 1 },
+          '',
+          '',
+          ''
+        )
       )
     );
   };

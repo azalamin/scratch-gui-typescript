@@ -5,7 +5,7 @@ const SpriteInfo = (props: PropsInterface) => {
     e.preventDefault();
     props.onChangeVisibility(true);
   };
-  const handleClickNotVisible = (e: any) => {
+  const handleClickNotVisible = (e: any): any => {
     e.preventDefault();
     props.onChangeVisibility(false);
   };
