@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { indexForPositionOnList } from './drag-utils';
 
-const SortableHOC = function (WrappedComponent: any) {
+const SortableHOC: any = function (WrappedComponent: any) {
   class SortableWrapper extends React.Component<PropsInterface> {
     sortableRefs: any;
     boxes: any;
