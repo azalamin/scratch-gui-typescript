@@ -4,7 +4,7 @@ import { defineMessages, FormattedMessage, injectIntl, IntlShape } from 'react-i
 import { connect } from 'react-redux';
 import MediaQuery from 'react-responsive';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import tabStyles from 'react-tabs/style/react-tabs.module.css'; // Can be crash tabStyles
+import tabStyles from './react-tabs.module.css'; // Can be crash tabStyles
 import Renderer from 'scratch-render';
 
 import BackdropLibrary from '../../containers/backdrop-library';
