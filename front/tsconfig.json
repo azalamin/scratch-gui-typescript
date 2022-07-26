@@ -1,23 +1,22 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"],
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "typeRoots": ["./src/types"],
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": ["src", "declarations.d.ts"]
+	"compilerOptions": {
+		"target": "es5",
+		"plugins": [{ "name": "typescript-plugin-css-modules" }],
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"typeRoots": ["./src/types"],
+		"noEmit": true,
+		"jsx": "react-jsx"
+	},
+	"include": ["src", "declarations.d.ts", "custom.d.ts"]
 }

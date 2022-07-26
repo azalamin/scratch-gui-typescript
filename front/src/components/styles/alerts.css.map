@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,IAAI;EACV,KAAK,EAAE,IAAI;CACZ",
-    "sources": [
-        "alerts.scss"
-    ],
-    "names": [],
-    "file": "alerts.css"
-}
+{"version":3,"sources":["alerts.scss","alerts.css"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,UAAA;EACA,WAAA;ACCF","file":"alerts.css"}

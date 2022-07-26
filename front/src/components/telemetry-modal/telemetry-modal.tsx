@@ -125,7 +125,7 @@ const TelemetryModal = (props: PropsInterface) => {
 		<ReactModal
 			isOpen
 			className={styles.modalContent}
-			contentLabel={props.intl.formatMessage(messages.label)}
+			contentLabel={props.intl.formatMessage(messages.label, '', '', '', '')?.message}
 			overlayClassName={styles.modalOverlay}
 			onRequestClose={handleCancel}
 		>
@@ -160,7 +160,7 @@ const TelemetryModal = (props: PropsInterface) => {
 								name='optInOut'
 								type='radio'
 								value='true'
-								title={props.intl.formatMessage(messages.optInTooltip)}
+								title={props.intl.formatMessage(messages.optInTooltip, '', '', '', '')?.message}
 								checked={props.isTelemetryEnabled === true}
 								onChange={handleOptInOutChanged}
 							/>
@@ -171,7 +171,7 @@ const TelemetryModal = (props: PropsInterface) => {
 								name='optInOut'
 								type='radio'
 								value='false'
-								title={props.intl.formatMessage(messages.optOutTooltip)}
+								title={props.intl.formatMessage(messages.optOutTooltip, '', '', '', '')?.message}
 								checked={props.isTelemetryEnabled === false}
 								onChange={handleOptInOutChanged}
 							/>

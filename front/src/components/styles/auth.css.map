@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,CAAC;EACZ,KAAK,EAAE,IAAI;CACX;;AAED,AAAA,eAAe,CAAC;EACf,KAAK,EAAE,GAAG;CACV;;AAED,AAAA,YAAY,CAAC;EACZ,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,GAAG;CACV;;AAED,AAAA,UAAU,CAAC;EACV,eAAe,EAAE,IAAI;CACrB",
-    "sources": [
-        "auth.scss"
-    ],
-    "names": [],
-    "file": "auth.css"
-}
+{"version":3,"sources":["auth.scss","auth.css"],"names":[],"mappings":"AAAA;EACC,WAAA;ACCD;;ADEA;EACC,UAAA;ACCD;;ADEA;EACC,YAAA;EACA,UAAA;ACCD;;ADEA;EACC,qBAAA;ACCD","file":"auth.css"}

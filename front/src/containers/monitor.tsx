@@ -163,9 +163,13 @@ const Monitor = (props: PropsInterface) => {
 			const numberOfColumns = rows[0].length;
 			let columnNumber: any = 1;
 			if (numberOfColumns > 1) {
-				const msg: any = props.intl.formatMessage(messages.columnPrompt, {
+				const msg: any = props.intl.formatMessage(
+					messages.columnPrompt,
 					numberOfColumns,
-				});
+					'',
+					'',
+					''
+				);
 				columnNumber = parseInt(msg, 10);
 			}
 			const newListValue = rows

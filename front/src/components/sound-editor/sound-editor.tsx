@@ -1,10 +1,5 @@
 import classNames from 'classnames';
-import {
-  defineMessages,
-  FormattedMessage,
-  injectIntl,
-  IntlShape,
-} from 'react-intl';
+import { defineMessages, FormattedMessage, injectIntl, IntlShape } from 'react-intl';
 
 import Input from '../forms/input';
 import Label from '../forms/label';
@@ -38,307 +33,298 @@ import pasteIcon from './icon--paste.svg';
 const BufferedInput = BufferedInputHOC(Input);
 
 const messages = defineMessages({
-  sound: {
-    id: 'gui.soundEditor.sound',
-    description: 'Label for the name of the sound',
-    defaultMessage: 'Sound',
-  },
-  play: {
-    id: 'gui.soundEditor.play',
-    description: 'Title of the button to start playing the sound',
-    defaultMessage: 'Play',
-  },
-  stop: {
-    id: 'gui.soundEditor.stop',
-    description: 'Title of the button to stop the sound',
-    defaultMessage: 'Stop',
-  },
-  copy: {
-    id: 'gui.soundEditor.copy',
-    description: 'Title of the button to copy the sound',
-    defaultMessage: 'Copy',
-  },
-  paste: {
-    id: 'gui.soundEditor.paste',
-    description: 'Title of the button to paste the sound',
-    defaultMessage: 'Paste',
-  },
-  copyToNew: {
-    id: 'gui.soundEditor.copyToNew',
-    description: 'Title of the button to copy the selection into a new sound',
-    defaultMessage: 'Copy to New',
-  },
-  delete: {
-    id: 'gui.soundEditor.delete',
-    description: 'Title of the button to delete the sound',
-    defaultMessage: 'Delete',
-  },
-  save: {
-    id: 'gui.soundEditor.save',
-    description: 'Title of the button to save trimmed sound',
-    defaultMessage: 'Save',
-  },
-  undo: {
-    id: 'gui.soundEditor.undo',
-    description: 'Title of the button to undo',
-    defaultMessage: 'Undo',
-  },
-  redo: {
-    id: 'gui.soundEditor.redo',
-    description: 'Title of the button to redo',
-    defaultMessage: 'Redo',
-  },
-  faster: {
-    id: 'gui.soundEditor.faster',
-    description: 'Title of the button to apply the faster effect',
-    defaultMessage: 'Faster',
-  },
-  slower: {
-    id: 'gui.soundEditor.slower',
-    description: 'Title of the button to apply the slower effect',
-    defaultMessage: 'Slower',
-  },
-  echo: {
-    id: 'gui.soundEditor.echo',
-    description: 'Title of the button to apply the echo effect',
-    defaultMessage: 'Echo',
-  },
-  robot: {
-    id: 'gui.soundEditor.robot',
-    description: 'Title of the button to apply the robot effect',
-    defaultMessage: 'Robot',
-  },
-  louder: {
-    id: 'gui.soundEditor.louder',
-    description: 'Title of the button to apply the louder effect',
-    defaultMessage: 'Louder',
-  },
-  softer: {
-    id: 'gui.soundEditor.softer',
-    description: 'Title of the button to apply thr.softer effect',
-    defaultMessage: 'Softer',
-  },
-  reverse: {
-    id: 'gui.soundEditor.reverse',
-    description: 'Title of the button to apply the reverse effect',
-    defaultMessage: 'Reverse',
-  },
-  fadeOut: {
-    id: 'gui.soundEditor.fadeOut',
-    description: 'Title of the button to apply the fade out effect',
-    defaultMessage: 'Fade out',
-  },
-  fadeIn: {
-    id: 'gui.soundEditor.fadeIn',
-    description: 'Title of the button to apply the fade in effect',
-    defaultMessage: 'Fade in',
-  },
-  mute: {
-    id: 'gui.soundEditor.mute',
-    description: 'Title of the button to apply the mute effect',
-    defaultMessage: 'Mute',
-  },
+	sound: {
+		id: 'gui.soundEditor.sound',
+		description: 'Label for the name of the sound',
+		defaultMessage: 'Sound',
+	},
+	play: {
+		id: 'gui.soundEditor.play',
+		description: 'Title of the button to start playing the sound',
+		defaultMessage: 'Play',
+	},
+	stop: {
+		id: 'gui.soundEditor.stop',
+		description: 'Title of the button to stop the sound',
+		defaultMessage: 'Stop',
+	},
+	copy: {
+		id: 'gui.soundEditor.copy',
+		description: 'Title of the button to copy the sound',
+		defaultMessage: 'Copy',
+	},
+	paste: {
+		id: 'gui.soundEditor.paste',
+		description: 'Title of the button to paste the sound',
+		defaultMessage: 'Paste',
+	},
+	copyToNew: {
+		id: 'gui.soundEditor.copyToNew',
+		description: 'Title of the button to copy the selection into a new sound',
+		defaultMessage: 'Copy to New',
+	},
+	delete: {
+		id: 'gui.soundEditor.delete',
+		description: 'Title of the button to delete the sound',
+		defaultMessage: 'Delete',
+	},
+	save: {
+		id: 'gui.soundEditor.save',
+		description: 'Title of the button to save trimmed sound',
+		defaultMessage: 'Save',
+	},
+	undo: {
+		id: 'gui.soundEditor.undo',
+		description: 'Title of the button to undo',
+		defaultMessage: 'Undo',
+	},
+	redo: {
+		id: 'gui.soundEditor.redo',
+		description: 'Title of the button to redo',
+		defaultMessage: 'Redo',
+	},
+	faster: {
+		id: 'gui.soundEditor.faster',
+		description: 'Title of the button to apply the faster effect',
+		defaultMessage: 'Faster',
+	},
+	slower: {
+		id: 'gui.soundEditor.slower',
+		description: 'Title of the button to apply the slower effect',
+		defaultMessage: 'Slower',
+	},
+	echo: {
+		id: 'gui.soundEditor.echo',
+		description: 'Title of the button to apply the echo effect',
+		defaultMessage: 'Echo',
+	},
+	robot: {
+		id: 'gui.soundEditor.robot',
+		description: 'Title of the button to apply the robot effect',
+		defaultMessage: 'Robot',
+	},
+	louder: {
+		id: 'gui.soundEditor.louder',
+		description: 'Title of the button to apply the louder effect',
+		defaultMessage: 'Louder',
+	},
+	softer: {
+		id: 'gui.soundEditor.softer',
+		description: 'Title of the button to apply thr.softer effect',
+		defaultMessage: 'Softer',
+	},
+	reverse: {
+		id: 'gui.soundEditor.reverse',
+		description: 'Title of the button to apply the reverse effect',
+		defaultMessage: 'Reverse',
+	},
+	fadeOut: {
+		id: 'gui.soundEditor.fadeOut',
+		description: 'Title of the button to apply the fade out effect',
+		defaultMessage: 'Fade out',
+	},
+	fadeIn: {
+		id: 'gui.soundEditor.fadeIn',
+		description: 'Title of the button to apply the fade in effect',
+		defaultMessage: 'Fade in',
+	},
+	mute: {
+		id: 'gui.soundEditor.mute',
+		description: 'Title of the button to apply the mute effect',
+		defaultMessage: 'Mute',
+	},
 });
 
-const SoundEditor = (props: PropsInterface) => (
-  <div
-    className={styles.editorContainer}
-    ref={props.setRef}
-    onMouseDown={props.onContainerClick}
-  >
-    <div className={styles.row}>
-      <div className={styles.inputGroup}>
-        <Label text={props.intl.formatMessage(messages.sound)}>
-          <BufferedInput
-            tabIndex='1'
-            type='text'
-            value={props.name}
-            onSubmit={props.onChangeName}
-          />
-        </Label>
-        <div className={styles.buttonGroup}>
-          <button
-            className={styles.button}
-            disabled={!props.canUndo}
-            title={props.intl.formatMessage(messages.undo)}
-            onClick={props.onUndo}
-          >
-            <img
-              className={styles.undoIcon}
-              draggable={false}
-              src={undoIcon}
-              alt=''
-            />
-          </button>
-          <button
-            className={styles.button}
-            disabled={!props.canRedo}
-            title={props.intl.formatMessage(messages.redo)}
-            onClick={props.onRedo}
-          >
-            <img
-              className={styles.redoIcon}
-              draggable={false}
-              src={redoIcon}
-              alt=''
-            />
-          </button>
-        </div>
-      </div>
-      <div className={styles.inputGroup}>
-        <IconButton
-          className={styles.toolButton}
-          img={copyIcon}
-          title={props.intl.formatMessage(messages.copy)}
-          onClick={props.onCopy}
-        />
-        <IconButton
-          className={styles.toolButton}
-          disabled={props.canPaste === false}
-          img={pasteIcon}
-          title={props.intl.formatMessage(messages.paste)}
-          onClick={props.onPaste}
-        />
-        <IconButton
-          className={classNames(styles.toolButton, styles.flipInRtl)}
-          img={copyToNewIcon}
-          title={props.intl.formatMessage(messages.copyToNew)}
-          onClick={props.onCopyToNew}
-        />
-      </div>
-      <IconButton
-        className={styles.toolButton}
-        disabled={props.trimStart === null}
-        img={deleteIcon}
-        title={props.intl.formatMessage(messages.delete)}
-        onClick={props.onDelete}
-      />
-    </div>
-    <div className={styles.row}>
-      <div className={styles.waveformContainer}>
-        <Waveform data={props.chunkLevels} height={160} width={600} />
-        <AudioSelector
-          playhead={props.playhead}
-          trimEnd={props.trimEnd}
-          trimStart={props.trimStart}
-          onPlay={props.onPlay}
-          onSetTrim={props.onSetTrim}
-          onStop={props.onStop}
-        />
-      </div>
-    </div>
-    <div className={classNames(styles.row, styles.rowReverse)}>
-      <div className={styles.inputGroup}>
-        {props.playhead ? (
-          <button
-            className={classNames(styles.roundButton, styles.stopButtonn)}
-            title={props.intl.formatMessage(messages.stop)}
-            onClick={props.onStop}
-          >
-            <img draggable={false} src={stopIcon} alt='' />
-          </button>
-        ) : (
-          <button
-            className={classNames(styles.roundButton, styles.playButton)}
-            title={props.intl.formatMessage(messages.play)}
-            onClick={props.onPlay}
-          >
-            <img draggable={false} src={playIcon} alt='' />
-          </button>
-        )}
-      </div>
-      <IconButton
-        className={styles.effectButton}
-        img={fasterIcon}
-        title={<FormattedMessage {...messages.faster} />}
-        onClick={props.onFaster}
-      />
-      <IconButton
-        className={styles.effectButton}
-        img={slowerIcon}
-        title={<FormattedMessage {...messages.slower} />}
-        onClick={props.onSlower}
-      />
-      <IconButton
-        disabled={props.tooLoud}
-        className={classNames(styles.effectButton, styles.flipInRtl)}
-        img={louderIcon}
-        title={<FormattedMessage {...messages.louder} />}
-        onClick={props.onLouder}
-      />
-      <IconButton
-        className={classNames(styles.effectButton, styles.flipInRtl)}
-        img={softerIcon}
-        title={<FormattedMessage {...messages.softer} />}
-        onClick={props.onSofter}
-      />
-      <IconButton
-        className={classNames(styles.effectButton, styles.flipInRtl)}
-        img={muteIcon}
-        title={<FormattedMessage {...messages.mute} />}
-        onClick={props.onMute}
-      />
-      <IconButton
-        className={styles.effectButton}
-        img={fadeInIcon}
-        title={<FormattedMessage {...messages.fadeIn} />}
-        onClick={props.onFadeIn}
-      />
-      <IconButton
-        className={styles.effectButton}
-        img={fadeOutIcon}
-        title={<FormattedMessage {...messages.fadeOut} />}
-        onClick={props.onFadeOut}
-      />
-      <IconButton
-        className={styles.effectButton}
-        img={reverseIcon}
-        title={<FormattedMessage {...messages.reverse} />}
-        onClick={props.onReverse}
-      />
-      <IconButton
-        className={styles.effectButton}
-        img={robotIcon}
-        title={<FormattedMessage {...messages.robot} />}
-        onClick={props.onRobot}
-      />
-    </div>
-  </div>
-);
+const SoundEditor = (props: PropsInterface) => {
+	function callFormatMessage(id: FormattedMessage.MessageDescriptor) {
+		return props.intl.formatMessage({ id: id }, '', '', '', '');
+	}
+	return (
+		<div className={styles.editorContainer} ref={props.setRef} onMouseDown={props.onContainerClick}>
+			<div className={styles.row}>
+				<div className={styles.inputGroup}>
+					<Label text={callFormatMessage(messages.sound)?.message}>
+						<BufferedInput
+							tabIndex='1'
+							type='text'
+							value={props.name}
+							onSubmit={props.onChangeName}
+						/>
+					</Label>
+					<div className={styles.buttonGroup}>
+						<button
+							className={styles.button}
+							disabled={!props.canUndo}
+							title={callFormatMessage(messages.undo)?.message}
+							onClick={props.onUndo}
+						>
+							<img className={styles.undoIcon} draggable={false} src={undoIcon} alt='' />
+						</button>
+						<button
+							className={styles.button}
+							disabled={!props.canRedo}
+							title={callFormatMessage(messages.redo)?.message}
+							onClick={props.onRedo}
+						>
+							<img className={styles.redoIcon} draggable={false} src={redoIcon} alt='' />
+						</button>
+					</div>
+				</div>
+				<div className={styles.inputGroup}>
+					<IconButton
+						className={styles.toolButton}
+						img={copyIcon}
+						title={callFormatMessage(messages.copy)?.message}
+						onClick={props.onCopy}
+					/>
+					<IconButton
+						className={styles.toolButton}
+						disabled={props.canPaste === false}
+						img={pasteIcon}
+						title={callFormatMessage(messages.paste)?.message}
+						onClick={props.onPaste}
+					/>
+					<IconButton
+						className={classNames(styles.toolButton, styles.flipInRtl)}
+						img={copyToNewIcon}
+						title={callFormatMessage(messages.copyToNew)?.message}
+						onClick={props.onCopyToNew}
+					/>
+				</div>
+				<IconButton
+					className={styles.toolButton}
+					disabled={props.trimStart === null}
+					img={deleteIcon}
+					title={callFormatMessage(messages.delete)?.message}
+					onClick={props.onDelete}
+				/>
+			</div>
+			<div className={styles.row}>
+				<div className={styles.waveformContainer}>
+					<Waveform data={props.chunkLevels} height={160} width={600} />
+					<AudioSelector
+						playhead={props.playhead}
+						trimEnd={props.trimEnd}
+						trimStart={props.trimStart}
+						onPlay={props.onPlay}
+						onSetTrim={props.onSetTrim}
+						onStop={props.onStop}
+					/>
+				</div>
+			</div>
+			<div className={classNames(styles.row, styles.rowReverse)}>
+				<div className={styles.inputGroup}>
+					{props.playhead ? (
+						<button
+							className={classNames(styles.roundButton, styles.stopButtonn)}
+							title={callFormatMessage(messages.stop)?.message}
+							onClick={props.onStop}
+						>
+							<img draggable={false} src={stopIcon} alt='' />
+						</button>
+					) : (
+						<button
+							className={classNames(styles.roundButton, styles.playButton)}
+							title={callFormatMessage(messages.play)?.message}
+							onClick={props.onPlay}
+						>
+							<img draggable={false} src={playIcon} alt='' />
+						</button>
+					)}
+				</div>
+				<IconButton
+					className={styles.effectButton}
+					img={fasterIcon}
+					title={<FormattedMessage {...messages.faster} />}
+					onClick={props.onFaster}
+				/>
+				<IconButton
+					className={styles.effectButton}
+					img={slowerIcon}
+					title={<FormattedMessage {...messages.slower} />}
+					onClick={props.onSlower}
+				/>
+				<IconButton
+					disabled={props.tooLoud}
+					className={classNames(styles.effectButton, styles.flipInRtl)}
+					img={louderIcon}
+					title={<FormattedMessage {...messages.louder} />}
+					onClick={props.onLouder}
+				/>
+				<IconButton
+					className={classNames(styles.effectButton, styles.flipInRtl)}
+					img={softerIcon}
+					title={<FormattedMessage {...messages.softer} />}
+					onClick={props.onSofter}
+				/>
+				<IconButton
+					className={classNames(styles.effectButton, styles.flipInRtl)}
+					img={muteIcon}
+					title={<FormattedMessage {...messages.mute} />}
+					onClick={props.onMute}
+				/>
+				<IconButton
+					className={styles.effectButton}
+					img={fadeInIcon}
+					title={<FormattedMessage {...messages.fadeIn} />}
+					onClick={props.onFadeIn}
+				/>
+				<IconButton
+					className={styles.effectButton}
+					img={fadeOutIcon}
+					title={<FormattedMessage {...messages.fadeOut} />}
+					onClick={props.onFadeOut}
+				/>
+				<IconButton
+					className={styles.effectButton}
+					img={reverseIcon}
+					title={<FormattedMessage {...messages.reverse} />}
+					onClick={props.onReverse}
+				/>
+				<IconButton
+					className={styles.effectButton}
+					img={robotIcon}
+					title={<FormattedMessage {...messages.robot} />}
+					onClick={props.onRobot}
+				/>
+			</div>
+		</div>
+	);
+};
 
 interface PropsInterface {
-  canPaste: boolean;
-  canRedo: boolean;
-  canUndo: boolean;
-  chunkLevels: any;
-  intl: IntlShape;
-  name: string;
-  onChangeName: any;
-  onContainerClick: any;
-  onCopy: any;
-  onCopyToNew: any;
-  onDelete: any;
-  onEcho: any;
-  onFadeIn: any;
-  onFadeOut: any;
-  onFaster: any;
-  onLouder: any;
-  onMute: any;
-  onPaste: any;
-  onPlay: any;
-  onRedo: any;
-  onReverse: any;
-  onRobot: any;
-  onSetTrim: any;
-  onSlower: any;
-  onSofter: any;
-  onStop: any;
-  onUndo: any;
-  playhead: number;
-  setRef: any;
-  tooLoud: boolean;
-  trimEnd: number;
-  trimStart: number;
+	canPaste: boolean;
+	canRedo: boolean;
+	canUndo: boolean;
+	chunkLevels: any;
+	intl: IntlShape;
+	name: string;
+	onChangeName: any;
+	onContainerClick: any;
+	onCopy: any;
+	onCopyToNew: any;
+	onDelete: any;
+	onEcho: any;
+	onFadeIn: any;
+	onFadeOut: any;
+	onFaster: any;
+	onLouder: any;
+	onMute: any;
+	onPaste: any;
+	onPlay: any;
+	onRedo: any;
+	onReverse: any;
+	onRobot: any;
+	onSetTrim: any;
+	onSlower: any;
+	onSofter: any;
+	onStop: any;
+	onUndo: any;
+	playhead: number;
+	setRef: any;
+	tooLoud: boolean;
+	trimEnd: number;
+	trimStart: number;
 }
 
 // TODO
