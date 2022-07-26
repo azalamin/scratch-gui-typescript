@@ -297,4 +297,4 @@ interface PropsInterface {
 //     ])
 // };
 
-export default injectIntl(SpriteInfo);
+export default injectIntl(SpriteInfo as any);
